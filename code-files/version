@@ -1,0 +1,3 @@
+.control-group:last-of-type:before{
+    content:"LAST VERSION OF THE THEME: v1.4.0";
+}
