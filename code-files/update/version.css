@@ -188,11 +188,6 @@
   width: 75px
 }
 
-.sprite-item {
-  background-position: 50%!important;
-  margin-top: auto!important;
-  margin-bottom: auto!important;
-}
 
 .chat .user-name {
   -webkit-transition: all 200ms ease;
@@ -3459,3 +3454,4 @@ span {
 .item.item-subMenu:hover:after {
   opacity: 1;
 }
+
