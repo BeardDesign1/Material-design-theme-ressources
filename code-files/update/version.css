@@ -11,7 +11,7 @@
 */
 
 .lastversion:after {
-  content: "Current version: v1.5.1";
+  content: "Current version: v1.5.2";
 }
 
 
@@ -1330,7 +1330,7 @@
           transition-delay: 100ms;
 }
 
-.radio span:before {
+.radio .radio-inner span:before {
   content: "";
   width: 30px;
   height: 30px;
@@ -3454,4 +3454,3 @@ span {
 .item.item-subMenu:hover:after {
   opacity: 1;
 }
-
