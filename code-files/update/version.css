@@ -124,7 +124,7 @@
     border-radius: 0px !important;
     color: #fff !important;
     border-right-color: rgba(255, 255, 255, 0) !important;
-    padding: 3px !important;
+    padding: 0 !important;
     opacity: 0.17;
     height: 100%!important;
     width: 70px;
@@ -353,12 +353,6 @@
         opacity: 0;
     }
     100% {}
-}
-.checkbox:active .checkbox-inner input[type=checkbox]:checked+span {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    -webkit-transition: all 100ms ease;
-    transition: all 100ms ease;
 }
 .channel-notification-settings .content,
 .channel-notification-settings .content .content-inner {
@@ -813,7 +807,7 @@
     display: block;
     position: absolute;
     bottom: 2px;
-    right: 9.5px;
+    right: 9px;
     -webkit-transform: scale(.65)rotate(0deg)translate(13.5px, 3px);
     transform: scale(.65)rotate(0deg)translate(13.5px, 3px);
     width: 1px;
