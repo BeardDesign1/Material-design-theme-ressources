@@ -705,7 +705,7 @@
     -webkit-transition: all 150ms ease;
     transition: all 150ms ease;
 }
-.ggggggggggggggg-channels .channel-voice-states li.speaking .avatar-small {
+.guild-channels .channel-voice-states li.speaking .avatar-small {
     border: 2px solid #66BB6A!important;
     -webkit-transition: all 80ms ease;
     transition: all 80ms ease;
@@ -2955,9 +2955,6 @@ span {
 }
 .item.item-subMenu:hover:after {
     opacity: 1;
-}
-.sprite-item[style*='background-image: url("/assets/02688013143b0b59b79981eb5515cfa0.png")'] {
-    background-image: url("https://cdn.discordapp.com/attachments/126228856477712384/223697463712808960/emoji-google.png")!important
 }
 .comment .message+div .edit-message .avatar-large {
     visibility: hidden;
