@@ -11,7 +11,7 @@
 */
 
 .lastversion:after {
-    content: "Current version: v1.5.6";
+    content: "Current version: v1.5.5";
 }
 /*-----GENERAL KEYFRAMES-----*/
 
@@ -1359,8 +1359,8 @@
 .slider .slider-handle {
     border: 0px;
     background: #697EC4;
-    -webkit-transform: scale(0.66);
-    transform: scale(0.66);
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
     -webkit-transition: all 100ms ease, transform 200ms cubic-bezier(.35, .01, 0, 1);
     -webkit-transition: all 100ms ease, -webkit-transform 100ms cubic-bezier(.35, .01, 0, 1);
     transition: all 100ms ease, -webkit-transform 100ms cubic-bezier(.35, .01, 0, 1);
@@ -1381,8 +1381,8 @@
     position: absolute;
     top: 51%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%)scale(0.9);
-    transform: translate(-50%, -50%)scale(0.9);
+    -webkit-transform: translate(-50%, -50%)scale(1);
+    transform: translate(-50%, -50%)scale(1);
     -webkit-transition: 300ms cubic-bezier(.35, .01, 0, 1);
     transition: 300ms cubic-bezier(.35, .01, 0, 1);
 }
@@ -1392,7 +1392,24 @@
     opacity: .2;
 }
 .slider .slider-handle span {
-    display: none;
+    transform:scale(1.2);
+    z-index:100000;
+    background:#697EC4;
+    color:#fff;
+    border-radius:100px;
+    border:none;
+    transition:all 100ms ease;
+}
+.slider .slider-handle:active span{
+    transform:scale(0.95);
+}
+.context-menu .slider .slider-bar{
+    height:3px
+}
+
+.slider-handle span:before,
+.slider-handle span:after{
+    display:none
 }
 .slider .slider-bar {
     height: 3px;
@@ -3024,24 +3041,12 @@ span {
 }
 .guild-header-open ul.treatment-1 {
     border-radius: 3px;
-    max-height: 229px!important;
-    width: 216px!important;
-    opacity: 1!important;
-    margin-left: 12px!important;
-    -webkit-transform: translate(0, 10px)!important;
-    transform: translate(0, 10px)!important;
+    transform:translate(0,10px)
 }
 .guild-header ul.treatment-1 {
     border-radius: 3px;
-    max-height: 229px!important;
-    width: 216px!important;
-    opacity: 1!important;
-    margin-left: 12px!important;
-    -webkit-transform: translate(0, -290px);
-    transform: translate(0, -290px);
-    -webkit-transition: all 500ms cubic-bezier(.72, 0, 0, 1);
-    transition: all 500ms cubic-bezier(.72, 0, 0, 1);
-    z-index: 0
+    z-index: 0;
+    transform:translate(0,10px)
 }
 .guild-channels header {
     margin: 0;
@@ -3212,4 +3217,24 @@ ul.treatment-1 .icon-settings {
 }
 .guild-header ul.treatment-1 li.leave:hover a {
     color: #F15959
+}
+.context-menu .slider .slider-handle-track{
+    right:10px!important
+}
+
+@import url(https://fonts.googleapis.com/css?family=Product+Sans);
+.guild-header header span{
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-weight:500;
+    letter-spacing: 0.3px;
+	opacity:0.95
+}
+
+.markdown-modal .markdown-modal-footer{
+    background-color:#212121;
+    border-top:0!important
+}
+.markdown-modal .markdown-modal-header .markdown-modal-close{
+    background:url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_clear_white_24px.svg);
+    background-size:100%
 }
