@@ -11,7 +11,7 @@
 */
 
 .lastversion:after {
-    content: "Current version: v1.5.9";
+    content: "Current version: v1.6.0";
 }
 
 
@@ -670,15 +670,67 @@
 
 .guilds-wrapper .guild.guilds-add {
     border: 0px;
-    -webkit-transform: translate(0, 10px);
-    transform: translate(0, 10px);
-    background: #212121;
+    background: transparent;
     -webkit-transition: all 200ms ease!important;
     transition: all 200ms ease!important;
     margin-left: 0px!important;
     font-size: 32px;
     font-weight: 600;
-    margin: 13px!important
+    margin: 0px!important;
+    position: fixed;
+    left: 15px;
+    bottom: 0px;
+    z-index: 10;
+    color: transparent;
+    height: 70px;
+    width: 80px;
+    padding: 0;
+    z-index: 100000000000000000
+}
+
+.guilds-wrapper .guild.guilds-add:after {
+    background-color: #7289DA;
+    -webkit-transition: all 200ms ease!important;
+    transition: all 200ms ease!important;
+    position: fixed;
+    left: 14px;
+    bottom: 20px;
+    z-index: 1;
+    visibility: visible;
+    content: "";
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-image: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_add_white_24px.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+}
+
+.guilds-wrapper .guild.guilds-add:hover:after {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+    background-color: #697EC4;
+}
+
+.guilds-wrapper .guilds .guild.guilds-add:hover {
+    opacity: 1!important
+}
+
+.guilds-wrapper .guild.guilds-add:before {
+    content: "";
+    width: 78px;
+    height: 100px;
+    background: #fff;
+    display: block;
+    position: fixed;
+    left: 0px;
+    bottom: -16px;
+    z-index: -1;
+    background: -webkit-linear-gradient(top, rgba(48, 48, 48, 0) 0%, rgba(48, 48, 48, 1) 100%);
+    background: linear-gradient(to bottom, rgba(48, 48, 48, 0) 0%, rgba(48, 48, 48, 1) 100%);
+    visibility: visible;
+    pointer-events: none
 }
 
 .private-channels .channel .channel-name,
@@ -1617,7 +1669,7 @@
 
 .slider .slider-handle span {
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
     z-index: 100000;
     background: #697EC4;
     color: #fff;
@@ -3098,8 +3150,6 @@ div[style="height:30px;width:100%;background:#282B30;"] progress {
     margin-left: 14px;
     box-shadow: none!important;
     border-radius: 0 5px 5px 0;
-    white-space: nowrap;
-    overflow: hidden;
     width: auto;
 }
 
@@ -3597,14 +3647,14 @@ span {
 .guild-header-open ul.treatment-1 {
     border-radius: 3px;
     -webkit-transform: translate(0, 10px);
-            transform: translate(0, 10px)
+    transform: translate(0, 10px)
 }
 
 .guild-header ul.treatment-1 {
     border-radius: 3px;
     z-index: 0;
     -webkit-transform: translate(0, 10px);
-            transform: translate(0, 10px)
+    transform: translate(0, 10px)
 }
 
 .guild-channels header {
@@ -3797,7 +3847,6 @@ ul.treatment-1 .icon-settings {
     right: 10px!important
 }
 
-
 .markdown-modal .markdown-modal-footer {
     background-color: #212121;
     border-top: 0!important
@@ -3809,7 +3858,7 @@ ul.treatment-1 .icon-settings {
 }
 
 .emoji.jumboable {
-    zoom: 1.3
+    zoom: 1
 }
 
 #user-profile-modal .tab-bar-container {
@@ -3873,7 +3922,7 @@ ul.treatment-1 .icon-settings {
     z-index: 2;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     top: 85px;
     border: 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
@@ -3884,7 +3933,7 @@ ul.treatment-1 .icon-settings {
     border: 6px solid #212121;
     zoom: .8;
     -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 #user-profile-modal .header {
@@ -3905,7 +3954,7 @@ ul.treatment-1 .icon-settings {
     padding: 6px 20px;
     border-radius: 1000px;
     -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    transform: translate(-50%);
 }
 
 #user-profile-modal .header .activity {
@@ -3917,7 +3966,7 @@ ul.treatment-1 .icon-settings {
     padding: 6px 20px;
     border-radius: 1000px;
     -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    transform: translate(-50%);
     width: 100%;
     opacity: .5;
     font-size: 12px
@@ -3977,10 +4026,6 @@ ul.treatment-1 .icon-settings {
 
 #user-profile-modal .guilds .section .section-header {
     color: rgba(255, 255, 255, .8)
-}
-
-.sink-interactions.clickable {
-    display: none
 }
 
 .upload-modal .inner .comment .channel-textarea .channel-textarea-inner {
@@ -4069,11 +4114,29 @@ ul.treatment-1 .icon-settings {
 .tipsy {
     pointer-events: none;
     -webkit-animation: opacity 100ms ease;
-            animation: opacity 100ms ease;
+    animation: opacity 100ms ease;
     -webkit-transform: translate(0, -32px);
-            transform: translate(0, -32px);
+    transform: translate(0, -32px);
 }
 
 .tipsy-inner {
     border-radius: 3px
+}
+
+.guild:not(.guilds-add):last-of-type {
+    margin-bottom: 60px!important
+}
+
+.dms .guild:not(.guilds-add):last-of-type {
+    margin-bottom: 0px!important
+}
+
+.emoji.jumboable {
+    width: 32px;
+    height: 32px;
+}
+
+#voice-connection .btn:active,
+.account .btn:active {
+    background: #303030;
 }
