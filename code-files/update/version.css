@@ -6,12 +6,14 @@
 ///////////////////////////////////////
 /!\ DO NOT RECOLOR AND POST IT AS YOUR OWN THEME
 */
-
+body:after,
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.6.6";
+    content: "Current version: v1.6.7";
 }
-
+body:before{
+    content:"Happy halloween!";
+}
 
 /*-----GENERAL KEYFRAMES-----*/
 
@@ -2836,7 +2838,7 @@ code:hover .copybutton {
 }
 
 .friends-icon {
-    background-image: url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_account_circle_white_24px.svg)!important;
+    background-image: url(https://bearddesign.s-ul.eu/U8SF3s4A.svg)!important;
     opacity: 0.8;
 }
 
@@ -3686,8 +3688,8 @@ span {
     width: 23px;
     height: 23px;
     display: block;
-    -webkit-animation: arrow-anim-closed 300ms ease;
-    animation: arrow-anim-closed 300ms ease;
+    -webkit-animation: arrow-anim-closed 240ms ease;
+    animation: arrow-anim-closed 240ms ease;
     position: absolute;
     -webkit-transform: translate(200px, -39px);
     transform: translate(200px, -39px);
@@ -3697,8 +3699,8 @@ span {
 }
 
 .guild-header.popout-open:after {
-    -webkit-animation: arrow-anim-open 300ms ease;
-    animation: arrow-anim-open 350ms ease;
+    -webkit-animation: arrow-anim-open 240ms ease;
+    animation: arrow-anim-open 240ms ease;
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FscXVlXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSItOTUwIDUzMiAxOCAxOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtOTUwIDUzMiAxOCAxODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6bm9uZTt9DQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLXdpZHRoOjEuNTtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTS05MzIsNTMydjE4aC0xOHYtMThILTkzMnoiLz4NCjxwb2x5bGluZSBjbGFzcz0ic3QxIiBwb2ludHM9Ii05NDUuNCw1NDMuMiAtOTQxLDUzOC44IC05MzYuNiw1NDMuMiAiLz4NCjwvc3ZnPg0K);
 }
 
@@ -4515,4 +4517,47 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
 
 .connection-icon[src="/assets/e531a8063a4cde9853e38a861a7b2add.png"] {
     content: url(https://bearddesign.s-ul.eu/twYPCPQZ.svg)!important;
+}
+/*-------------------*/
+body:after{
+    z-index:10000000000000000000000000;
+    color:#fff;
+    background:#101010;
+    top:0;
+    left:50%;
+    position:absolute;
+    border-radius:0 0 5px 5px;
+    padding:5px 15px;
+    transform:translate(-50%,-100%);
+    animation: vrsion 3s ease;
+}
+@keyframes vrsion{
+    from{
+        transform:translate(-50%,-100%);
+        background:#101010;
+    }
+    20%{
+        transform:translate(-50%,0)
+    }
+    80%{
+        transform:translate(-50%,0)
+    }
+    to{
+        transform:translate(-50%,-100%);
+        background:#43B581;
+    }
+}
+
+body:before{
+    z-index:1000000000000000000000000;
+    color:#fff;
+    background:#101010;
+    top:0px;
+    left:50%;
+    position:absolute;
+    border-radius:0 0 5px 5px;
+    padding:5px 15px;
+    transform:translate(-50%,-100%);
+    animation: vrsion 3s ease;
+    animation-delay:3s;
 }
