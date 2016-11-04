@@ -10,7 +10,7 @@
 body:after,
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.7.3";
+    content: "Current version: v1.7.4";
 }
 
 body:before {
