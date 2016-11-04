@@ -5197,3 +5197,6 @@ body:before {
 .message-reactions-modal .message-reactions-list-inner .reaction:hover:not(.selected) {
     background: rgba(255, 255, 255, .03)
 }
+.titlebar{
+    z-index:10000000000000000!important
+}
