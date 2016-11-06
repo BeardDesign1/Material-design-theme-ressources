@@ -7,14 +7,13 @@
 /!\ DO NOT RECOLOR AND POST IT AS YOUR OWN THEME
 */
 
-body:after,
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.7.4";
+    content: "Current version: v1.7.6";
 }
 
-body:before {
-    content: "Thank's for using the material theme!";
+.app:after {
+    content: "Current version: v1.7.6\A Updated the small members tab theme\a to fix the emoji bug with the material theme\A Think about reinstalling it ^^";
 }
 
 
@@ -74,7 +73,38 @@ body:before {
     }
 }
 
-
+@keyframes vrsion {
+    from {
+        -webkit-transform: translate(0, -100%);
+        transform: translate(0, -100%);
+        visibility:hidden;
+        opacity:0;
+    }
+    0.1%{
+        visibility:visible;
+        opacity:0;
+    }
+    10% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity:1;
+    }
+    90% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity:1;
+    }
+    99.9{
+        visibility:visible;
+        opacity:0;
+    }
+    to {
+        -webkit-transform: translate(0, -100%);
+        transform: translate(0, -100%);
+        visibility:hidden;
+        opacity:0;
+    }
+}
 /*-----/GENERAL KEYFRAMES*/
 
 .message-group .comment .markup .highlight {
@@ -2194,23 +2224,20 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(14
 }
 
 .header-toolbar button {
-    -webkit-transition: all 400ms cubic-bezier(.64, 0, 0, 1);
-    -webkit-transition: all 400ms cubic-bezier(.3, .3, 0, 1);
-    transition: all 400ms cubic-bezier(.3, .3, 0, 1);
+    -webkit-transition: all 300ms cubic-bezier(.23,.23,0,1);
+    transition: all 300ms cubic-bezier(.23,.23,0,1);
     display: block;
 }
 
 .header-toolbar button.popout-open span {
     opacity: 1
 }
-
 .chat .title-wrap {
     z-index: 10000!important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
-
 .popout.popout-bottom-right.no-arrow.no-shadow {
     margin-top: 17px!important;
     margin-left: 10px!important;
@@ -2245,6 +2272,8 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(14
 .header-toolbar button.popout-open {
     -webkit-transform: translate(0, 55px);
     transform: translate(0, 55px);
+    -webkit-transition: all 400ms cubic-bezier(.3, .3, 0, 1);
+    transition: all 400ms cubic-bezier(.3, .3, 0, 1);
 }
 
 #voice-connection .btn-disconnect {
@@ -4656,76 +4685,24 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
 
 /*-------------------*/
 
-body:after {
-    z-index: 10000000000000000000000000;
+.app:after {
+    z-index: 5000000000000000000000000000000000000000000;
     color: #fff;
     background: #43B581;
-    top: 0;
-    left: 50%;
+    top: 65px;
+    right: 10px;
     position: absolute;
-    border-radius: 5px;
-    padding: 5px 15px;
-    -webkit-transform: translate(-50%, -100%);
-    transform: translate(-50%, -100%);
-    -webkit-animation: vrsion 3s ease;
-    animation: vrsion 3s ease;
+    border-radius: 3px;
+    padding: 8px 15px;
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, 00%);
+    -webkit-animation: vrsion 11s cubic-bezier(.63,0,0,1);
+    animation: vrsion 11s cubic-bezier(.63,0,0,1);
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
-}
-
-@-webkit-keyframes vrsion {
-    from {
-        -webkit-transform: translate(-50%, -100%);
-        transform: translate(-50%, -100%);
-    }
-    20% {
-        -webkit-transform: translate(-50%, 20%);
-        transform: translate(-50%, 20%)
-    }
-    80% {
-        -webkit-transform: translate(-50%, 20%);
-        transform: translate(-50%, 20%)
-    }
-    to {
-        -webkit-transform: translate(-50%, -100%);
-        transform: translate(-50%, -100%);
-    }
-}
-
-@keyframes vrsion {
-    from {
-        -webkit-transform: translate(-50%, -100%);
-        transform: translate(-50%, -100%);
-    }
-    20% {
-        -webkit-transform: translate(-50%, 20%);
-        transform: translate(-50%, 20%)
-    }
-    80% {
-        -webkit-transform: translate(-50%, 20%);
-        transform: translate(-50%, 20%)
-    }
-    to {
-        -webkit-transform: translate(-50%, -100%);
-        transform: translate(-50%, -100%);
-    }
-}
-
-body:before {
-    z-index: 1000000000000000000000000;
-    color: #fff;
-    background: #43B581;
-    top: 0px;
-    left: 50%;
-    position: absolute;
-    border-radius: 5px;
-    padding: 5px 15px;
-    -webkit-transform: translate(-50%, -100%);
-    transform: translate(-50%, -100%);
-    -webkit-animation: vrsion 3s ease;
-    animation: vrsion 3s ease;
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
+    white-space: pre;
+    visibility:hidden;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
 }
 
 .chat .messages {
@@ -4828,7 +4805,7 @@ body:before {
     background: #212121!important;
     border: 1px solid #212121;
     margin-right: 14px;
-    margin-bottom: -14px;
+    margin-bottom: -14px!important;
     border-radius: 4px 4px 0 0!important;
     margin-bottom: -20px;
 }
@@ -5199,4 +5176,21 @@ body:before {
 }
 .titlebar{
     z-index:10000000000000000!important
+}
+.icon.icon-lock{
+    background-image:url(https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_lock_outline_white_24px.svg);
+    background-size:110%;
+    background-position:50%
+}
+.chat .jump-to-present-bar .spinner{
+    margin-left:50px;
+    margin-top:10px;
+    margin-bottom:10px;
+    transform:scale(1.3)
+}
+.popout.popout-bottom[style*="z-index: 2000; visibility: visible;"]{
+    z-index:10000000000!important
+}
+.popout.no-arrow+.popout.popout-invert.popout-top[style*="z-index: 1005;"]{
+    z-index:100000000!important;
 }
