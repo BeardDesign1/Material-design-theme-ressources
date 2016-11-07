@@ -9,11 +9,11 @@
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.7.6";
+    content: "Current version: v1.7.7";
 }
 
 .app:after {
-    content: "Current version: v1.7.6\A Updated the small members tab theme\a to fix the emoji bug with the material theme\A Think about reinstalling it ^^";
+    content: "Current version: v1.7.7\A - fixed the block/message pop-out bug\A Thanks for using the material theme ;)";
 }
 
 
@@ -5192,5 +5192,8 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
     z-index:10000000000!important
 }
 .popout.no-arrow+.popout.popout-invert.popout-top[style*="z-index: 1005;"]{
+    z-index:100000000!important;
+}
+.popout[style*="z-index:"]{
     z-index:100000000!important;
 }
