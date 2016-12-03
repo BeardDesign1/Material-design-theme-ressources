@@ -9,11 +9,11 @@
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.7.9";
+    content: "Current version: v1.8.0";
 }
 
 .app:after {
-    content: "Current version: v1.7.9\A - Updated the look of the 'join server' button\A - Fixed the profiles bug\A - Added a twitter icon to embed tweets \A Thanks for using the material theme ;)";
+    content: "Current version: v1.8.0\A - Made the 'friends' button pinned on top of the friends panel\A - Fixed some bugs\A - Some small tweaks here and there \A Thanks for using the material theme ;)";
 }
 
 
