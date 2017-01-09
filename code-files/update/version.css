@@ -20,15 +20,15 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.8.6";
+    content: "Current version: v1.8.7";
 }
 
 #bd-themes-pane .bda-slist:before {
-    content: "Current version: v1.8.6\A - Made the 'call' panel collapse when hovering the chat.\A - Fixed the double reddit icon bug.(thanks to praedyth on GitHub)\A - Fixed the 'add channel' bug.\A   (thanks to @Finicalmist#0001 and @Mokocchi#0607) \A - Fixed some more bugs.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.8.7\A BetterDiscord has been breaking for a lot of people,\A to fix it temporarly go to bit.ly/betterdiscordfix\A\A - Made the 'call' panel collapse when hovering the chat.\A - Fixed the double reddit icon bug.(thanks to praedyth on GitHub) \A - Fixed the 'add channel' bug.\A   (thanks to @Finicalmist#0001 and @Mokocchi#0607) \A - Fixed some more bugs.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 .app:after {
-    content: "Current version: v1.8.6\A \A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.8.7\A\A BetterDiscord has been breaking for a lot of people,\A to fix it temporarly go to bit.ly/betterdiscordfix\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 
@@ -6695,4 +6695,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .content form {
     background: #303030
+}
+.emoji-picker[style="display: none;"]{
+    display:block!important
 }
