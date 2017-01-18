@@ -20,15 +20,15 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.8.7";
+    content: "Current version: v1.8.8";
 }
 
 #bd-themes-pane .bda-slist:before {
-    content: "Current version: v1.8.7\A BetterDiscord has been breaking for a lot of people,\A to fix it temporarly go to bit.ly/betterdiscordfix\A\A - Made the 'call' panel collapse when hovering the chat.\A - Fixed the double reddit icon bug.(thanks to praedyth on GitHub) \A - Fixed the 'add channel' bug.\A   (thanks to @Finicalmist#0001 and @Mokocchi#0607) \A - Fixed some more bugs.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.8.8\A\A - Deleted the collapsible call function\A - Fixed a bunch of bugs.\A\A Thanks to:\A @Ashye#0664\A @TechnoCat#2700\A ... and more people for the feedback <3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 .app:after {
-    content: "Current version: v1.8.7\A\A BetterDiscord has been breaking for a lot of people,\A to fix it temporarly go to bit.ly/betterdiscordfix\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.8.8\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 
@@ -659,8 +659,9 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .guilds-wrapper .guilds .guild {
     opacity: 1;
-    -webkit-transition: all 100ms ease!important;
-    transition: all 100ms ease!important;
+    -webkit-transition: all 00ms ease!important;
+    -webkit-transition: all 0ms ease!important;
+    transition: all 0ms ease!important;
 }
 
 .guilds-wrapper .guilds .guild.selected {
@@ -683,8 +684,18 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     opacity: 1;
 }
 
+.theme-dark #friends .friends-header .tab-bar .tab-bar-item:hover:not(.selected) {
+    background: #303030
+}
+
 .guilds-wrapper .guilds:hover .guild.selected {
     opacity: 1;
+}
+
+.guilds-wrapper .guilds .guild .guild-inner a:active {
+    -webkit-transition: 0;
+    transition: 0;
+    opacity: 1!important
 }
 
 .guilds-wrapper .guilds .guild {
@@ -4579,14 +4590,49 @@ span {
 .radio-theme.dark label {
     width: 506px;
     height: 50px;
-    background: #7289DA;
-    border: 0px!important
+    background: #303030;
+    border: 0px!important;
+    border-radius: 3px;
 }
 
-.theme-light+span .radio-theme.dark.compact label,
-.theme-light+span .radio-theme.dark label {
-    background: #F04747;
-    box-shadow: 0 2px 10px rgba(240, 71, 71, .3);
+.theme-light+div .radio-theme.dark.compact label,
+.theme-light+div .radio-theme.dark label {
+    background: #F04646;
+    box-shadow: 0 2px 10px rgba(240, 71, 71, .3), 0 0 0 2px rgba(240, 70, 70, .4);
+    -webkit-transition: box-shadow 100ms cubic-bezier(0, 0, 0, 1);
+    transition: box-shadow 100ms cubic-bezier(0, 0, 0, 1);
+    -webkit-animation: darktheme 800ms ease infinite;
+            animation: darktheme 800ms ease infinite;
+}
+
+@-webkit-keyframes darktheme {
+    0% {
+        box-shadow: 0 2px 10px rgba(240, 71, 71, .3), 0 0 0 2px rgba(240, 70, 70, .4);
+    }
+    80% {
+        box-shadow: 0 0px 20px 15px rgba(240, 71, 71, .3), 0 0 0 6px rgba(240, 70, 70, .7);
+    }
+    100% {
+        box-shadow: 0 2px 10px rgba(240, 71, 71, .3), 0 0 0 2px rgba(240, 70, 70, .4);
+    }
+}
+
+@keyframes darktheme {
+    0% {
+        box-shadow: 0 2px 10px rgba(240, 71, 71, .3), 0 0 0 2px rgba(240, 70, 70, .4);
+    }
+    80% {
+        box-shadow: 0 0px 20px 15px rgba(240, 71, 71, .3), 0 0 0 6px rgba(240, 70, 70, .7);
+    }
+    100% {
+        box-shadow: 0 2px 10px rgba(240, 71, 71, .3), 0 0 0 2px rgba(240, 70, 70, .4);
+    }
+}
+
+.theme-light+div .radio-theme.dark.compact label:hover,
+.theme-light+div .radio-theme.dark label:hover {
+    background: #F04646;
+    box-shadow: 0 0px 20px 10px rgba(240, 71, 71, .3), 0 0 0 6px rgba(240, 70, 70, .7);
 }
 
 .radio-theme.dark:after {
@@ -4601,7 +4647,7 @@ span {
     pointer-events: none
 }
 
-.theme-dark+span .radio-theme.dark:after {
+.theme-dark+div .radio-theme.dark:after {
     content: "DARK MODE ENABLED"
 }
 
@@ -6619,83 +6665,4 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     font-weight: 600;
     margin-top: 2px;
     color: #fff
-}
-
-
-/*calls*/
-
-.private.chat .private-channel-call {
-    -webkit-transition: all 200ms cubic-bezier(0, 0, 0, 1);
-    transition: all 200ms cubic-bezier(0, 0, 0, 1);
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover) {
-    -webkit-transform: translate(0, -100px);
-            transform: translate(0, -100px);
-}
-
-.private.chat .private-channel-call .private-channel-call-participants {
-    -webkit-transition: all 200ms cubic-bezier(0, 0, 0, 1);
-    transition: all 200ms cubic-bezier(0, 0, 0, 1);
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover) .private-channel-call-participants {
-    -webkit-transform: translate(0, 77px)scale(0.6);
-            transform: translate(0, 77px)scale(0.6);
-}
-
-.private.chat .private-channel-call .private-channel-call-actions {
-    -webkit-transition: all 100ms ease;
-    transition: all 100ms ease
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover) .private-channel-call-actions {
-    opacity: 0
-}
-
-.private.chat .title-wrap+.private-channel-call+.content {
-    -webkit-transition: -webkit-transform 200ms cubic-bezier(0, 0, 0, 1);
-    transition: -webkit-transform 200ms cubic-bezier(0, 0, 0, 1);
-    transition: transform 200ms cubic-bezier(0, 0, 0, 1);
-    transition: transform 200ms cubic-bezier(0, 0, 0, 1), -webkit-transform 200ms cubic-bezier(0, 0, 0, 1);
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover)+.content {
-    -webkit-transform: translate(0, -100px);
-            transform: translate(0, -100px);
-}
-
-.private.chat .title-wrap+.private-channel-call+.content {
-    margin-bottom: -100px;
-}
-
-.private.chat .private-channel-call+.content .message-group {
-    -webkit-transform: translate(0, -100px);
-            transform: translate(0, -100px);
-    -webkit-transition: all 200ms cubic-bezier(0, 0, 0, 1);
-    transition: all 200ms cubic-bezier(0, 0, 0, 1)
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover)+.content .message-group {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px)
-}
-
-.private.chat .private-channel-call+.content form {
-    -webkit-transform: translate(0, -100px);
-            transform: translate(0, -100px);
-    -webkit-transition: all 200ms cubic-bezier(0, 0, 0, 1);
-    transition: all 200ms cubic-bezier(0, 0, 0, 1);
-}
-
-.private.chat .private-channel-call+.content:hover form {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px)
-}
-
-.content form {
-    background: #303030
-}
-.emoji-picker[style="display: none;"]{
-    display:block!important
 }
