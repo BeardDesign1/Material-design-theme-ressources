@@ -6926,16 +6926,15 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     position: relative;
     background: none;
 }
-
 .premium-settings .premium-header.splash:before {
     width: 100%;
-    background: url(/assets/99d84e6e97d1a7737be24c391fbf57e3.svg) 100% 0px no-repeat;
-    ;
+    background: url(https://canary.discordapp.com/assets/99d84e6e97d1a7737be24c391fbf57e3.svg) 100% 0px no-repeat;
     height: 100%;
     content: "";
     display: block;
     position: absolute;
     -webkit-filter: invert(85%) grayscale(100%);
+    pointer-events:none;
 }
 
 .premium-settings .premium-header .intro-subtitle {
