@@ -15,15 +15,15 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.9.0";
+    content: "Current version: v1.9.1";
 }
 
 #bd-themes-pane .bda-slist:before {
-    content: "Current version: v1.9.0\A\A I've been working on this for 6 months now, wow.\AThanks a lot for all the help, feedback and love <3\A Here's a piece of birthday cake just for you, you're awesome 🍰\A\A - Made the color pill visible for embeds with custom ones.\A  (Also made it look cool)\A - Customised the Nitro icon in the settings as well as the page.\A - New Spinners! These ones are actually material styled yaay!\A - Edited file icons(when you upload a file to a chat), I might be missing\A    a few so please report it if you see a weird looking one.\A - Made the emoji search bar easier to read and better looking.\A - Fixed a LOT of bugs.\A\A Thanks to:\A @czar#1455, @Jeder#2091, @Viniuau#3029, @💎#5201, @#s#8059,\A @Chilace#3179 ... and more people for the feedback <3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.9.1\A\A I've been working on this for 6 months now, wow.\AThanks a lot for all the help, feedback and love <3\A Here's a piece of birthday cake just for you, you're awesome 🍰\A\A - Made the color pill visible for embeds with custom ones.\A  (Also made it look cool)\A - Customised the Nitro icon in the settings as well as the page.\A - New Spinners! These ones are actually material styled yaay!\A - Edited file icons(when you upload a file to a chat), I might be missing\A    a few so please report it if you see a weird looking one.\A - Made the emoji search bar easier to read and better looking.\A - Fixed a LOT of bugs.\A\Av1.9.1\A - fixed bugs.(completely deleted off the collapsible calls,\A   that was a dumb idea sorry)\A - themed the help section.\A\A Thanks to:\A @czar#1455, @Jeder#2091, @Viniuau#3029, @💎#5201, @#s#8059,\A @Chilace#3179 (v1.9.1 ->) @Mafu#4398, @AmiT177#6849\A ... and more people for the feedback <3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 .app:after {
-    content: "Current version: v1.9.0\A\A IT'S THE THEME'S 6 MONTHS ANNIVERSARY EVERYONE!\A\A>> Go to Settings/BetterDiscord/Themes for cake <<";
+    content: "Current version: v1.9.1\A\A IT'S THE THEME'S 6 MONTHS ANNIVERSARY EVERYONE!\A\A>> Go to Settings/BetterDiscord/Themes for cake <<";
 }
 
 
@@ -806,7 +806,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     -webkit-transition: all 200ms ease!important;
     transition: all 200ms ease!important;
     position: absolute;
-    left: 14px;
+    left: 8px;
     bottom: 20px;
     z-index: 1;
     content: "";
@@ -1882,7 +1882,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     transition: all 100ms ease;
     content: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTkuNDMgMTIuOThjLjA0LS4zMi4wNy0uNjQuMDctLjk4cy0uMDMtLjY2LS4wNy0uOThsMi4xMS0xLjY1Yy4xOS0uMTUuMjQtLjQyLjEyLS42NGwtMi0zLjQ2Yy0uMTItLjIyLS4zOS0uMy0uNjEtLjIybC0yLjQ5IDFjLS41Mi0uNC0xLjA4LS43My0xLjY5LS45OGwtLjM4LTIuNjVDMTQuNDYgMi4xOCAxNC4yNSAyIDE0IDJoLTRjLS4yNSAwLS40Ni4xOC0uNDkuNDJsLS4zOCAyLjY1Yy0uNjEuMjUtMS4xNy41OS0xLjY5Ljk4bC0yLjQ5LTFjLS4yMy0uMDktLjQ5IDAtLjYxLjIybC0yIDMuNDZjLS4xMy4yMi0uMDcuNDkuMTIuNjRsMi4xMSAxLjY1Yy0uMDQuMzItLjA3LjY1LS4wNy45OHMuMDMuNjYuMDcuOThsLTIuMTEgMS42NWMtLjE5LjE1LS4yNC40Mi0uMTIuNjRsMiAzLjQ2Yy4xMi4yMi4zOS4zLjYxLjIybDIuNDktMWMuNTIuNCAxLjA4LjczIDEuNjkuOThsLjM4IDIuNjVjLjAzLjI0LjI0LjQyLjQ5LjQyaDRjLjI1IDAgLjQ2LS4xOC40OS0uNDJsLjM4LTIuNjVjLjYxLS4yNSAxLjE3LS41OSAxLjY5LS45OGwyLjQ5IDFjLjIzLjA5LjQ5IDAgLjYxLS4yMmwyLTMuNDZjLjEyLS4yMi4wNy0uNDktLjEyLS42NGwtMi4xMS0xLjY1ek0xMiAxNS41Yy0xLjkzIDAtMy41LTEuNTctMy41LTMuNXMxLjU3LTMuNSAzLjUtMy41IDMuNSAxLjU3IDMuNSAzLjUtMS41NyAzLjUtMy41IDMuNXoiLz48L3N2Zz4=);
     -webkit-transform: translate(0, 2px);
-            transform: translate(0, 2px)
+    transform: translate(0, 2px)
 }
 
 .user-settings-modal .tab-bar.SIDE .tab-bar-item.selected,
@@ -2998,9 +2998,13 @@ code:hover .copybutton {
 
 /*-----CALLS------*/
 
-.private-channel-call .status-deafened:after,
 .private-channel-call .status-muted:after {
     background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgwem0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4gICAgPHBhdGggZD0iTTE5IDExaC0xLjdjMCAuNzQtLjE2IDEuNDMtLjQzIDIuMDVsMS4yMyAxLjIzYy41Ni0uOTguOS0yLjA5LjktMy4yOHptLTQuMDIuMTdjMC0uMDYuMDItLjExLjAyLS4xN1Y1YzAtMS42Ni0xLjM0LTMtMy0zUzkgMy4zNCA5IDV2LjE4bDUuOTggNS45OXpNNC4yNyAzTDMgNC4yN2w2LjAxIDYuMDFWMTFjMCAxLjY2IDEuMzMgMyAyLjk5IDMgLjIyIDAgLjQ0LS4wMy42NS0uMDhsMS42NiAxLjY2Yy0uNzEuMzMtMS41LjUyLTIuMzEuNTItMi43NiAwLTUuMy0yLjEtNS4zLTUuMUg1YzAgMy40MSAyLjcyIDYuMjMgNiA2LjcyVjIxaDJ2LTMuMjhjLjkxLS4xMyAxLjc3LS40NSAyLjU0LS45TDE5LjczIDIxIDIxIDE5LjczIDQuMjcgM3oiLz48L3N2Zz4=);
+    background-size: 100%
+}
+
+.private-channel-call .status-deafened:after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTE2LjUgMTJjMC0xLjc3LTEuMDItMy4yOS0yLjUtNC4wM3YyLjIxbDIuNDUgMi40NWMuMDMtLjIuMDUtLjQxLjA1LS42M3ptMi41IDBjMCAuOTQtLjIgMS44Mi0uNTQgMi42NGwxLjUxIDEuNTFDMjAuNjMgMTQuOTEgMjEgMTMuNSAyMSAxMmMwLTQuMjgtMi45OS03Ljg2LTctOC43N3YyLjA2YzIuODkuODYgNSAzLjU0IDUgNi43MXpNNC4yNyAzTDMgNC4yNyA3LjczIDlIM3Y2aDRsNSA1di02LjczbDQuMjUgNC4yNWMtLjY3LjUyLTEuNDIuOTMtMi4yNSAxLjE4djIuMDZjMS4zOC0uMzEgMi42My0uOTUgMy42OS0xLjgxTDE5LjczIDIxIDIxIDE5LjczbC05LTlMNC4yNyAzek0xMiA0TDkuOTEgNi4wOSAxMiA4LjE4VjR6Ii8+ICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=);
     background-size: 100%
 }
 
@@ -6633,78 +6637,6 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     color: #fff
 }
 
-
-/*calls*/
-
-.private.chat .private-channel-call {
-    -webkit-transition: all 200ms cubic-bezier(0, 0, 0, 1);
-    transition: all 200ms cubic-bezier(0, 0, 0, 1);
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover) {
-    -webkit-transform: translate(0, -100px);
-    transform: translate(0, -100px);
-}
-
-.private.chat .private-channel-call .private-channel-call-participants {
-    -webkit-transition: all 200ms cubic-bezier(0, 0, 0, 1);
-    transition: all 200ms cubic-bezier(0, 0, 0, 1);
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover) .private-channel-call-participants {
-    -webkit-transform: translate(0, 77px)scale(0.6);
-    transform: translate(0, 77px)scale(0.6);
-}
-
-.private.chat .private-channel-call .private-channel-call-actions {
-    -webkit-transition: all 100ms ease;
-    transition: all 100ms ease
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover) .private-channel-call-actions {
-    opacity: 0
-}
-
-.private.chat .title-wrap+.private-channel-call+.content {
-    -webkit-transition: -webkit-transform 200ms cubic-bezier(0, 0, 0, 1);
-    transition: -webkit-transform 200ms cubic-bezier(0, 0, 0, 1);
-    transition: transform 200ms cubic-bezier(0, 0, 0, 1);
-    transition: transform 200ms cubic-bezier(0, 0, 0, 1), -webkit-transform 200ms cubic-bezier(0, 0, 0, 1);
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover)+.content {
-    -webkit-transform: translate(0, -100px);
-    transform: translate(0, -100px);
-}
-
-.private.chat .title-wrap+.private-channel-call+.content {
-    margin-bottom: -100px;
-}
-
-.private.chat .private-channel-call+.content .message-group {
-    -webkit-transform: translate(0, -100px);
-    transform: translate(0, -100px);
-    -webkit-transition: all 200ms cubic-bezier(0, 0, 0, 1);
-    transition: all 200ms cubic-bezier(0, 0, 0, 1)
-}
-
-.private.chat:hover .title-wrap:not(:hover)+.private-channel-call:not(:hover)+.content .message-group {
-    -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px)
-}
-
-.private.chat .private-channel-call+.content form {
-    -webkit-transform: translate(0, -100px);
-    transform: translate(0, -100px);
-    -webkit-transition: all 200ms cubic-bezier(0, 0, 0, 1);
-    transition: all 200ms cubic-bezier(0, 0, 0, 1);
-}
-
-.private.chat .private-channel-call+.content:hover form {
-    -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px)
-}
-
 .content form {
     background: #303030
 }
@@ -6733,6 +6665,12 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     background-size: 140%;
 }
 
+.icon.icon-file.webcode {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTI4NSA0MDguOSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMjg1IDQwOC45IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6bm9uZTt9LnN0MXtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTS0yODUsNDA4LjloMjR2MjRoLTI0VjQwOC45eiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0tMjcxLDQxMC45aC04Yy0xLjEsMC0yLDAuOS0yLDJ2MTZjMCwxLjEsMC45LDIsMiwyaDEyYzEuMSwwLDItMC45LDItMnYtMTJMLTI3MSw0MTAuOXogTS0yNzQuNSw0MjMuNmwtMS43LDAuNmwxLjcsMC42djAuOGwtMi41LTEuMXYtMC43bDIuNS0xLjFWNDIzLjZ6IE0tMjczLjYsNDI2LjRoLTAuNmwxLjYtNC42aDAuNkwtMjczLjYsNDI2LjR6IE0tMjY5LDQyNC41bC0yLjYsMS4xdi0wLjhsMS43LTAuNmwtMS43LTAuNnYtMC44bDIuNiwxLjFWNDI0LjV6IE0tMjcyLDQxNy45di01LjVsNS41LDUuNUgtMjcyeiIvPjwvc3ZnPg==);
+    background-position: 50%;
+    background-size: 140%;
+}
+
 .icon.icon-file {
     background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTYgMmMtMS4xIDAtMS45OS45LTEuOTkgMkw0IDIwYzAgMS4xLjg5IDIgMS45OSAySDE4YzEuMSAwIDItLjkgMi0yVjhsLTYtNkg2em03IDdWMy41TDE4LjUgOUgxM3oiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==);
     background-position: 50%;
@@ -6745,7 +6683,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .upload-area .upload-drop-modal {
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
     -webkit-transition: all 200ms ease;
     transition: all 200ms ease;
     opacity: 0;
@@ -6753,7 +6691,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .upload-area.in .upload-drop-modal {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1
 }
 
@@ -6799,7 +6737,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     display: block!important;
     border-radius: 100px;
     -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
+    transform: translate(0, -50%);
     opacity: 0.9;
 }
 
@@ -6808,7 +6746,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 }
 
 .theme-dark .message-group .embed-color-pill[style*="background-color"]+ .embed {
-    padding-left: 11px;
+    padding-left: 16px;
     padding-right: 12px
 }
 
@@ -6926,6 +6864,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     position: relative;
     background: none;
 }
+
 .premium-settings .premium-header.splash:before {
     width: 100%;
     background: url(https://canary.discordapp.com/assets/99d84e6e97d1a7737be24c391fbf57e3.svg) 100% 0px no-repeat;
@@ -6934,7 +6873,12 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     display: block;
     position: absolute;
     -webkit-filter: invert(85%) grayscale(100%);
-    pointer-events:none;
+    pointer-events: none;
+}
+
+.user-settings-streamer-mode .user-settings-streamer-mode-image,
+.emoji-picker .no-search-results .sad-discord {
+    -webkit-filter: invert(85%) grayscale(100%);
 }
 
 .premium-settings .premium-header .intro-subtitle {
@@ -6943,4 +6887,74 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .premium-settings .premium-feature .premium-feature-title {
     color: rgba(255, 255, 255, .3)
+}
+
+.incoming-call .incoming-call-inner {
+    background: #212121;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .6), 0 1px 2px rgba(255, 255, 255, .05) inset;
+}
+
+.incoming-call .options .option .icon {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNNi42MiAxMC43OWMxLjQ0IDIuODMgMy43NiA1LjE0IDYuNTkgNi41OWwyLjItMi4yYy4yNy0uMjcuNjctLjM2IDEuMDItLjI0IDEuMTIuMzcgMi4zMy41NyAzLjU3LjU3LjU1IDAgMSAuNDUgMSAxVjIwYzAgLjU1LS40NSAxLTEgMS05LjM5IDAtMTctNy42MS0xNy0xNyAwLS41NS40NS0xIDEtMWgzLjVjLjU1IDAgMSAuNDUgMSAxIDAgMS4yNS4yIDIuNDUuNTcgMy41Ny4xMS4zNS4wMy43NC0uMjUgMS4wMmwtMi4yIDIuMnoiLz48L3N2Zz4=);
+}
+
+.incoming-call {
+    z-index: 1000000000000;
+}
+
+.need-help-modal .footer {
+    background: #252525;
+}
+
+.need-help-modal .footer {
+    border-top: 0px;
+}
+
+.need-help-modal {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+
+.need-help-modal a {
+    border-radius: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.need-help-modal a:active {
+    border-radius: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #fff;
+    background: #738BD7;
+    -webkit-transition: 0ms;
+    transition: 0ms;
+    opacity: 1!important
+}
+
+.need-help-modal a:hover {
+    border-radius: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    opacity: 1!important;
+    color: #fff
+}
+
+.need-help-modal .header {
+    background: #141414
+}
+
+.need-help-modal .header input[type=text] {
+    border-radius: 0px;
+    box-shadow: 0 -2px 0 rgba(255, 255, 255, .05) inset;
+    border: none;
+    margin-bottom: 10px!important;
+    color: #fff!important
+}
+
+.need-help-modal .header input[type=text]:focus {
+    box-shadow: 0 -2px 0 rgba(255, 255, 255, .2) inset;
+    border: none;
 }
