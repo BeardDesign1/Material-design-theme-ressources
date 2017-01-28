@@ -15,15 +15,15 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.9.1";
+    content: "Current version: v1.9.2";
 }
 
 #bd-themes-pane .bda-slist:before {
-    content: "Current version: v1.9.1\A\A I've been working on this for 6 months now, wow.\AThanks a lot for all the help, feedback and love <3\A Here's a piece of birthday cake just for you, you're awesome 🍰\A\A - Made the color pill visible for embeds with custom ones.\A  (Also made it look cool)\A - Customised the Nitro icon in the settings as well as the page.\A - New Spinners! These ones are actually material styled yaay!\A - Edited file icons(when you upload a file to a chat), I might be missing\A    a few so please report it if you see a weird looking one.\A - Made the emoji search bar easier to read and better looking.\A - Fixed a LOT of bugs.\A\Av1.9.1\A - fixed bugs.(completely deleted off the collapsible calls,\A   that was a dumb idea sorry)\A - themed the help section.\A\A Thanks to:\A @czar#1455, @Jeder#2091, @Viniuau#3029, @💎#5201, @#s#8059,\A @Chilace#3179 (v1.9.1 ->) @Mafu#4398, @AmiT177#6849\A ... and more people for the feedback <3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.9.2\A\A I've been working on this for 6 months now, wow.\AThanks a lot for all the help, feedback and love <3\A Here's a piece of birthday cake just for you, you're awesome 🍰\A\Av1.9.1\A - fixed bugs.(completely deleted off the collapsible calls,\A   that was a dumb idea sorry)\A - themed the help section.\A\Av1.9.2\A - Themed the search suggestions (not finished yet, gimme some time)\A - Fixed the 'status' bug\A\A Thanks to:\A(v1.9.1 ->) @Mafu#4398, @AmiT177#6849, (v1.9.2 ->) @Aisopos#5958,\A @National#5425, @Freddie#3708, @Finicalmist#0001, @Lεgιφη #3985,\A @RedSkull#0824 ... and more people for the feedback <3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 .app:after {
-    content: "Current version: v1.9.1\A\A IT'S THE THEME'S 6 MONTHS ANNIVERSARY EVERYONE!\A\A>> Go to Settings/BetterDiscord/Themes for cake <<";
+    content: "Current version: v1.9.2\A\A IT'S THE THEME'S 6 MONTHS ANNIVERSARY EVERYONE!\A\A>> Go to Settings/BetterDiscord/Themes for cake <<";
 }
 
 
@@ -6957,4 +6957,87 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .need-help-modal .header input[type=text]:focus {
     box-shadow: 0 -2px 0 rgba(255, 255, 255, .2) inset;
     border: none;
+}
+
+
+/*Search popout*/
+
+.popout.popout-bottom.no-shadow.search-popout {
+    background: #212121;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2)!important;
+    border-radius: 3px!important
+}
+
+.popout.popout-bottom.no-shadow.search-popout {
+    -webkit-animation: searchpopout 300ms cubic-bezier(.49, .33, 0, 1);
+            animation: searchpopout 300ms cubic-bezier(.49, .33, 0, 1);
+}
+
+@-webkit-keyframes searchpopout {
+    0% {
+        -webkit-transform: translateX(-50%) translateY(-10px) translateZ(0px);
+                transform: translateX(-50%) translateY(-10px) translateZ(0px);
+        opacity: 0;
+    }
+}
+
+@keyframes searchpopout {
+    0% {
+        -webkit-transform: translateX(-50%) translateY(-10px) translateZ(0px);
+                transform: translateX(-50%) translateY(-10px) translateZ(0px);
+        opacity: 0;
+    }
+}
+
+.search-popout .option:after {
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 100%, 0) 0, #212121 80%);
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 0, #212121 80%);
+}
+
+.search-popout .option.selected {
+    background: #252525
+}
+
+.search-popout .option.selected:after {
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 100%, 0) 0, #252525 80%);
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 0, #252525 80%);
+}
+
+.search-popout .search-option .filter {
+    color: #fff;
+    background: #303030;
+    margin-top: -4px;
+    margin-bottom: -4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: -1px;
+    padding-right: 4px;
+    margin-left: -4px;
+    padding-left: 4px;
+    border-radius: 2px
+}
+
+.search-popout .search-option.selected .filter {
+    background: #353535;
+}
+
+.search-popout .results-group:before {
+    display: none!important;
+}
+
+.search-popout .search-query {
+    border: none;
+}
+
+
+/**/
+
+.popout.popout-top[style*="overflow: hidden"],
+.popout.popout-bottom[style*="overflow: hidden"] {
+    overflow: visible!important
+}
+
+.status-picker.popout-menu {
+    left: 70px!important;
+    position: fixed;
 }
