@@ -15,15 +15,15 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.9.2";
+    content: "Current version: v1.9.3";
 }
 
 #bd-themes-pane .bda-slist:before {
-    content: "Current version: v1.9.2\A\A I've been working on this for 6 months now, wow.\AThanks a lot for all the help, feedback and love <3\A Here's a piece of birthday cake just for you, you're awesome 🍰\A\Av1.9.1\A - fixed bugs.(completely deleted off the collapsible calls,\A   that was a dumb idea sorry)\A - themed the help section.\A\Av1.9.2\A - Themed the search suggestions (not finished yet, gimme some time)\A - Fixed the 'status' bug\A\A Thanks to:\A(v1.9.1 ->) @Mafu#4398, @AmiT177#6849, (v1.9.2 ->) @Aisopos#5958,\A @National#5425, @Freddie#3708, @Finicalmist#0001, @Lεgιφη #3985,\A @RedSkull#0824 ... and more people for the feedback <3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.9.3\A\Av1.9.2\A - Themed the search suggestions (not finished yet, gimme some time)\A - Fixed the 'status' bug\A\A Thanks to:\A(v1.9.2 ->) @Aisopos#5958,\A @National#5425, @Freddie#3708, @Finicalmist#0001, @Lεgιφη #3985,\A @RedSkull#0824, (v1.9.3 ->) @Jeder#2091, @ ... and more people for the feedback <3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 .app:after {
-    content: "Current version: v1.9.2\A\A IT'S THE THEME'S 6 MONTHS ANNIVERSARY EVERYONE!\A\A>> Go to Settings/BetterDiscord/Themes for cake <<";
+    content: "Current version: v1.9.3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 
@@ -761,7 +761,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .guilds-wrapper .guilds .guild.unread:before {
     z-index: 100;
     -webkit-transform: translate(72px, 10px) scale(1.2);
-    transform: translate(72px, 10px) scale(1.2);
+    transform: translate(66px, 9px) scale(1.2);
     background: #F04747;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 hsla(0, 0%, 100%, .15);
     height: 12px;
@@ -769,16 +769,17 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     margin-top: 0px;
     -webkit-transition: all 100ms ease !important;
     transition: all 100ms ease !important;
+    border-radius: 50%!important;
 }
 
 .guilds-wrapper .guilds .guild.selected:before {
     -webkit-transform: translate(72px, 10px) scale(0)!important;
-    transform: translate(72px, 10px) scale(0)!important;
+    transform: translate(66px, 9px) scale(0)!important;
 }
 
 .guilds-wrapper .guilds .guild.selected.unread:before {
     -webkit-transform: translate(72px, 10px) scale(1.2)!important;
-    transform: translate(72px, 10px) scale(1.2)!important;
+    transform: translate(66px, 9px) scale(1.3)!important;
 }
 
 .guilds-wrapper .guild.guilds-add {
@@ -2506,23 +2507,23 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 
 @-webkit-keyframes dot2 {
     from {
-        -webkit-transform: translate(72px, 10px) scale(0);
-        transform: translate(72px, 10px) scale(0);
+        -webkit-transform: translate(66px, 9px) scale(0);
+        transform: translate(66px, 9px) scale(0);
     }
     to {
-        -webkit-transform: translate(72px, 10px) scale(1.2);
-        transform: translate(72px, 10px) scale(1.2);
+        -webkit-transform: translate(66px, 9px) scale(1.2);
+        transform: translate(66px, 9px) scale(1.2);
     }
 }
 
 @keyframes dot2 {
     from {
-        -webkit-transform: translate(72px, 10px) scale(0);
-        transform: translate(72px, 10px) scale(0);
+        -webkit-transform: translate(66px, 9px) scale(0);
+        transform: translate(66px, 9px) scale(0);
     }
     to {
-        -webkit-transform: translate(72px, 10px) scale(1.2);
-        transform: translate(72px, 10px) scale(1.2);
+        -webkit-transform: translate(66px, 9px) scale(1.2);
+        transform: translate(66px, 9px) scale(1.2);
     }
 }
 
@@ -6964,19 +6965,19 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .popout.popout-bottom.no-shadow.search-popout {
     background: #212121;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .2)!important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2), 0 0 1px 1px rgba(255, 255, 255, .02) inset!important;
     border-radius: 3px!important
 }
 
 .popout.popout-bottom.no-shadow.search-popout {
     -webkit-animation: searchpopout 300ms cubic-bezier(.49, .33, 0, 1);
-            animation: searchpopout 300ms cubic-bezier(.49, .33, 0, 1);
+    animation: searchpopout 300ms cubic-bezier(.49, .33, 0, 1);
 }
 
 @-webkit-keyframes searchpopout {
     0% {
         -webkit-transform: translateX(-50%) translateY(-10px) translateZ(0px);
-                transform: translateX(-50%) translateY(-10px) translateZ(0px);
+        transform: translateX(-50%) translateY(-10px) translateZ(0px);
         opacity: 0;
     }
 }
@@ -6984,7 +6985,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 @keyframes searchpopout {
     0% {
         -webkit-transform: translateX(-50%) translateY(-10px) translateZ(0px);
-                transform: translateX(-50%) translateY(-10px) translateZ(0px);
+        transform: translateX(-50%) translateY(-10px) translateZ(0px);
         opacity: 0;
     }
 }
@@ -7010,8 +7011,8 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     margin-bottom: -4px;
     padding-top: 4px;
     padding-bottom: 4px;
-    margin-right: -1px;
-    padding-right: 4px;
+    margin-right: 1px;
+    padding-right: 2px;
     margin-left: -4px;
     padding-left: 4px;
     border-radius: 2px
@@ -7032,12 +7033,16 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 /**/
 
-.popout.popout-top[style*="overflow: hidden"],
-.popout.popout-bottom[style*="overflow: hidden"] {
+.popout.popout-top[style*="overflow: hidden"] {
     overflow: visible!important
 }
 
 .status-picker.popout-menu {
     left: 70px!important;
     position: fixed;
+}
+
+.theme-dark .search-answer,
+.theme-dark .search-filter {
+    background: #303030
 }
