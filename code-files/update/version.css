@@ -19,11 +19,11 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 }
 
 #bd-themes-pane .bda-slist:before {
-    content: "Current version: v1.9.3\A\Av1.9.2\A - Themed the search suggestions (not finished yet, gimme some time)\A - Fixed the 'status' bug\A\A Thanks to:\A(v1.9.2 ->) @Aisopos#5958,\A @National#5425, @Freddie#3708, @Finicalmist#0001, @Lεgιφη #3985,\A @RedSkull#0824, (v1.9.3 ->) @Jeder#2091, @ ... and more people for the feedback <3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.9.3\A\Av1.9.2\A - Themed the search suggestions (not finished yet, gimme some time)\A - Fixed the 'status' bug\A\Av1.9.3\A - Finished theming the search popout.\A - Themed the 'add/join server' modal.\A - Some more stuff that I can't remember haha.\A - Added a cool context menu(right click menu) animation. - Fixed the 'typing' bug.\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 .app:after {
-    content: "Current version: v1.9.3\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.9.3\A\APlease help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 
@@ -80,6 +80,34 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     from {
         -webkit-transform: translate(0, -100%);
         transform: translate(0, -100%);
+    }
+}
+
+@-webkit-keyframes slide-left {
+    from {
+        -webkit-transform: translate(-100);
+        transform: translate(-100);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        -webkit-transform: translate(-100);
+        transform: translate(-100);
+    }
+}
+
+@-webkit-keyframes slide-right {
+    from {
+        -webkit-transform: translate(0);
+        transform: translate(100%);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        -webkit-transform: translate(0);
+        transform: translate(100%);
     }
 }
 
@@ -265,6 +293,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     opacity: .95;
     -webkit-transition: all 200ms ease!important;
     transition: all 200ms ease!important;
+    overflow-y: visible!important
 }
 
 .typing .text {
@@ -944,23 +973,107 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     background: #212121!important;
     border-radius: 2px;
     padding: 0px 0px;
-    -webkit-transform-origin: top left;
-    transform-origin: top left;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3)!important;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4)!important;
     -webkit-animation: opacity 100ms ease;
-    animation: opacity 100ms ease
+    animation: opacity 100ms linear, context-open 150ms cubic-bezier(0, 0, 0, 1), shadow-anim 200ms ease;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #252525
+}
+
+@-webkit-keyframes context-open {
+    0% {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@keyframes context-open {
+    0% {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@-webkit-keyframes shadow-anim {
+    0% {
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes shadow-anim {
+    0% {
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 2px 25px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.context-menu.invertY {
+    -webkit-animation: opacity 100ms linear, context-open-invertY 150ms cubic-bezier(0, 0, 0, 1), shadow-anim 200ms ease!important;
+            animation: opacity 100ms linear, context-open-invertY 150ms cubic-bezier(0, 0, 0, 1), shadow-anim 200ms ease!important;
+    margin-top: -29px;
+}
+
+.context-menu.invertY[style*="top: 10px;"],
+.context-menu.invertY[style*="top: 11px;"],
+.context-menu.invertY[style*="top: 12px;"],
+.context-menu.invertY[style*="top: 13px;"],
+.context-menu.invertY[style*="top: 14px;"],
+.context-menu.invertY[style*="top: 15px;"],
+.context-menu.invertY[style*="top: 16px;"],
+.context-menu.invertY[style*="top: 17px;"],
+.context-menu.invertY[style*="top: 18px;"],
+.context-menu.invertY[style*="top: 19px;"],
+.context-menu.invertY[style*="top: 20px;"],
+.context-menu.invertY[style*="top: 21px;"],
+.context-menu.invertY[style*="top: 22px;"],
+.context-menu.invertY[style*="top: 23px;"],
+.context-menu.invertY[style*="top: 24px;"],
+.context-menu.invertY[style*="top: 25px;"],
+.context-menu.invertY[style*="top: 26px;"],
+.context-menu.invertY[style*="top: 27px;"],
+.context-menu.invertY[style*="top: 28px;"],
+.context-menu.invertY[style*="top: 29px;"],
+.context-menu.invertY[style*="top: 30px;"],
+.context-menu.invertY[style*="top: 31px;"],
+.context-menu.invertY[style*="top: 32px;"],
+.context-menu.invertY[style*="top: 33px;"],
+.context-menu.invertY[style*="top: 34px;"],
+.context-menu.invertY[style*="top: 35px;"],
+.context-menu.invertY[style*="top: 36px;"],
+.context-menu.invertY[style*="top: 37px;"],
+.context-menu.invertY[style*="top: 38px;"],
+.context-menu.invertY[style*="top: 39px;"] {
+    margin-top: 0!important
+}
+
+.context-menu .item-group:not(:first-child):not(:empty) {
+    border-color: #242424!important
+}
+
+@-webkit-keyframes context-open-invertY {
+    0% {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+    }
+}
+
+@keyframes context-open-invertY {
+    0% {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+    }
 }
 
 .theme-dark.context-menu .item-group {
     border-color: rgba(255, 255, 255, .03)!important
-}
-
-.context-menu .item:first-of-type {
-    border-radius: 2px 2px 0 0
-}
-
-.context-menu .item:last-of-type {
-    border-radius: 0 0 2px 2px
 }
 
 .context-menu .item {
@@ -984,7 +1097,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .context-menu .item:active {
     -webkit-transition: all 0ms;
     transition: all 0ms;
-    background: rgba(225, 225, 225, 0.1)!important;
+    background: #738BD7!important;
 }
 
 .guild-channels .channel-voice-states li {
@@ -1769,11 +1882,6 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     background: #697EC4;
     -webkit-transform: scale(0.6);
     transform: scale(0.6);
-    -webkit-transition: all 100ms ease, transform 200ms cubic-bezier(.35, .01, 0, 1);
-    -webkit-transition: all 100ms ease, -webkit-transform 100ms cubic-bezier(.35, .01, 0, 1);
-    transition: all 100ms ease, -webkit-transform 100ms cubic-bezier(.35, .01, 0, 1);
-    transition: all 100ms ease, transform 100ms cubic-bezier(.35, .01, 0, 1);
-    transition: all 100ms ease, transform 100ms cubic-bezier(.35, .01, 0, 1), -webkit-transform 100ms cubic-bezier(.35, .01, 0, 1);
     border-radius: 50%;
     cursor: pointer;
     box-shadow: none;
@@ -1849,11 +1957,6 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .slider-handle-track {
     margin-right: -13px;
     margin-left: -13px;
-}
-
-.slider-bar-fill {
-    -webkit-transition: all 100ms ease;
-    transition: all 100ms ease;
 }
 
 .context-menu .slider .slider-handle {
@@ -3094,14 +3197,27 @@ code:hover .copybutton {
 }
 
 .call-avatar .avatar-xxlarge {
-    -webkit-transition: all 400ms cubic-bezier(0, 0, 0, 1);
-    transition: all 400ms cubic-bezier(0, 0, 0, 1);
+    -webkit-transition: transform 400ms cubic-bezier(0, 0, 0, 1), opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(0, 0, 0, 1);
+    -webkit-transition: opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(0, 0, 0, 1), -webkit-transform 400ms cubic-bezier(0, 0, 0, 1);
+    transition: opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(0, 0, 0, 1), -webkit-transform 400ms cubic-bezier(0, 0, 0, 1);
+    transition: transform 400ms cubic-bezier(0, 0, 0, 1), opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(0, 0, 0, 1);
+    transition: transform 400ms cubic-bezier(0, 0, 0, 1), opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(0, 0, 0, 1), -webkit-transform 400ms cubic-bezier(0, 0, 0, 1);
+    cursor: pointer;
 }
 
 .call-avatar .avatar-xxlarge:hover {
     -webkit-transform: scale(0.98);
     transform: scale(0.98);
-    opacity: 0.8
+    opacity: 0.8;
+}
+
+.call-avatar .avatar-xxlarge.speaking {
+    -webkit-transition: transform 400ms cubic-bezier(0, 0, 0, 1), opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(1, 0, 1, 1);
+    -webkit-transition: opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(1, 0, 1, 1), -webkit-transform 400ms cubic-bezier(0, 0, 0, 1);
+    transition: opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(1, 0, 1, 1), -webkit-transform 400ms cubic-bezier(0, 0, 0, 1);
+    transition: transform 400ms cubic-bezier(0, 0, 0, 1), opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(1, 0, 1, 1);
+    transition: transform 400ms cubic-bezier(0, 0, 0, 1), opacity 400ms cubic-bezier(0, 0, 0, 1), box-shadow 100ms cubic-bezier(1, 0, 1, 1), -webkit-transform 400ms cubic-bezier(0, 0, 0, 1);
+    box-shadow: 0 0 0 2px #141414 inset, 0 0 0 5px #43B581;
 }
 
 .region-select-popout .region-select-name {
@@ -3110,10 +3226,6 @@ code:hover .copybutton {
 
 .region-select-popout .check {
     width: 20px;
-}
-
-.private-channel-call .btn-text.btn-danger {
-    border-radius:
 }
 
 .image-gif {
@@ -5056,7 +5168,27 @@ img[src="/assets/4a3496c5b0924198ae0234331c912d1b.png"] {
 }
 
 .private-channels .scroller::-webkit-scrollbar {
-    display: none
+    background: rgba(225, 225, 225, 0.05);
+    width: 6px!important;
+}
+
+.private-channels .scroller::-webkit-scrollbar-thumb:hover,
+.private-channels .scroller::-webkit-scrollbar-thumb {
+    border: none !important;
+    background-color: rgba(225, 225, 225, 0.2) !important;
+    display: initial;
+    border-radius: 0!important;
+}
+
+.private-channels .scroller::-webkit-scrollbar-thumb:active {
+    border: none !important;
+    background-color: rgba(225, 225, 225, 0.4) !important;
+    display: initial;
+    border-radius: 0!important
+}
+
+.private-channels .scroller {
+    overflow-x: hidden;
 }
 
 .channel.channel-voice:hover a {
@@ -7042,7 +7174,410 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     position: fixed;
 }
 
-.theme-dark .search-answer,
 .theme-dark .search-filter {
     background: #303030
+}
+
+.theme-dark .search-answer {
+    background: #738BD7
+}
+
+.search-popout .option .non-text {
+    color: rgba(255, 255, 255, .7)
+}
+
+.search-popout .option .answer {
+    color: rgba(255, 255, 255, .7)
+}
+
+.search-popout .results-group .search-clear-history {
+    background: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTE1IDE2aDR2MmgtNHptMC04aDd2MmgtN3ptMCA0aDZ2MmgtNnpNMyAxOGMwIDEuMS45IDIgMiAyaDZjMS4xIDAgMi0uOSAyLTJWOEgzdjEwek0xNCA1aC0zbC0xLTFINkw1IDVIMnYyaDEyeiIvPiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+) 50% 50% no-repeat;
+    opacity: .6;
+    background-size: 110%
+}
+
+.search-popout .results-group .search-learn-more {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTEgMThoMnYtMmgtMnYyem0xLTE2QzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQxIDAtOC0zLjU5LTgtOHMzLjU5LTggOC04IDggMy41OSA4IDgtMy41OSA4LTggOHptMC0xNGMtMi4yMSAwLTQgMS43OS00IDRoMmMwLTEuMS45LTIgMi0yczIgLjkgMiAyYzAgMi0zIDEuNzUtMyA1aDJjMC0yLjI1IDMtMi41IDMtNSAwLTIuMjEtMS43OS00LTQtNHoiLz48L3N2Zz4=);
+    background-size: 90%
+}
+
+.search-popout .option.selected:before {
+    background: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTE5IDNINWMtMS4xMSAwLTIgLjktMiAydjE0YzAgMS4xLjg5IDIgMiAyaDE0YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bS0yIDEwaC00djRoLTJ2LTRIN3YtMmg0VjdoMnY0aDR2MnoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==) 0 50% no-repeat;
+    opacity: 0.6;
+}
+
+.search-popout .option.selected:hover::before {
+    opacity: 0.8;
+}
+
+.guild-channels .channel-voice-states li.speaking .avatar-small {
+    background-color: #66BB6A
+}
+
+.embed-thumbnail.embed-thumbnail-video img[href*="https://i.ytimg.com/"][width="400"][height="300"],
+.embed-thumbnail.embed-thumbnail-video iframe[src*="https://www.youtube.com/embed/"][width="400"][height="300"] {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 226px;
+    border-radius: 2px
+}
+
+.new-messages-indicator {
+    -webkit-animation: slide-down 200ms ease;
+            animation: slide-down 200ms ease
+}
+
+.new-messages-indicator.bottom {
+    -webkit-animation: slide-up 200ms ease;
+            animation: slide-up 200ms ease
+}
+
+.search-popout .option strong,
+.search-popout .option.user .displayed-nick {
+    color: #fff;
+    background: #303030;
+    padding: 4px 5px;
+    border-radius: 2px;
+    margin-right: 2px
+}
+
+.search-popout .option:active strong,
+.search-popout .option.user:active .displayed-nick {
+    color: #fff;
+    background: #738BD7;
+    padding: 4px 5px;
+    border-radius: 2px;
+    margin-right: 2px
+}
+
+.search-popout .search-option:active .filter {
+    background: #738BD7;
+}
+
+.search-popout .date-picker {
+    border: none;
+}
+
+.react-datepicker {
+    background: #212121
+}
+
+.react-datepicker .react-datepicker__header {
+    background-color: transparent
+}
+
+.react-datepicker .react-datepicker__day--disabled,
+.react-datepicker .react-datepicker__day--outside-month {
+    border: none!important;
+    background-color: #303030!important;
+    color: #fff!important;
+    opacity: 0.7
+}
+
+.react-datepicker .react-datepicker__day--disabled:hover,
+.react-datepicker .react-datepicker__day--outside-month:hover {
+    border: none!important;
+    background-color: #303030!important;
+    color: #fff!important;
+    opacity: 1
+}
+
+.react-datepicker .react-datepicker__day {
+    border: none!important;
+}
+
+.react-datepicker .react-datepicker__day {
+    color: #fff;
+    background: #303030
+}
+
+.react-datepicker .react-datepicker__day:hover {
+    color: #fff;
+    background: #353535
+}
+
+.react-datepicker .react-datepicker__day:active {
+    background: #738BD7;
+    opacity: 1
+}
+
+.react-datepicker .react-datepicker__day--disabled:active,
+.react-datepicker .react-datepicker__day--outside-month:active {
+    border: none!important;
+    background-color: #738BD7!important;
+    color: #fff!important
+}
+
+.react-datepicker .react-datepicker__day.react-datepicker__day--disabled,
+.react-datepicker .react-datepicker__day.react-datepicker__day--disabled:hover {
+    opacity: 0.4!important;
+    pointer-events: none
+}
+
+.react-datepicker .react-datepicker__day-name {
+    color: rgba(255, 255, 255, .7)
+}
+
+.react-datepicker .react-datepicker__current-month {
+    color: rgba(255, 255, 255, .6);
+    border: none
+}
+
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--next,
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--previous {
+    border: none;
+    background-color: #303030;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIyNSI+PHBhdGggZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTcuMzM4IDEyLjQ4NWMtNC4xNTYgNC4xNTYtOC4zMTIgOC4zMTItMTIuNDY4IDEyLjQ2Ny0xLjQwMi0xLjQwMi0yLjgwNS0yLjgwNC00LjIwNy00LjIwNiAyLjc1Ni0yLjc1NyA1LjUxMy01LjUxNCA4LjI3LTguMjdDNi4xNzYgOS43MiAzLjQxOSA2Ljk2My42NjMgNC4yMDdMNC44NyAwYy0uMDU4LS4wNTkgMTIuNTU1IDEyLjU2MiAxMi40NjggMTIuNDg1eiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+)50% no-repeat;
+    background-size: 50%!important
+}
+
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--next:hover,
+.react-datepicker .react-datepicker__navigation.react-datepicker__navigation--previous:hover {
+    border: none;
+    background-color: #383838;
+}
+
+.search-popout .date-picker .date-picker-hint {
+    border: none;
+    padding-top: 0
+}
+
+.search-popout .search-query .search-for strong {
+    color: #fff;
+    border-radius: 2px!important
+}
+
+
+/**/
+
+.create-guild-container {
+    visibility: visible;
+    overflow: hidden;
+    background: none;
+}
+
+.create-guild-container .create-or-join {
+    -webkit-transform: none!important;
+            transform: none!important;
+    opacity: 1;
+    -webkit-transition: 200ms ease;
+    transition: 200ms ease;
+}
+
+.create-guild-container .create-or-join[style*="transform: translateX(0%)"] {
+    opacity: 1
+}
+
+.theme-dark .layers {
+    background: none!important
+}
+
+.create-guild-container .action {
+    background: #212121
+}
+
+.create-guild-container .create-or-join[style*="transform: translateX(0%)"] .action.create:hover,
+.create-guild-container .create-or-join[style*="transform: translateX(0%)"] .action.create {
+    position: absolute!important;
+    width: 228px;
+    height: 295px;
+    left: 24px;
+    top: 94px;
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+}
+
+.create-guild-container .create-or-join[style*="transform: translateX(0%)"] .action.join:hover,
+.create-guild-container .create-or-join[style*="transform: translateX(0%)"] .action.join {
+    position: absolute!important;
+    width: 228px;
+    height: 295px;
+    right: 24px;
+    top: 94px;
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+}
+
+.create-guild-container .action.create:hover {
+    position: absolute!important;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: 200ms ease;
+    transition: 200ms ease;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    z-index: 2;
+    opacity: 1;
+}
+
+.create-guild-container .action.join:hover {
+    position: absolute!important;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    -webkit-transition: 200ms ease;
+    transition: 200ms ease;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    z-index: 2;
+    opacity: 1;
+}
+
+.create-guild-container .action.create:not(:hover) {
+    position: absolute!important;
+    width: 228px;
+    height: 295px;
+    left: 24px;
+    top: 94px;
+    -webkit-transition: 200ms ease, opacity 150ms ease;
+    transition: 200ms ease, opacity 150ms ease;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    z-index: 1;
+    opacity: 0;
+}
+
+.create-guild-container .action.join:not(:hover) {
+    position: absolute!important;
+    width: 228px;
+    height: 295px;
+    right: 24px;
+    top: 94px;
+    -webkit-transition: 200ms ease, opacity 150ms ease;
+    transition: 200ms ease, opacity 150ms ease;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    z-index: 1;
+    opacity: 0;
+}
+
+.create-guild-container .action:active {
+    -webkit-transform: scale(1.05)!important;
+            transform: scale(1.05)!important;
+    -webkit-transition: 100ms ease!important;
+    transition: 100ms ease!important
+}
+
+.create-guild-container .create-or-join[style*="transform: translateX(0%)"] .action * {
+    opacity: 1;
+    -webkit-transition: 50ms ease;
+    transition: 50ms ease;
+}
+
+.create-guild-container .create-or-join .action * {
+    opacity: 0;
+    -webkit-transition: 50ms ease;
+    transition: 50ms ease;
+}
+
+.create-guild-container .create-or-join .form-inner {
+    background: #141414
+}
+
+.create-guild-container .action {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: 200ms ease;
+    transition: 200ms ease;
+}
+
+.create-guild-container .create-or-join .actions .or {
+    display: none;
+}
+
+.create-guild-container .create-guild[style*="transform: translateX(0%) translateZ(0px);"],
+.create-guild-container .join-server[style*="transform: translateX(0%) translateZ(0px);"] {
+    -webkit-transition: 300ms ease!important;
+    transition: 300ms ease!important;
+    opacity: 1;
+    -webkit-transform: none!important;
+            transform: none!important;
+}
+
+.create-guild-container .create-guild,
+.create-guild-container .join-server {
+    -webkit-transition: 200ms ease!important;
+    transition: 200ms ease!important;
+    opacity: 1;
+    -webkit-transform: none!important;
+            transform: none!important;
+}
+
+.create-guild-container .create-guild,
+.create-guild-container .join-server {
+    background: #212121
+}
+
+.create-guild-container .create-guild[style*="transform: translateX(0%) translateZ(0px);"] .form-inner,
+.create-guild-container .join-server[style*="transform: translateX(0%) translateZ(0px);"] .form-inner,
+.create-guild-container .create-guild[style*="transform: translateX(0%) translateZ(0px);"] .form-actions,
+.create-guild-container .join-server[style*="transform: translateX(0%) translateZ(0px);"] .form-actions {
+    opacity: 1;
+    -webkit-transition: 100ms ease;
+    transition: 100ms ease;
+}
+
+.create-guild-container .create-guild .form-inner,
+.create-guild-container .join-server .form-inner,
+.create-guild-container .create-guild .form-actions,
+.create-guild-container .join-server .form-actions {
+    opacity: 0;
+    -webkit-transition: 100ms ease;
+    transition: 100ms ease;
+}
+
+.create-guild-container .action.create .action-icon {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTQsNEgyMEExLDEgMCAwLDEgMjEsNVY5QTEsMSAwIDAsMSAyMCwxMEg0QTEsMSAwIDAsMSAzLDlWNUExLDEgMCAwLDEgNCw0TTksOEgxMFY2SDlWOE01LDZWOEg3VjZINU04LDE2SDExVjEzSDEzVjE2SDE2VjE4SDEzVjIxSDExVjE4SDhWMTZaIiAvPjwvc3ZnPg==) 50% no-repeat;
+    background-size: 33%;
+}
+
+.create-guild-container .action.join .action-icon {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTE5ODcgMTk4OSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMTk4NyAxOTg5IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTE5NjcsMTk5M2gtMTZjLTAuNiwwLTEsMC40LTEsMXY0YzAsMC42LDAuNCwxLDEsMWgxNmMwLjYsMCwxLTAuNCwxLTF2LTRDLTE5NjYsMTk5My40LTE5NjYuNCwxOTkzLTE5NjcsMTk5M3ogTS0xOTgwLDE5OTdoLTJ2LTJoMlYxOTk3eiBNLTE5NzcsMTk5N2gtMXYtMmgxVjE5OTd6Ii8+PHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSItMTk3Mi40LDIwMDQuNiAtMTk3NC45LDIwMDIuMSAtMTk3Ni4zLDIwMDMuNSAtMTk3NC44LDIwMDUgLTE5NzksMjAwNSAtMTk3OSwyMDA3IC0xOTc0LjgsMjAwNyAtMTk3Ni4zLDIwMDguNSAtMTk3NC45LDIwMDkuOSAtMTk3Mi40LDIwMDcuNCAtMTk3MSwyMDA2ICIvPjwvc3ZnPg==) 50% no-repeat;
+    background-size: 33%;
+}
+
+.create-guild-container .join-server .link-container input {
+    border: none!important;
+    border-bottom: 2px solid rgba(255, 255, 255, .05)!important;
+    border-radius: 0;
+}
+
+.create-guild-container .join-server .link-container input:hover {
+    border: none!important;
+    border-bottom: 2px solid rgba(255, 255, 255, .1)!important
+}
+
+.create-guild-container .join-server .link-container input:focus {
+    border: none!important;
+    border-bottom: 2px solid #738BD7!important
+}
+
+.create-guild-container .join-server .link-container label {
+    color: rgba(255, 255, 255, .4);
+    margin-top: 10px
+}
+
+.create-guild-container .form-actions .btn-default {
+    color: rgba(255, 255, 255, .6);
+}
+
+.create-guild-container .form-actions .btn-default:before {
+    background: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMjAgMTFINy44M2w1LjU5LTUuNTlMMTIgNGwtOCA4IDggOCAxLjQxLTEuNDFMNy44MyAxM0gyMHYtMnoiLz48L3N2Zz4=);
+    background-size: 100%;
+    opacity: .6;
+    background-position: 0 50%;
+}
+
+.region-select:active button {
+    background: #697EC4;
+    color: #fff
 }
