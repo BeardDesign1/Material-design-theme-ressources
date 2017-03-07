@@ -15,15 +15,11 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v1.9.3";
+    content: "Current version: v1.9.5";
 }
 
 #bd-themes-pane .bda-slist:before {
-    content: "Current version: v1.9.3\A\Av1.9.2\A - Themed the search suggestions (not finished yet, gimme some time)\A - Fixed the 'status' bug\A\Av1.9.3\A - Finished theming the search popout.\A - Themed the 'add/join server' modal.\A - Some more stuff that I can't remember haha.\A - Added a cool context menu(right click menu) animation. - Fixed the 'typing' bug.\A\A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
-}
-
-.app:after {
-    content: "Current version: v1.9.3\A\APlease help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v1.9.5\A\Av1.9.3\A - Finished theming the search popout.\A - Themed the 'add/join server' modal.\A - Some more stuff that I can't remember haha.\A - Added a cool context menu(right click menu) animation.\A - Fixed the 'typing' bug.\A\Av1.9.5 - fixed many bugs.\A - Updated the colors of the quickswitcher\A - Deleted the welcome message(it was really useless).\A\APlease help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
 
 
@@ -108,72 +104,6 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     from {
         -webkit-transform: translate(0);
         transform: translate(100%);
-    }
-}
-
-@-webkit-keyframes vrsion {
-    from {
-        -webkit-transform: translate(0, -100%);
-        transform: translate(0, -100%);
-        visibility: hidden;
-        opacity: 0;
-    }
-    0.1% {
-        visibility: visible;
-        opacity: 0;
-    }
-    10% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    90% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    99.9 {
-        visibility: visible;
-        opacity: 0;
-    }
-    to {
-        -webkit-transform: translate(0, -100%);
-        transform: translate(0, -100%);
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
-@keyframes vrsion {
-    from {
-        -webkit-transform: translate(0, -100%);
-        transform: translate(0, -100%);
-        visibility: hidden;
-        opacity: 0;
-    }
-    0.1% {
-        visibility: visible;
-        opacity: 0;
-    }
-    10% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    90% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    99.9 {
-        visibility: visible;
-        opacity: 0;
-    }
-    to {
-        -webkit-transform: translate(0, -100%);
-        transform: translate(0, -100%);
-        visibility: hidden;
-        opacity: 0;
     }
 }
 
@@ -609,11 +539,14 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .tooltip {
     background-color: #303030 !important;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5)!important;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2)!important;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 13px;
-    z-index: 10000000
+    z-index: 1000000000000000000;
+    pointer-events: none;
+    -webkit-animation: opacity 50ms ease;
+            animation: opacity 50ms ease;
 }
 
 .tooltip:after {
@@ -1015,7 +948,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .context-menu.invertY {
     -webkit-animation: opacity 100ms linear, context-open-invertY 150ms cubic-bezier(0, 0, 0, 1), shadow-anim 200ms ease!important;
-            animation: opacity 100ms linear, context-open-invertY 150ms cubic-bezier(0, 0, 0, 1), shadow-anim 200ms ease!important;
+    animation: opacity 100ms linear, context-open-invertY 150ms cubic-bezier(0, 0, 0, 1), shadow-anim 200ms ease!important;
     margin-top: -29px;
 }
 
@@ -1591,6 +1524,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     background: #303030!important
 }
 
+.bd-plugin-container .checkbox .checkbox-inner span:before,
 .bda-slist .checkbox .checkbox-inner span:before {
     border-color: #303030!important;
 }
@@ -1996,7 +1930,8 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .user-settings-modal .tab-bar.SIDE .tab-bar-item:hover {
     -webkit-transition: 0ms;
-    transition: 0ms
+    -webkit-transition: 10ms ease;
+    transition: 10ms ease
 }
 
 .user-settings-modal .tab-bar.SIDE .tab-bar-item {
@@ -2005,6 +1940,13 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     padding-top: 10px;
     opacity: .3;
     color: #fff;
+    -webkit-transition: all 50ms ease;
+    transition: all 50ms ease;
+}
+
+.tab-bar.SIDE .tab-bar-item {
+    -webkit-transition: all 50ms ease;
+    transition: all 50ms ease;
 }
 
 .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(2):before {
@@ -3917,10 +3859,10 @@ span {
     content: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTguNTkgMTYuMzRsNC41OC00LjU5LTQuNTgtNC41OUwxMCA1Ljc1bDYgNi02IDZ6Ii8+ICAgIDxwYXRoIGQ9Ik0wLS4yNWgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==);
     position: absolute;
     right: 5px;
-    margin-top: -4px;
     opacity: .6;
     -webkit-transition: all 100ms ease;
     transition: all 100ms ease;
+    top: 5px;
 }
 
 .item.item-subMenu:hover:after {
@@ -5131,26 +5073,6 @@ img[src="/assets/4a3496c5b0924198ae0234331c912d1b.png"] {
 
 /*-------------------*/
 
-.app:after {
-    z-index: 5000000000000000000000000000000000000000000;
-    color: #fff;
-    background: #43B581;
-    top: 65px;
-    right: 10px;
-    position: absolute;
-    border-radius: 2px;
-    padding: 10px 15px;
-    -webkit-transform: translate(0, -100%);
-    transform: translate(0, 00%);
-    -webkit-animation: vrsion 11s cubic-bezier(.63, 0, 0, 1);
-    animation: vrsion 11s cubic-bezier(.63, 0, 0, 1);
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    white-space: pre;
-    visibility: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .1), 0 1px 2px rgba(255, 255, 255, .2);
-}
-
 .scroller.guild-channels {
     box-shadow: 0 17px 10px -15px rgba(0, 0, 0, 0.1) inset, 0 -20px 25px -15px rgba(0, 0, 0, 0.1) inset;
 }
@@ -5703,6 +5625,23 @@ a[href="/channels/@me"] .badge {
     background-color: #1DA1F2
 }
 
+iframe[src*="https://www.youtube.com"]:after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-size: 50%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    pointer-events: none;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTAgNy4zNDVjMC0xLjI5NC4xNi0yLjU5LjE2LTIuNTlzLjE1Ni0xLjEuNjM2LTEuNTg3Yy42MDgtLjYzNyAxLjQwOC0uNjE3IDEuNzY0LS42ODRDMy44NCAyLjM2IDggMi4zMjQgOCAyLjMyNHMzLjM2Mi4wMDQgNS42LjE2NmMuMzE0LjAzOC45OTYuMDQgMS42MDQuNjc4LjQ4LjQ4Ni42MzYgMS41ODguNjM2IDEuNTg4UzE2IDYuMDUgMTYgNy4zNDZ2MS4yNThjMCAxLjI5Ni0uMTYgMi41OS0uMTYgMi41OXMtLjE1NiAxLjEwMi0uNjM2IDEuNTg4Yy0uNjA4LjYzOC0xLjI5LjY0LTEuNjA0LjY3OC0yLjIzOC4xNjItNS42LjE2Ni01LjYuMTY2cy00LjE2LS4wMzctNS40NC0uMTZjLS4zNTYtLjA2Ny0xLjE1Ni0uMDQ3LTEuNzY0LS42ODQtLjQ4LS40ODctLjYzNi0xLjU4Ny0uNjM2LTEuNTg3UzAgOS45IDAgOC42MDV2LTEuMjZ6bTYuMzQ4IDIuNzNWNS41OGw0LjMyMyAyLjI1NS00LjMyIDIuMjR6Ii8+PC9zdmc+);
+    background-color: #CD201F
+}
+
 .embed-tweet .embed-thumbnail img[href*="https://pbs.twimg.com/profile_images"] {
     display: none;
 }
@@ -6038,6 +5977,7 @@ a[href="/channels/@me"] .badge {
     opacity: 0.03
 }
 
+.bd-plugin-container,
 .bda-slist li {
     background: #303030!important;
     border-radius: 2px;
@@ -6047,13 +5987,26 @@ a[href="/channels/@me"] .badge {
     box-shadow: 0 2px 10px rgba(0, 0, 0, .2)
 }
 
-.bda-slist .bda-name {
-    color: rgba(255, 255, 255, .6)
+.bd-plugin-container {
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-right: 10px;
 }
 
+.bd-plugin-container .bd-plugin-info .bd-plugin-name,
+.bda-slist .bda-name {
+    color: rgba(255, 255, 255, .6)!important;
+    border: none!important;
+}
+
+.bd-plugin-container .bd-plugin-info .bd-plugin-description,
 .bda-slist .bda-description {
     border-top: 1px solid rgba(255, 255, 255, .05);
     color: rgba(255, 255, 255, .7)
+}
+
+.bd-plugin-container .bd-plugin-info .bd-plugin-description {
+    margin-top: 5px
 }
 
 .bda-slist .checkbox:before {
@@ -6995,7 +6948,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .premium-settings .premium-header.splash {
     position: relative;
-    background: none;
+    background: none!important;
 }
 
 .premium-settings .premium-header.splash:before {
@@ -7217,19 +7170,19 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .embed-thumbnail.embed-thumbnail-video img[href*="https://i.ytimg.com/"][width="400"][height="300"],
 .embed-thumbnail.embed-thumbnail-video iframe[src*="https://www.youtube.com/embed/"][width="400"][height="300"] {
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     height: 226px;
     border-radius: 2px
 }
 
 .new-messages-indicator {
     -webkit-animation: slide-down 200ms ease;
-            animation: slide-down 200ms ease
+    animation: slide-down 200ms ease
 }
 
 .new-messages-indicator.bottom {
     -webkit-animation: slide-up 200ms ease;
-            animation: slide-up 200ms ease
+    animation: slide-up 200ms ease
 }
 
 .search-popout .option strong,
@@ -7358,7 +7311,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .create-guild-container .create-or-join {
     -webkit-transform: none!important;
-            transform: none!important;
+    transform: none!important;
     opacity: 1;
     -webkit-transition: 200ms ease;
     transition: 200ms ease;
@@ -7386,7 +7339,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     -webkit-transition: 300ms ease;
     transition: 300ms ease;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
 }
 
@@ -7400,7 +7353,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     -webkit-transition: 300ms ease;
     transition: 300ms ease;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
 }
 
@@ -7413,7 +7366,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     -webkit-transition: 200ms ease;
     transition: 200ms ease;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     z-index: 2;
     opacity: 1;
 }
@@ -7427,7 +7380,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     -webkit-transition: 200ms ease;
     transition: 200ms ease;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     z-index: 2;
     opacity: 1;
 }
@@ -7441,7 +7394,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     -webkit-transition: 200ms ease, opacity 150ms ease;
     transition: 200ms ease, opacity 150ms ease;
     -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     z-index: 1;
     opacity: 0;
 }
@@ -7455,14 +7408,14 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     -webkit-transition: 200ms ease, opacity 150ms ease;
     transition: 200ms ease, opacity 150ms ease;
     -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     z-index: 1;
     opacity: 0;
 }
 
 .create-guild-container .action:active {
     -webkit-transform: scale(1.05)!important;
-            transform: scale(1.05)!important;
+    transform: scale(1.05)!important;
     -webkit-transition: 100ms ease!important;
     transition: 100ms ease!important
 }
@@ -7485,7 +7438,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .create-guild-container .action {
     -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     -webkit-transition: 200ms ease;
     transition: 200ms ease;
 }
@@ -7500,7 +7453,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     transition: 300ms ease!important;
     opacity: 1;
     -webkit-transform: none!important;
-            transform: none!important;
+    transform: none!important;
 }
 
 .create-guild-container .create-guild,
@@ -7509,7 +7462,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     transition: 200ms ease!important;
     opacity: 1;
     -webkit-transform: none!important;
-            transform: none!important;
+    transform: none!important;
 }
 
 .create-guild-container .create-guild,
@@ -7580,4 +7533,125 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .region-select:active button {
     background: #697EC4;
     color: #fff
+}
+
+
+/*quickswitcher*/
+
+.quickswitcher {
+    background: #212121!important;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2), 0 1px 0 rgba(255, 255, 255, .02) inset!important;
+}
+
+.quickswitcher.dark .big-input {
+    background: #303030;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
+}
+
+.quickswitcher.dark .scroller-wrap:before {
+    background-image: -webkit-linear-gradient(bottom, transparent, #212121 60%, transparent);
+    background-image: linear-gradient(0deg, transparent, #212121 60%, transparent);
+}
+
+.quickswitcher.dark .result.selected {
+    background: #141414;
+}
+
+.quickswitcher.dark .result.selected:after {
+    background-color: #181818;
+    box-shadow: none
+}
+
+.quickswitcher .scroller-wrap .scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.quickswitcher .scroller-wrap {
+    margin-right: -4px!important
+}
+
+.keybind-shortcut.dark span {
+    border-color: #303030;
+    color: rgba(255, 255, 255, .5);
+    box-shadow: inset 0 -4px 0 rgba(255, 255, 255, .03);
+}
+
+.keybind-shortcut.dark span:active {
+    box-shadow: inset 0 -2px 0 rgba(255, 255, 255, .07);
+    color: rgba(255, 255, 255, .7);
+    border-color: #353535;
+}
+
+.keybind-shortcut.dark svg g {
+    fill: rgba(255, 255, 255, .5)!important;
+}
+
+.channel-notices .channel-notice.quickswitcher-notice {
+    background: url(/assets/8fdb69b7684b8e1ecb3fdde909daca41.svg) center 35px no-repeat #191919;
+}
+
+.quickswitcher .tips .misc-controls .keybind-shortcut:last-of-type:before {
+    display: none;
+}
+
+.settings .settings-header {
+    box-shadow: none;
+    width: ;
+    margin: 0!important;
+}
+
+.tab-bar.SIDE::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-bar.SIDE {
+    margin-right: -20px
+}
+
+.ui-button.grey.outlined {
+    color: rgba(255, 255, 255, .4);
+    border-color: rgba(255, 255, 255, .3);
+    -webkit-transition: 200ms ease;
+    transition: 200ms ease;
+}
+
+.ui-button.grey.outlined:hover {
+    color: rgba(255, 255, 255, .6);
+    border-color: rgba(255, 255, 255, .7);
+}
+
+.premium-settings.v1 .premium-features .premium-feature .ui-form-text.style-default {
+    color: rgba(255, 255, 255, .7);
+}
+
+[data-bd=tbi-settings] span:last-child {
+    opacity: 1
+}
+
+.context-menu .context-menu {
+    -webkit-transform: translate(0, -16px)!important;
+            transform: translate(0, -16px)!important;
+}
+
+.theme-dark.context-menu .item-subMenu {
+    position: relative;
+}
+
+body:before {
+    content: url(http://imgur.com/f8L7rOJ);
+    position: fixed;
+    width: 0px;
+    height: 0px;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+.mfa-modal .mfa-step{
+	border-color:rgba(255,255,255,.03);
+}
+
+.flair img[alt="Scan me!"]{
+	box-shadow:0 0 30px rgba(255,255,255,0.3), 0 0 0 30px #303030,-5px 0 0 30px #303030,5px 0 0 30px #303030;
 }
