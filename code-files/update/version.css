@@ -15,13 +15,15 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v2.0.0";
+    content: "Current version: v2.0.1";
 }
 
 #bd-themes-pane .bda-slist:before {
-    content: "Current version: v2.0.0\A\A  Changelog:\A - Changed the look + added a new animation to the server menu.\A - Changed the look + added a new animation to the status menu.\A - Made the streaming people's popout profiles completely purple.\A - Changed the background of the 'reconnecting' screen.\A - Slightly changed the look and feel of the server list.\A - New notification animation/notification ring on server icons. \A (more subtle and better looking than the red dot).\A - Added ripple effect on the voice channels's arrows.\A - Finished theming the search suggestions.\A - Themed the ctrl+k panel(canary).\A - More things here and there :3\A\A Some people asked me to add a scrollbar to the channel list:\A I won't add it in the main theme since I didn't find a visually nice way\A to implement it, but if that's really a problem for you,\A just go to bit.ly/ChannelScroll and copy the text to your custom css.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v2.0.1\A \A Changelog:\A \A v2.0.1\A - Changed the color of the server notification ring to red.\A    (after popular demand)\A \A v2.0.0\A - Changed the look + added a new animation to the server menu.\A - Changed the look + added a new animation to the status menu.\A - Made the streaming people's popout profiles completely purple.\A - Changed the background of the 'reconnecting' screen.\A - Slightly changed the look and feel of the server list.\A - New notification animation/notification ring on server icons. \A (more subtle and better looking than the red dot).\A - Added ripple effect on the voice channels's arrows.\A - Finished theming the search suggestions.\A - Themed the ctrl+k panel(canary).\A - More things here and there :3\A \A Some people asked me to add a scrollbar to the channel list:\A I won't add it in the main theme since I didn't find a visually nice way\A to implement it, but if that's really a problem for you,\A just go to bit.ly/ChannelScroll and copy the text to your custom css.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
-
+:root {
+  --accent: #7289DA;
+}
 
 /*-----GENERAL KEYFRAMES-----*/
 
@@ -773,7 +775,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 }
 
 .guilds-wrapper .guild.guilds-add:after {
-    background-color: #7289DA;
+    background-color: var(--accent);
     transition: all 200ms ease!important;
     position: absolute;
     left: 8px;
@@ -792,7 +794,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .guilds-wrapper .guild.guilds-add:hover:after {
     box-shadow: 0 10px 15px rgba(0, 0, 0, .4), 0 -1px 0px rgba(0, 0, 0, 0.2) inset, 0 2px 1px rgba(255, 255, 255, 0.2) inset;
-    background-color: #697EC4;
+    background-color: var(--accent);
 }
 
 .guilds-wrapper .guilds .guild.guilds-add:hover {
@@ -1388,17 +1390,17 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 }
 
 .checkbox .checkbox-inner input[type=checkbox]+span {
-    background: #7289DA;
+    background: var(--accent);
     transition: all 0s;
-    border-color: #7289DA;
+    border-color: var(--accent);
     -webkit-animation: box-check2 400ms cubic-bezier(.52, .01, 0, 1);
     animation: box-check2 400ms cubic-bezier(.52, .01, 0, 1);
 }
 
 .checkbox .checkbox-inner input[type=checkbox]:checked+span {
-    background: #7289DA;
+    background: var(--accent);
     transition: all 0s;
-    border-color: #7289DA;
+    border-color: var(--accent);
     -webkit-animation: box-check1 400ms cubic-bezier(.52, .01, 0, 1);
     animation: box-check1 400ms cubic-bezier(.52, .01, 0, 1);
 }
@@ -1611,7 +1613,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     content: "";
     width: 30px;
     height: 30px;
-    background: #7289DA;
+    background: var(--accent);
     display: block;
     position: absolute;
     bottom: -11px;
@@ -1635,7 +1637,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     -webkit-transform: scale(0.55);
     -ms-transform: scale(0.55);
         transform: scale(0.55);
-    border: 4px solid #7289DA;
+    border: 4px solid var(--accent);
     background: transparent;
     border-radius: 100px;
     transition: all 200ms cubic-bezier(.35, .01, 0, 1);
@@ -1811,7 +1813,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .slider .slider-handle {
     border: 0px;
-    background: #697EC4;
+    background: var(--accent);
     -webkit-transform: scale(0.6);
     -ms-transform: scale(0.6);
         transform: scale(0.6);
@@ -1827,7 +1829,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     content: "";
     width: 50px;
     height: 50px;
-    background: #7289DA;
+    background: var(--accent);
     display: block;
     opacity: 0;
     border-radius: 50%;
@@ -1857,7 +1859,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     -ms-transform: scale(1.2);
         transform: scale(1.2);
     z-index: 100000;
-    background: #697EC4;
+    background: var(--accent);
     color: #fff;
     border-radius: 100px;
     border: none;
@@ -2578,7 +2580,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 }
 
 .invite-button:active {
-    background: #7289DA!important;
+    background: var(--accent)!important;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .3), 0 1px 3px rgba(255, 255, 255, .1) inset, 0 2px 10px rgba(21, 101, 192, .3);
     transition: 0ms!important
 }
@@ -3220,11 +3222,6 @@ code:hover .copybutton {
     background: #212121!important
 }
 
-.dms .guild .guild-inner {
-    -webkit-animation: scale 500ms cubic-bezier(.44, .37, 0, 1.25);
-    animation: scale 500ms cubic-bezier(.44, .37, 0, 1.25);
-}
-
 .guild .badge {
     -webkit-animation: opacity 300ms ease;
     animation: opacity 300ms ease;
@@ -3529,7 +3526,7 @@ span {
     display: block;
     font-size: 12px;
     height: 15px;
-    color: #7289DA;
+    color: var(--accent);
     font-weight: 700;
     content: "No need to update this theme, it updates itself when you reload discord.";
 }
@@ -3538,7 +3535,7 @@ span {
     font-size: 14px;
     font-weight: 600;
     color: #fff!important;
-    background: #7289DA;
+    background: var(--accent);
     padding: 8px 0;
     border-radius: 3px;
     transition: all 200ms ease;
@@ -3563,7 +3560,7 @@ span {
     font-size: 14px;
     font-weight: 600;
     color: #fff!important;
-    background: #7289DA;
+    background: var(--accent);
     padding: 8px 0;
     border-radius: 3px;
     transition: all 200ms ease;
@@ -3588,7 +3585,7 @@ span {
     font-size: 14px;
     font-weight: 600;
     color: #fff!important;
-    background: #7289DA;
+    background: var(--accent);
     padding: 8px 0;
     border-radius: 3px;
     transition: all 200ms ease;
@@ -3743,7 +3740,7 @@ span {
 }
 
 .Select-option.is-selected:hover {
-    background: #7289DA!important;
+    background: var(--accent)!important;
 }
 
 .Select-control .Select-value {
@@ -4417,7 +4414,7 @@ span {
     border: 0;
     color: #fff;
     transition: all 100ms ease;
-    border-bottom: 2px solid #7289DA;
+    border-bottom: 2px solid var(--accent);
     background: transparent;
     border-radius: 0;
     opacity: 1;
@@ -4921,7 +4918,7 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
 }
 
 .connect-account-btn:active {
-    background: #7289DA;
+    background: var(--accent);
     transition: all 10ms ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .8), 0 2px 2px -2px rgba(255, 255, 255, .2) inset, 0 5px 10px rgba(25, 118, 210, .2);
 }
@@ -5898,12 +5895,12 @@ iframe[src*="https://www.youtube.com"]:after {
 .user-settings-modal-games .games-table .games-row .item-game .game-input:focus {
     color: #fff!important;
     border: none;
-    border-bottom: 2px solid #7289DA;
+    border-bottom: 2px solid var(--accent);
     border-radius: 0
 }
 
 .now-playing .checkbox .checkbox-inner input[type=checkbox]+span:before {
-    border-color: #7289DA
+    border-color: var(--accent)
 }
 
 .now-playing .checkbox .checkbox-inner input[type=checkbox]:checked+span {
@@ -6004,7 +6001,7 @@ div.control-group .shortcut-recorder input[type=text]:focus {
 
 #theme-search:focus,
 #plugin-search:focus {
-    border-color: #7289DA!important;
+    border-color: var(--accent)!important;
 }
 
 .ebr-top:after {
@@ -6808,7 +6805,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 }
 
 .emoji-picker .search-bar input:focus {
-    border-bottom: 2px solid #7289DA;
+    border-bottom: 2px solid var(--accent);
 }
 
 .emoji-picker .search-bar input::-webkit-input-placeholder {
@@ -7441,7 +7438,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 }
 
 .region-select:active button {
-    background: #697EC4;
+    background: var(--accent);
     color: #fff
 }
 
@@ -7504,7 +7501,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .quickswitcher.dark .result.selected:active,
 .quickswitcher.dark .result.selected:active:after {
-    background-color: #7289DA;
+    background-color: var(--accent);
     transition: 0ms!important;
 }
 
@@ -7664,9 +7661,9 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .popout-bottom .popout-menu {
     background: transparent;
-    position: fixed;
-    left: 70px!important;
-    top: 57px!important;
+    position: absolute;
+    left: 0px!important;
+    top: 0px!important;
     -webkit-animation: slide-down 200ms ease, opacity 200ms ease, visibility 1ms ease;
             animation: slide-down 200ms ease, opacity 200ms ease, visibility 1ms ease;
     -webkit-flex-direction: row!important;
@@ -7696,9 +7693,12 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     -webkit-transform: none!important;
         -ms-transform: none!important;
             transform: none!important;
-    pointer-events: none
+    pointer-events: none;
+    position:absolute;
 }
-
+.tutorial-indicators+.theme-dark{
+	position:relative;
+}
 .popout-bottom[style*="overflow: hidden; visibility: visible;"] .popout-menu * {
     pointer-events: auto;
 }
@@ -7779,6 +7779,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
     transition: 0ms cubic-bezier(.52, 0, 0, 1);
     background-position: 50%;
+
 }
 
 .guilds-wrapper .guilds .guild .guild-inner a:hover:after {
@@ -7988,7 +7989,7 @@ a:active .friends-icon {
 }
 
 .context-menu .item:active .checkbox span:before {
-    border-color: #7289DA!important;
+    border-color: var(--accent)!important;
 }
 
 .context-menu .item.danger:active {
@@ -8004,37 +8005,37 @@ a:active .friends-icon {
     display: none;
 }
 
-.dms .guild a:after,
 .guild.unread a:after {
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, .15), 0 2px 20px rgba(0, 0, 0, .1)!important;
-    -webkit-animation: guild-notifs 1s cubic-bezier(.2, 0, 0, 1);
-            animation: guild-notifs 1s cubic-bezier(.2, 0, 0, 1);
+    box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
+    -webkit-animation:guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
+            animation:guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
+}
+.dms .guild a:after {
+    box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
+    -webkit-animation:scale-center 1s cubic-bezier(.44, .37, 0, 1.25), guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
+            animation:scale-center 1s cubic-bezier(.44, .37, 0, 1.25), guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
+}
+@keyframes scale-center{
+	0%{
+		transform: translate(-50%, -50%) scale(0);
+	}
 }
 
 .guild.unread a:hover:after {
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, .25), 0 2px 20px rgba(0, 0, 0, .4)!important;
-}
-
-@-webkit-keyframes guild-notifs {
-    0% {
-        box-shadow: 0 0 0 -15px rgba(255, 255, 255, .15), 0 0 0 0px rgba(255, 255, 255, .8), 0 2px 20px rgba(0, 0, 0, .1);
-    }
-    100% {
-        box-shadow: 0 0 0 4px rgba(255, 255, 255, .15), 0 0 0 20px rgba(255, 255, 255, 0), 0 2px 20px rgba(0, 0, 0, .1);
-    }
+    box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
 }
 
 @keyframes guild-notifs {
     0% {
-        box-shadow: 0 0 0 -15px rgba(255, 255, 255, .15), 0 0 0 0px rgba(255, 255, 255, .8), 0 2px 20px rgba(0, 0, 0, .1);
+        box-shadow:0 0 0 -2px #303030 inset, 0 0 0 -15px #F04747, 0 0 0 0px rgba(255, 255, 255, .8), 0 2px 20px rgba(0, 0, 0, .1);
     }
     100% {
-        box-shadow: 0 0 0 4px rgba(255, 255, 255, .15), 0 0 0 20px rgba(255, 255, 255, 0), 0 2px 20px rgba(0, 0, 0, .1);
+        box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
     }
 }
 
 .guild.unread.selected a:after {
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2), 0 2px 20px rgba(0, 0, 0, .4)!important;
+    box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
 }
 
 .user-settings-modal-security .backup-codes .code {
@@ -8151,7 +8152,7 @@ a:active .friends-icon {
 }
 
 .theme-dark .messages-popout-wrap .has-more button:active {
-    background: #7289DA;
+    background: var(--accent);
     color: #fff;
     transition: 0ms;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
@@ -8288,7 +8289,6 @@ a:active .friends-icon {
     background: rgba(225, 225, 225, 0.05)!important;
     width: 6px!important;
 }
-
 .scroller.guild-channels::-webkit-scrollbar-thumb:hover,
 .scroller.guild-channels::-webkit-scrollbar-thumb {
     border: none !important;
@@ -8296,7 +8296,6 @@ a:active .friends-icon {
     display: initial;
     border-radius: 0!important;
 }
-
 .scroller.guild-channels::-webkit-scrollbar-thumb:active {
     border: none !important;
     background-color: rgba(225, 225, 225, 0.2) !important;
