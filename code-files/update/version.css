@@ -15,15 +15,66 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
-    content: "Current version: v2.0.1";
+    content: "Current version: v2.0.2";
 }
 
 #bd-themes-pane .bda-slist:before {
-    content: "Current version: v2.0.1\A \A Changelog:\A \A v2.0.1\A - Changed the color of the server notification ring to red.\A    (after popular demand)\A \A v2.0.0\A - Changed the look + added a new animation to the server menu.\A - Changed the look + added a new animation to the status menu.\A - Made the streaming people's popout profiles completely purple.\A - Changed the background of the 'reconnecting' screen.\A - Slightly changed the look and feel of the server list.\A - New notification animation/notification ring on server icons. \A (more subtle and better looking than the red dot).\A - Added ripple effect on the voice channels's arrows.\A - Finished theming the search suggestions.\A - Themed the ctrl+k panel(canary).\A - More things here and there :3\A \A Some people asked me to add a scrollbar to the channel list:\A I won't add it in the main theme since I didn't find a visually nice way\A to implement it, but if that's really a problem for you,\A just go to bit.ly/ChannelScroll and copy the text to your custom css.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
+    content: "Current version: v2.0.2\A\A🔸Announcement🔸\A Hi! From all the feedback I get from you guys,\A it clearly seems that you want more customisation options. I was waiting\A for BetterDiscord 2.0 to implement settings natively, but with all the\A trouble around the notification rings, with some people wanting one color\A and other people wanting it another, I decided to do it now.\A How does it work? Go to the Custom CSS tab ;)\A \A Changelog:\A \A v2.0.2\A - Added color settings (Go see in the Custom CSS tab :D)\A \A v2.0.1\A - Changed the color of the server notification ring to red.\A (after popular demand)\A \A Some people asked me to add a scrollbar to the channel list:\A I won't add it in the main theme since I didn't find a visually nice way\A to implement it, but if that's really a problem for you,\A just go to bit.ly/ChannelScroll and copy the text to your custom css.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)";
 }
+
 :root {
-  --accent: #7289DA;
+    --accent-color: #7289DA;
+    --notification-color: #FFF;
+    --channels-scrollbar: var(--disabled);
+    --disabled: none;
+    --enabled: initial;
 }
+
+
+/*-----ACCENT COLOR-----*/
+
+#instant-invite-modal .copy,
+.create-guild-container .action:hover.create .btn,
+.region-select:hover button,
+.slider-bar-fill,
+.form .btn-primary:hover,
+.form .btn-primary {
+    background: var(--accent-color);
+}
+
+.region-select:hover button,
+.tab-bar.TOP .tab-bar-item.selected,
+.form .control-group input[type=email]:focus,
+.form .control-group input[type=number]:focus,
+.form .control-group input[type=password]:focus,
+.form .control-group input[type=text]:focus,
+.form .control-group textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.create-guild-container h5,
+.create-guild-container .action.create .action-header,
+#permissions .permissions-helpdesk,
+#permissions .permissions-helpdesk:hover,
+.guild-settings-modal-members .guild-settings-modal-members-footer a,
+.guild-settings-modal-members .guild-settings-modal-members-footer a:hover,
+.guild-settings-modal-overview a:hover,
+.guild-settings-modal-overview a,
+.region-select-modal .region-select-modal-header,
+.region-select button,
+.form header,
+.chat .welcome-message h1,
+.tab-bar.TOP .tab-bar-item.selected,
+.user-settings-modal a:hover,
+.user-settings-modal a,
+.form .control-group label a:hover,
+.form .control-group label a {
+    color: var(--accent-color);
+}
+
+
+/*-----/ACCENT COLOR-----*/
+
 
 /*-----GENERAL KEYFRAMES-----*/
 
@@ -158,7 +209,50 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 }
 
 
-/*-----/GENERAL KEYFRAMES*/
+/*-----/GENERAL KEYFRAMES-----*/
+
+.bd-settings #bd-customcss-attach-controls:after {
+    width: 100%;
+    padding: 10px;
+    content:"To add custom settings to the theme, copy the following\A code in your custom CSS and replace the things you want\A to change:\A \A :root {\A --accent-color: #7289DA;\A --notification-color: #FFF;\A}\A\A Don't forget to save/update when you're done!\A\A And if you're too lazy to manually copy it,\A just go to bit.ly/BMTsettings and directly copy/paste\Athe code. ";
+    background: #43B581;
+    margin-top: 5px;
+    display: block;
+    border-radius: 2px;
+    font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
+    white-space: pre;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+#bd-customcss-detach-controls-buttons button:last-of-type:after {
+    width: 30px;
+    height: 30px;
+    content: "";
+    background: var(--accent-color);
+    margin-top: -23px;
+    display: block;
+    position: absolute;
+    left: 120px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, .3), 40px 0 var(--notification-color), 40px 2px 10px rgba(0, 0, 0, .3);
+    transition: all 100ms ease;
+    pointer-events: none
+}
+
+#bd-customcss-detach-controls-buttons button:hover:last-of-type:after {
+    -webkit-transform: translate(0, 1px);
+        -ms-transform: translate(0, 1px);
+            transform: translate(0, 1px);
+    transition: all 150ms ease-in-out;
+}
+
+#bd-customcss-detach-controls-buttons button:active:last-of-type:after {
+    -webkit-transform: translate(0, -2px);
+        -ms-transform: translate(0, -2px);
+            transform: translate(0, -2px);
+    transition: all 50ms ease;
+}
 
 .message-group .comment .markup .highlight {
     background: rgba(255, 255, 255, 0.05)
@@ -256,10 +350,10 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     animation: opacity 300ms ease;
     -webkit-transform-origin: bottom left;
     -ms-transform-origin: bottom left;
-        transform-origin: bottom left;
+    transform-origin: bottom left;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     width: auto;
     padding-right: 20px;
     padding-top: 0px;
@@ -549,7 +643,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     border: 5px solid #424242;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
-        transform: scale(1.2);
+    transform: scale(1.2);
     opacity: 0.8;
     transition: all 100ms ease;
 }
@@ -580,7 +674,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     z-index: 1000000000000000000;
     pointer-events: none;
     -webkit-animation: opacity 80ms ease;
-            animation: opacity 80ms ease;
+    animation: opacity 80ms ease;
 }
 
 .tooltip:after {
@@ -596,7 +690,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     opacity: 1;
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-        transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .private-channels .channel .icon-friends {
@@ -609,7 +703,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     background-color: rgba(0, 0, 0, 0);
     -webkit-transform: scale(1.4);
     -ms-transform: scale(1.4);
-        transform: scale(1.4);
+    transform: scale(1.4);
     opacity: 1!important;
 }
 
@@ -691,7 +785,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     transition: all 10ms ease;
     -webkit-transform: translate(-13px)!important;
     -ms-transform: translate(-13px)!important;
-        transform: translate(-13px)!important;
+    transform: translate(-13px)!important;
     margin-bottom: 0px!important;
     z-index: 5;
 }
@@ -699,7 +793,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .guilds-wrapper .guilds .guild .badge {
     -webkit-transform: translate(-10px, -10px)!important;
     -ms-transform: translate(-12px, -10px)!important;
-        transform: translate(-12px, -10px)!important;
+    transform: translate(-12px, -10px)!important;
 }
 
 .guilds-wrapper .guilds .guild+.guild {
@@ -753,7 +847,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .guilds-wrapper .guilds .guild.selected:before {
     -webkit-transform: scale(0)!important;
     -ms-transform: scale(0)!important;
-        transform: scale(0)!important;
+    transform: scale(0)!important;
 }
 
 .guilds-wrapper .guild.guilds-add {
@@ -775,7 +869,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 }
 
 .guilds-wrapper .guild.guilds-add:after {
-    background-color: var(--accent);
+    background-color: var(--accent-color);
     transition: all 200ms ease!important;
     position: absolute;
     left: 8px;
@@ -794,7 +888,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .guilds-wrapper .guild.guilds-add:hover:after {
     box-shadow: 0 10px 15px rgba(0, 0, 0, .4), 0 -1px 0px rgba(0, 0, 0, 0.2) inset, 0 2px 1px rgba(255, 255, 255, 0.2) inset;
-    background-color: var(--accent);
+    background-color: var(--accent-color);
 }
 
 .guilds-wrapper .guilds .guild.guilds-add:hover {
@@ -829,7 +923,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .channel-members .member:hover .member-username-inner {
     -webkit-transform: translate(5px);
     -ms-transform: translate(5px);
-        transform: translate(5px);
+    transform: translate(5px);
 }
 
 .guild-channels .channel .channel-name {
@@ -839,7 +933,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .guild-channels .channel:hover .channel-name {
     -webkit-transform: translate(5px);
     -ms-transform: translate(5px);
-        transform: translate(5px);
+    transform: translate(5px);
 }
 
 .bot-tag {
@@ -869,7 +963,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .private-channels .channel:hover .avatar-small {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
-        transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 #friends .friends-table .friends-row .discord-tag .discriminator {
@@ -893,7 +987,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .channel-members .member:hover .avatar-small {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
-        transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .channel-members .member.popout-open .avatar-small,
@@ -1039,7 +1133,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .context-menu .item:active {
     transition: all 0ms;
-    background: #738BD7!important;
+    background: var(--accent-color)!important;
     color: #fff;
 }
 
@@ -1133,13 +1227,13 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     transition: all 300ms ease;
     -webkit-transform: rotate(0deg)scale(0.3);
     -ms-transform: rotate(0deg)scale(0.3);
-        transform: rotate(0deg)scale(0.3);
+    transform: rotate(0deg)scale(0.3);
 }
 
 .btn-hamburger.btn-hamburger-open {
     -webkit-transform: rotate(180deg)scale(0.3);
     -ms-transform: rotate(180deg)scale(0.3);
-        transform: rotate(180deg)scale(0.3);
+    transform: rotate(180deg)scale(0.3);
 }
 
 .btn-hamburger-open span {
@@ -1149,7 +1243,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .guild-header:active .btn-hamburger {
     -webkit-transform: scale(0.2);
     -ms-transform: scale(0.2);
-        transform: scale(0.2)
+    transform: scale(0.2)
 }
 
 .guild-header span {
@@ -1177,12 +1271,12 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     right: 9px;
     -webkit-transform: scale(.65)rotate(0deg)translate(13.5px, 3px);
     -ms-transform: scale(.65)rotate(0deg)translate(13.5px, 3px);
-        transform: scale(.65)rotate(0deg)translate(13.5px, 3px);
+    transform: scale(.65)rotate(0deg)translate(13.5px, 3px);
     width: 1px;
     height: 1px;
     -webkit-transform-origin: bottom right;
     -ms-transform-origin: bottom right;
-        transform-origin: bottom right;
+    transform-origin: bottom right;
     -webkit-animation: check-anim- 200ms linear 200ms, check-anim2- 200ms cubic-bezier(.49, 0, 0, 1);
     animation: check-anim- 200ms linear 200ms, check-anim2- 200ms cubic-bezier(.49, 0, 0, 1)
 }
@@ -1286,7 +1380,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .checkbox .checkbox-inner input[type=checkbox]:checked+span:before {
     -webkit-transform: scale(.1)rotate(45deg)translate(0, 0);
     -ms-transform: scale(.1)rotate(45deg)translate(0, 0);
-        transform: scale(.1)rotate(45deg)translate(0, 0);
+    transform: scale(.1)rotate(45deg)translate(0, 0);
     width: 40px;
     height: 100px;
     -webkit-animation: check-anim 100ms, check-anim2 300ms cubic-bezier(.49, 0, 0, 1) 100ms;
@@ -1390,17 +1484,17 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 }
 
 .checkbox .checkbox-inner input[type=checkbox]+span {
-    background: var(--accent);
+    background: var(--accent-color);
     transition: all 0s;
-    border-color: var(--accent);
+    border-color: var(--accent-color);
     -webkit-animation: box-check2 400ms cubic-bezier(.52, .01, 0, 1);
     animation: box-check2 400ms cubic-bezier(.52, .01, 0, 1);
 }
 
 .checkbox .checkbox-inner input[type=checkbox]:checked+span {
-    background: var(--accent);
+    background: var(--accent-color);
     transition: all 0s;
-    border-color: var(--accent);
+    border-color: var(--accent-color);
     -webkit-animation: box-check1 400ms cubic-bezier(.52, .01, 0, 1);
     animation: box-check1 400ms cubic-bezier(.52, .01, 0, 1);
 }
@@ -1474,8 +1568,8 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     left: 50%;
     -webkit-transform: translate(-50%, -50%)scale(.8);
     -ms-transform: translate(-50%, -50%)scale(.8);
-        transform: translate(-50%, -50%)scale(.8);
-    background: #738BD7;
+    transform: translate(-50%, -50%)scale(.8);
+    background: var(--accent-color);
     border-radius: 50%;
     opacity: 0;
     transition: 200ms cubic-bezier(.35, .01, 0, 1);
@@ -1484,14 +1578,14 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .checkbox:active .checkbox-inner:after {
     -webkit-transform: translate(-50%, -50%)scale(1);
     -ms-transform: translate(-50%, -50%)scale(1);
-        transform: translate(-50%, -50%)scale(1);
+    transform: translate(-50%, -50%)scale(1);
     opacity: .2;
 }
 
 .checkbox:active .checkbox-inner input[type=checkbox]:checked+span {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     transition: all 100ms ease;
 }
 
@@ -1519,10 +1613,6 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .private-channel-recipients-invite .discriminator {
     color: rgba(255, 255, 255, .99)!important
-}
-
-#bd-customcss-attach-controls .checkbox-inner span:before {
-    border-color: #E8E8E8!important;
 }
 
 .search-bar-tag {
@@ -1582,7 +1672,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .radio .radio-inner input[type=radio]:checked+span:after {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
-        transform: scale(0);
+    transform: scale(0);
     transition-delay: 50ms;
 }
 
@@ -1603,7 +1693,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     border-radius: 50%;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     transition: all 300ms cubic-bezier(.35, .01, 0, 1);
     opacity: 1!important;
     transition-delay: 100ms;
@@ -1613,7 +1703,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     content: "";
     width: 30px;
     height: 30px;
-    background: var(--accent);
+    background: var(--accent-color);
     display: block;
     position: absolute;
     bottom: -11px;
@@ -1621,7 +1711,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     border-radius: 50%;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     transition: all 300ms cubic-bezier(.35, .01, 0, 1);
     transition-delay: 50ms;
 }
@@ -1629,15 +1719,15 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .radio .radio-inner input[type=radio]:checked+span:before {
     -webkit-transform: scale(.5);
     -ms-transform: scale(.5);
-        transform: scale(.5);
+    transform: scale(.5);
     transition-delay: 100ms;
 }
 
 .radio .radio-inner {
     -webkit-transform: scale(0.55);
     -ms-transform: scale(0.55);
-        transform: scale(0.55);
-    border: 4px solid var(--accent);
+    transform: scale(0.55);
+    border: 4px solid var(--accent-color);
     background: transparent;
     border-radius: 100px;
     transition: all 200ms cubic-bezier(.35, .01, 0, 1);
@@ -1653,8 +1743,8 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     left: 50%;
     -webkit-transform: translate(-50%, -50%)scale(.8);
     -ms-transform: translate(-50%, -50%)scale(.8);
-        transform: translate(-50%, -50%)scale(.8);
-    background: #738BD7;
+    transform: translate(-50%, -50%)scale(.8);
+    background: var(--accent-color);
     border-radius: 50%;
     opacity: 0;
     transition: 200ms cubic-bezier(.35, .01, 0, 1);
@@ -1663,7 +1753,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .radio:active .radio-inner:after {
     -webkit-transform: translate(-50%, -50%)scale(1);
     -ms-transform: translate(-50%, -50%)scale(1);
-        transform: translate(-50%, -50%)scale(1);
+    transform: translate(-50%, -50%)scale(1);
     opacity: .2;
 }
 
@@ -1674,7 +1764,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 #friends .btn:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-        transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .avatar-uploader .avatar-uploader-inner:hover {
@@ -1720,7 +1810,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTkuNDMgMTIuOThjLjA0LS4zMi4wNy0uNjQuMDctLjk4cy0uMDMtLjY2LS4wNy0uOThsMi4xMS0xLjY1Yy4xOS0uMTUuMjQtLjQyLjEyLS42NGwtMi0zLjQ2Yy0uMTItLjIyLS4zOS0uMy0uNjEtLjIybC0yLjQ5IDFjLS41Mi0uNC0xLjA4LS43My0xLjY5LS45OGwtLjM4LTIuNjVDMTQuNDYgMi4xOCAxNC4yNSAyIDE0IDJoLTRjLS4yNSAwLS40Ni4xOC0uNDkuNDJsLS4zOCAyLjY1Yy0uNjEuMjUtMS4xNy41OS0xLjY5Ljk4bC0yLjQ5LTFjLS4yMy0uMDktLjQ5IDAtLjYxLjIybC0yIDMuNDZjLS4xMy4yMi0uMDcuNDkuMTIuNjRsMi4xMSAxLjY1Yy0uMDQuMzItLjA3LjY1LS4wNy45OHMuMDMuNjYuMDcuOThsLTIuMTEgMS42NWMtLjE5LjE1LS4yNC40Mi0uMTIuNjRsMiAzLjQ2Yy4xMi4yMi4zOS4zLjYxLjIybDIuNDktMWMuNTIuNCAxLjA4LjczIDEuNjkuOThsLjM4IDIuNjVjLjAzLjI0LjI0LjQyLjQ5LjQyaDRjLjI1IDAgLjQ2LS4xOC40OS0uNDJsLjM4LTIuNjVjLjYxLS4yNSAxLjE3LS41OSAxLjY5LS45OGwyLjQ5IDFjLjIzLjA5LjQ5IDAgLjYxLS4yMmwyLTMuNDZjLjEyLS4yMi4wNy0uNDktLjEyLS42NGwtMi4xMS0xLjY1ek0xMiAxNS41Yy0xLjkzIDAtMy41LTEuNTctMy41LTMuNXMxLjU3LTMuNSAzLjUtMy41IDMuNSAxLjU3IDMuNSAzLjUtMS41NyAzLjUtMy41IDMuNXoiLz48L3N2Zz4=);
     -webkit-transform: scale(1.15);
     -ms-transform: scale(1.15);
-        transform: scale(1.15);
+    transform: scale(1.15);
     margin-top: -1px
 }
 
@@ -1767,7 +1857,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     transition-delay: 100ms;
     -webkit-transform: translate(0, 60px);
     -ms-transform: translate(0, 60px);
-        transform: translate(0, 60px);
+    transform: translate(0, 60px);
 }
 
 .search-bar.search-bar-light {
@@ -1785,7 +1875,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .form .btn-primary:hover {
     -webkit-transform: translate(0, -2px);
     -ms-transform: translate(0, -1px);
-        transform: translate(0, -1px);
+    transform: translate(0, -1px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, .2);
     transition: all 150ms ease-in-out;
 }
@@ -1795,7 +1885,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     background: rgb(220, 220, 220);
     -webkit-transform: translate(0, 2px);
     -ms-transform: translate(0, 2px);
-        transform: translate(0, 2px);
+    transform: translate(0, 2px);
     box-shadow: 0 0px 0px rgba(0, 0, 0, .5);
     transition: all 50ms ease;
     border-radius: 4px;
@@ -1813,10 +1903,10 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 .slider .slider-handle {
     border: 0px;
-    background: var(--accent);
+    background: var(--accent-color);
     -webkit-transform: scale(0.6);
     -ms-transform: scale(0.6);
-        transform: scale(0.6);
+    transform: scale(0.6);
     border-radius: 50%;
     cursor: pointer;
     box-shadow: none;
@@ -1829,7 +1919,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     content: "";
     width: 50px;
     height: 50px;
-    background: var(--accent);
+    background: var(--accent-color);
     display: block;
     opacity: 0;
     border-radius: 50%;
@@ -1838,7 +1928,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     left: 50%;
     -webkit-transform: translate(-50%, -50%)scale(0.5);
     -ms-transform: translate(-50%, -50%)scale(0.5);
-        transform: translate(-50%, -50%)scale(0.5);
+    transform: translate(-50%, -50%)scale(0.5);
     transition: opacity 200ms ease, -webkit-transform 0ms linear 200ms;
     transition: transform 0ms linear 200ms, opacity 200ms ease;
     transition: transform 0ms linear 200ms, opacity 200ms ease, -webkit-transform 0ms linear 200ms;
@@ -1847,7 +1937,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .slider .slider-handle:active:after {
     -webkit-transform: translate(-50%, -50%)scale(1.1);
     -ms-transform: translate(-50%, -50%)scale(1.1);
-        transform: translate(-50%, -50%)scale(1.1);
+    transform: translate(-50%, -50%)scale(1.1);
     opacity: .2;
     transition: opacity 100ms ease, -webkit-transform 200ms cubic-bezier(.35, .01, 0, 1);
     transition: transform 200ms cubic-bezier(.35, .01, 0, 1), opacity 100ms ease;
@@ -1857,9 +1947,9 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .slider .slider-handle span {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
-        transform: scale(1.2);
+    transform: scale(1.2);
     z-index: 100000;
-    background: var(--accent);
+    background: var(--accent-color);
     color: #fff;
     border-radius: 100px;
     border: none;
@@ -1879,7 +1969,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     height: 3px;
     -webkit-transform: translate(0, 1px);
     -ms-transform: translate(0, 1px);
-        transform: translate(0, 1px);
+    transform: translate(0, 1px);
     border-radius: 0px;
     transition: all 100ms ease;
 }
@@ -1887,7 +1977,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .slider .slider-handle:active {
     -webkit-transform: scale(0.8);
     -ms-transform: scale(0.8);
-        transform: scale(0.8);
+    transform: scale(0.8);
 }
 
 .slider-handle-track {
@@ -1922,7 +2012,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     content: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTkuNDMgMTIuOThjLjA0LS4zMi4wNy0uNjQuMDctLjk4cy0uMDMtLjY2LS4wNy0uOThsMi4xMS0xLjY1Yy4xOS0uMTUuMjQtLjQyLjEyLS42NGwtMi0zLjQ2Yy0uMTItLjIyLS4zOS0uMy0uNjEtLjIybC0yLjQ5IDFjLS41Mi0uNC0xLjA4LS43My0xLjY5LS45OGwtLjM4LTIuNjVDMTQuNDYgMi4xOCAxNC4yNSAyIDE0IDJoLTRjLS4yNSAwLS40Ni4xOC0uNDkuNDJsLS4zOCAyLjY1Yy0uNjEuMjUtMS4xNy41OS0xLjY5Ljk4bC0yLjQ5LTFjLS4yMy0uMDktLjQ5IDAtLjYxLjIybC0yIDMuNDZjLS4xMy4yMi0uMDcuNDkuMTIuNjRsMi4xMSAxLjY1Yy0uMDQuMzItLjA3LjY1LS4wNy45OHMuMDMuNjYuMDcuOThsLTIuMTEgMS42NWMtLjE5LjE1LS4yNC40Mi0uMTIuNjRsMiAzLjQ2Yy4xMi4yMi4zOS4zLjYxLjIybDIuNDktMWMuNTIuNCAxLjA4LjczIDEuNjkuOThsLjM4IDIuNjVjLjAzLjI0LjI0LjQyLjQ5LjQyaDRjLjI1IDAgLjQ2LS4xOC40OS0uNDJsLjM4LTIuNjVjLjYxLS4yNSAxLjE3LS41OSAxLjY5LS45OGwyLjQ5IDFjLjIzLjA5LjQ5IDAgLjYxLS4yMmwyLTMuNDZjLjEyLS4yMi4wNy0uNDktLjEyLS42NGwtMi4xMS0xLjY1ek0xMiAxNS41Yy0xLjkzIDAtMy41LTEuNTctMy41LTMuNXMxLjU3LTMuNSAzLjUtMy41IDMuNSAxLjU3IDMuNSAzLjUtMS41NyAzLjUtMy41IDMuNXoiLz48L3N2Zz4=);
     -webkit-transform: translate(0, 2px);
     -ms-transform: translate(0, 2px);
-        transform: translate(0, 2px)
+    transform: translate(0, 2px)
 }
 
 .user-settings-modal .tab-bar.SIDE .tab-bar-item.selected,
@@ -2271,7 +2361,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     opacity: 0.6;
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
-        transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 .system-message-icon[style*='background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGZpbGw9IiM5OUFBQjUiIGQ9Ik0wIDE0LjI1VjE4aDMuNzVMMTQuODEgNi45NGwtMy43NS0zLjc1TDAgMTQuMjV6TTE3LjcxIDQuMDRjLjM5LS4zOS4zOS0xLjAyIDAtMS40MUwxNS4zNy4yOWMtLjM5LS4zOS0xLjAyLS4zOS0xLjQxIDBsLTEuODMgMS44MyAzLjc1IDMuNzUgMS44My0xLjgzeiIvPgogICAgPHBhdGggZD0iTTAgMGgxOHYxOEgwIi8+CiAgPC9nPgo8L3N2Zz4K");'] {
@@ -2279,28 +2369,28 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     opacity: 0.6;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
-        transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .system-message-icon[style*='background-image: url("/assets/c30220457097b064286a8759a9b6c4af.svg");'] {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSJub25lIiBkPSJNMCwwaDI0djI0SDBWMHoiLz4NCjxwYXRoIGZpbGw9IiM0M0I1ODEiIGQ9Ik02LjYsMTAuOGMxLjQsMi44LDMuOCw1LjEsNi42LDYuNmwyLjItMi4yYzAuMy0wLjMsMC43LTAuNCwxLTAuMmMxLjEsMC40LDIuMywwLjYsMy42LDAuNmMwLjUsMCwxLDAuNCwxLDENCglWMjBjMCwwLjUtMC41LDEtMSwxQzEwLjYsMjEsMywxMy40LDMsNGMwLTAuNSwwLjUtMSwxLTFoMy41YzAuNiwwLDEsMC41LDEsMWMwLDEuMywwLjIsMi40LDAuNiwzLjZjMC4xLDAuMywwLDAuNy0wLjMsMUw2LjYsMTAuOHoiDQoJLz4NCjwvc3ZnPg0K)!important;
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
-        transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 .system-message-icon[style*='background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmVyc2lvbj0iMS4xIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIj4KICAgIDxwYXRoIGQ9Ik0xOCAwSDB2MThoMTh6Ii8+CiAgICA8cGF0aCBmaWxsPSIjRjA0NzQ3IiBkPSJNMy44IDhsMy42LTMuNkw2IDMgMCA5bDYgNiAxLjQtMS40TDMuOCAxMEgxOFY4Ii8+CiAgPC9nPgo8L3N2Zz4=");'] {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSJub25lIiBkPSJNMCwwaDI0djI0SDBWMHoiLz4NCjxwYXRoIGZpbGw9IiNGNDQzMzYiIGQ9Ik0xMiwyMGwxLjQtMS40TDcuOCwxM0gyMHYtMkg3LjhsNS42LTUuNkwxMiw0bC04LDhMMTIsMjB6Ii8+DQo8L3N2Zz4NCg==)!important;
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
-        transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 .system-message-icon[style*='background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0xOCAwSDB2MThoMTh6Ii8+CiAgICA8cGF0aCBmaWxsPSIjNDNCNTgxIiBkPSJNMCA4aDE0LjJsLTMuNi0zLjZMMTIgM2w2IDYtNiA2LTEuNC0xLjQgMy42LTMuNkgwIi8+CiAgPC9nPgo8L3N2Zz4=");'] {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSJub25lIiBkPSJNMCwwaDI0djI0SDBWMHoiLz4NCjxwYXRoIGZpbGw9IiM2NkJCNkEiIGQ9Ik0xMiw0bC0xLjQsMS40bDUuNiw1LjZINHYyaDEyLjJsLTUuNiw1LjZMMTIsMjBsOC04TDEyLDR6Ii8+DQo8L3N2Zz4NCg==)!important;
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
-        transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 
@@ -2410,7 +2500,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .header-toolbar button.popout-open {
     -webkit-transform: translate(0, 55px);
     -ms-transform: translate(0, 55px);
-        transform: translate(0, 55px);
+    transform: translate(0, 55px);
     transition: all 400ms cubic-bezier(.3, .3, 0, 1);
 }
 
@@ -2425,7 +2515,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .embed-thumbnail.embed-thumbnail-link:hover {
     -webkit-transform: scale(0.95);
     -ms-transform: scale(0.95);
-        transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 .action-buttons {
@@ -2433,14 +2523,14 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     box-shadow: none!important;
     -webkit-transform: translate(-6px, 7px);
     -ms-transform: translate(-6px, 7px);
-        transform: translate(-6px, 7px)
+    transform: translate(-6px, 7px)
 }
 
 .btn-option {
     background: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgOGMxLjEgMCAyLS45IDItMnMtLjktMi0yLTItMiAuOS0yIDIgLjkgMiAyIDJ6bTAgMmMtMS4xIDAtMiAuOS0yIDJzLjkgMiAyIDIgMi0uOSAyLTItLjktMi0yLTJ6bTAgNmMtMS4xIDAtMiAuOS0yIDJzLjkgMiAyIDIgMi0uOSAyLTItLjktMi0yLTJ6Ii8+PC9zdmc+)!important;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     opacity: 0.2;
     width: 18px!important;
     height: 18px!important;
@@ -2452,7 +2542,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .btn-reaction {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     opacity: 0.1;
     width: 18px!important;
     height: 18px!important;
@@ -2475,8 +2565,8 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .attachment-image .image:hover,
 .embed-thumbnail.embed-thumbnail-image .image:hover {
     -webkit-transform: scale(0.98);
-    -ms-transform: scale(0.98);
-        transform: scale(0.98);
+        -ms-transform: scale(0.98);
+            transform: scale(0.98);
 }
 
 .attachment-image .image,
@@ -2505,7 +2595,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     animation: scale 400ms cubic-bezier(.5, 0, 0, 1);
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     transition: all 300ms ease;
     z-index: 10;
     right: 6px;
@@ -2515,7 +2605,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .guilds-wrapper .guilds .guild.audio:active .guild-inner:after {
     -webkit-transform: scale(0)translate(-40px, 40px);
     -ms-transform: scale(0)translate(-40px, 40px);
-        transform: scale(0)translate(-40px, 40px);
+    transform: scale(0)translate(-40px, 40px);
 }
 
 @-webkit-keyframes dot {
@@ -2547,7 +2637,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     margin-top: 11px;
     -webkit-transform: scale(0.8);
     -ms-transform: scale(0.8);
-        transform: scale(0.8);
+    transform: scale(0.8);
     background: rgba(225, 225, 225, 0.7);
     display: none;
 }
@@ -2580,7 +2670,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 }
 
 .invite-button:active {
-    background: var(--accent)!important;
+    background: var(--accent-color)!important;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .3), 0 1px 3px rgba(255, 255, 255, .1) inset, 0 2px 10px rgba(21, 101, 192, .3);
     transition: 0ms!important
 }
@@ -2619,7 +2709,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     top: 0px;
     -webkit-transform: scale(0.76);
     -ms-transform: scale(0.76);
-        transform: scale(0.76);
+    transform: scale(0.76);
     transition: all 300ms cubic-bezier(0, .34, 0, 1.54)
 }
 
@@ -2634,7 +2724,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     top: 0px;
     -webkit-transform: scale(0.60);
     -ms-transform: scale(0.60);
-        transform: scale(0.60);
+    transform: scale(0.60);
     transition: all 300ms cubic-bezier(0, .34, 0, 1.54)
 }
 
@@ -2642,20 +2732,20 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNOSAxNi4xN0w0LjgzIDEybC0xLjQyIDEuNDFMOSAxOSAyMSA3bC0xLjQxLTEuNDF6Ii8+PC9zdmc+);
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
-        transform: scale(0.5);
+    transform: scale(0.5);
 }
 
 .invite-button:hover .invite-button-icon.join:before {
     background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgNGwtMS40MSAxLjQxTDE2LjE3IDExSDR2MmgxMi4xN2wtNS41OCA1LjU5TDEyIDIwbDgtOHoiLz48L3N2Zz4=);
     -webkit-transform: scale(0.55);
     -ms-transform: scale(0.50)translate(10px);
-        transform: scale(0.50)translate(10px);
+    transform: scale(0.50)translate(10px);
 }
 
 .invite-button:hover .invite-button-icon.join {
     -webkit-transform: translate(-5px)scale(1.2);
     -ms-transform: translate(-5px)scale(1.2);
-        transform: translate(-5px)scale(1.2)
+    transform: translate(-5px)scale(1.2)
 }
 
 .invite-button.expired {
@@ -2665,7 +2755,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .invite-button-icon {
     -webkit-transform: translate(-5px);
     -ms-transform: translate(-5px);
-        transform: translate(-5px)
+    transform: translate(-5px)
 }
 
 .invite-button-icon.join {
@@ -2674,7 +2764,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     transition: all 300ms cubic-bezier(0, .34, 0, 1.54);
     -webkit-transform: translate(-5px);
     -ms-transform: translate(-5px);
-        transform: translate(-5px)
+    transform: translate(-5px)
 }
 
 .accessory .invite-button:hover .invite-button-icon.join {
@@ -2754,7 +2844,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .server-info button:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-        transform: scale(1.1);
+    transform: scale(1.1);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -2817,7 +2907,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .search-bar-clear.active {
     -webkit-transform: rotate(-180deg)scale(.8);
     -ms-transform: rotate(-180deg)scale(.8);
-        transform: rotate(-180deg)scale(.8);
+    transform: rotate(-180deg)scale(.8);
 }
 
 .titlebar-edge {
@@ -2874,7 +2964,7 @@ code:hover .copybutton {
 .channel-name.channel-private:hover+.status.status-online {
     -webkit-transform: scale(0.90)translate(-2px);
     -ms-transform: scale(0.90)translate(-2px);
-        transform: scale(0.90)translate(-2px)
+    transform: scale(0.90)translate(-2px)
 }
 
 .status.status-online {
@@ -2888,7 +2978,7 @@ code:hover .copybutton {
 .channel-name.channel-private:hover {
     -webkit-transform: scale(0.98);
     -ms-transform: scale(0.98);
-        transform: scale(0.98);
+    transform: scale(0.98);
 }
 
 .chat>.title-wrap>.title .channel-name.channel-private:before {
@@ -2929,7 +3019,7 @@ code:hover .copybutton {
 .embed-video-actions-inner:hover .embed-video-play {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-        transform: scale(1.1)
+    transform: scale(1.1)
 }
 
 .embed-video-play+.embed-video-popout {
@@ -2953,7 +3043,7 @@ code:hover .copybutton {
 .embed-thumbnail-video:hover {
     -webkit-transform: scale(0.98);
     -ms-transform: scale(0.98);
-        transform: scale(0.98)
+    transform: scale(0.98)
 }
 
 .detTubeButton {
@@ -3031,7 +3121,7 @@ code:hover .copybutton {
 .private-channel-call .btn-text:hover {
     -webkit-transform: scale(0.95);
     -ms-transform: scale(0.95);
-        transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 .private-channel-call .btn-icon:hover {
@@ -3077,7 +3167,7 @@ code:hover .copybutton {
 .call-avatar .avatar-xxlarge:hover {
     -webkit-transform: scale(0.98);
     -ms-transform: scale(0.98);
-        transform: scale(0.98);
+    transform: scale(0.98);
     opacity: 0.8;
 }
 
@@ -3113,7 +3203,7 @@ code:hover .copybutton {
     animation: opacity 200ms ease;
     -webkit-transform-origin: top;
     -ms-transform-origin: top;
-        transform-origin: top;
+    transform-origin: top;
 }
 
 [style='background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogIDxkZWZzPgogICAgPHBhdGggaWQ9ImEiIGQ9Ik04IDJWMEgxLjc3Nzc3Nzc4Qy43OTU5MzgyMiAwIDAgLjc5NTkzODIyIDAgMS43Nzc3Nzc3OFYxNC4yMjIyMjIyQzAgMTUuMjA0MDYxOC43OTU5MzgyMiAxNiAxLjc3Nzc3Nzc4IDE2SDE0LjIyMjIyMjJDMTUuMiAxNiAxNiAxNS4yMDg4ODg5IDE2IDE0LjIyMjIyMjJWOGgtMnY2SDJWMmg2eiIvPgogICAgPG1hc2sgaWQ9ImIiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeD0iMCIgeT0iMCIgZmlsbD0iI2ZmZiI+CiAgICAgIDx1c2UgeGxpbms6aHJlZj0iI2EiLz4KICAgIDwvbWFzaz4KICA8L2RlZnM+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiLz4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQgNCkiPgogICAgICA8dXNlIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBtYXNrPSJ1cmwoI2IpIiB4bGluazpocmVmPSIjYSIvPgogICAgICA8cGF0aCBmaWxsPSIjRkZGIiBkPSJNNiA4LjE1NDk0ODVsNS40Mjc2NzU4LTUuNDI3Njc1NzcgMS44NDUwNTE1IDEuODQ1MDUxNUw3Ljg0NTA1MTUgMTBINlY4LjE1NDk0ODV6bTkuODYwMDMxMS02LjI3NTk3MjFsLS44NDgyOTYzLjg0ODI5NjMzLTEuNzM5MDA3NS0xLjczOTAwNzUuODQ4Mjk2My0uODQ4Mjk2MzNjLjE3ODE0MjItLjE4NjYyNTIuNDc1MDQ2LS4xODY2MjUyLjY1MzE4ODIgMGwxLjA4NTgxOTMgMS4wODU4MTkzYy4xODY2MjUyLjE3ODE0MjI0LjE4NjYyNTIuNDc1MDQ1OTYgMCAuNjUzMTg4MnoiLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==");'] {
@@ -3125,7 +3215,7 @@ code:hover .copybutton {
     background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTAuMDkgMTUuNTlMMTEuNSAxN2w1LTUtNS01LTEuNDEgMS40MUwxMi42NyAxMUgzdjJoOS42N2wtMi41OCAyLjU5ek0xOSAzSDVjLTEuMTEgMC0yIC45LTIgMnY0aDJWNWgxNHYxNEg1di00SDN2NGMwIDEuMS44OSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMlY1YzAtMS4xLS45LTItMi0yeiIvPjwvc3ZnPg==);
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
-        transform: rotate(180deg);
+    transform: rotate(180deg);
     transition: all 200ms ease;
     opacity: 0.4;
     border-radius: 3px;
@@ -3146,7 +3236,7 @@ code:hover .copybutton {
     opacity: 1;
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
-        transform: rotate(180deg)
+    transform: rotate(180deg)
 }
 
 .btn-confirm:not(.reverse-slide).active .btn:last-of-type:not(:first-of-type) {
@@ -3457,14 +3547,14 @@ span {
     background-color: #141414!important;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
-        transform: scale(1.2);
+    transform: scale(1.2);
     border-radius: 10%;
 }
 
 #friends .friends-table .friends-row .friends-column-actions .friends-action:active {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-        transform: scale(1.1);
+    transform: scale(1.1);
     background-color: #141414!important;
     border-radius: 10%;
 }
@@ -3526,7 +3616,7 @@ span {
     display: block;
     font-size: 12px;
     height: 15px;
-    color: var(--accent);
+    color: var(--accent-color);
     font-weight: 700;
     content: "No need to update this theme, it updates itself when you reload discord.";
 }
@@ -3535,13 +3625,13 @@ span {
     font-size: 14px;
     font-weight: 600;
     color: #fff!important;
-    background: var(--accent);
+    background: var(--accent-color);
     padding: 8px 0;
     border-radius: 3px;
     transition: all 200ms ease;
     -webkit-transform: translate(0, -7px);
     -ms-transform: translate(0, -7px);
-        transform: translate(0, -7px);
+    transform: translate(0, -7px);
     position: absolute;
     bottom: -8px;
     right: 105px;
@@ -3552,7 +3642,7 @@ span {
 .descbutton:hover {
     -webkit-transform: translate(0, -8px);
     -ms-transform: translate(0, -8px);
-        transform: translate(0, -8px);
+    transform: translate(0, -8px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, .2);
 }
 
@@ -3560,13 +3650,13 @@ span {
     font-size: 14px;
     font-weight: 600;
     color: #fff!important;
-    background: var(--accent);
+    background: var(--accent-color);
     padding: 8px 0;
     border-radius: 3px;
     transition: all 200ms ease;
     -webkit-transform: translate(0, -7px);
     -ms-transform: translate(0, -7px);
-        transform: translate(0, -7px);
+    transform: translate(0, -7px);
     position: absolute;
     bottom: -8px;
     right: 0px;
@@ -3577,7 +3667,7 @@ span {
 .changelogbutton:hover {
     -webkit-transform: translate(0, -8px);
     -ms-transform: translate(0, -8px);
-        transform: translate(0, -8px);
+    transform: translate(0, -8px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, .2);
 }
 
@@ -3585,13 +3675,13 @@ span {
     font-size: 14px;
     font-weight: 600;
     color: #fff!important;
-    background: var(--accent);
+    background: var(--accent-color);
     padding: 8px 0;
     border-radius: 3px;
     transition: all 200ms ease;
     -webkit-transform: translate(0, -7px);
     -ms-transform: translate(0, -7px);
-        transform: translate(0, -7px);
+    transform: translate(0, -7px);
     position: absolute;
     bottom: -8px;
     right: 210px;
@@ -3602,7 +3692,7 @@ span {
 .donationbutton:hover {
     -webkit-transform: translate(0, -8px);
     -ms-transform: translate(0, -8px);
-        transform: translate(0, -8px);
+    transform: translate(0, -8px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, .2);
 }
 
@@ -3623,7 +3713,7 @@ span {
 }
 
 .input-switch input:checked+.input-switch-slider:before {
-    background: #738BD7!important;
+    background: var(--accent-color)!important;
 }
 
 .btn.btn-primary {
@@ -3735,12 +3825,14 @@ span {
 }
 
 .Select-option.is-selected {
-    background: #8495CF!important;
+    background: var(--accent-color)!important;
+    -webkit-filter: brightness(105%);
     color: #fff!important;
 }
 
 .Select-option.is-selected:hover {
-    background: var(--accent)!important;
+    background: var(--accent-color)!important;
+    -webkit-filter: none;
 }
 
 .Select-control .Select-value {
@@ -3922,7 +4014,7 @@ span {
     position: absolute;
     -webkit-transform: translate(200px, -39px);
     -ms-transform: translate(200px, -39px);
-        transform: translate(200px, -39px);
+    transform: translate(200px, -39px);
     z-index: 3;
     opacity: .8;
     pointer-events: none
@@ -4157,7 +4249,7 @@ span {
     zoom: .8;
     -webkit-transform: scale(1.3)translate(-5px, -5px);
     -ms-transform: scale(1.3)translate(-5px, -5px);
-        transform: scale(1.3)translate(-5px, -5px);
+    transform: scale(1.3)translate(-5px, -5px);
 }
 
 #user-profile-modal .header::after {
@@ -4244,7 +4336,7 @@ span {
 
 #user-profile-modal .header .activity strong {
     font-weight: 800;
-    color: #738BD7
+    color: var(--accent-color)
 }
 
 #user-profile-modal .guilds .section .connected-accounts .connected-account {
@@ -4294,7 +4386,7 @@ span {
 
 #user-profile-modal .guilds .section .note textarea:hover:focus,
 #user-profile-modal .guilds .section .note textarea:focus {
-    border-bottom: 2px solid #738BD7;
+    border-bottom: 2px solid var(--accent-color);
     transition: none;
     background: transparent;
 }
@@ -4414,14 +4506,14 @@ span {
     border: 0;
     color: #fff;
     transition: all 100ms ease;
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent-color);
     background: transparent;
     border-radius: 0;
     opacity: 1;
 }
 
 .user-popout {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .4), 0 1px 1px rgba(255, 255, 255, .03) inset;
 }
 
 .tipsy {
@@ -4440,7 +4532,7 @@ span {
     z-index: 1000000000000000000;
     pointer-events: none;
     -webkit-animation: opacity 80ms ease;
-            animation: opacity 80ms ease;
+    animation: opacity 80ms ease;
 }
 
 .tipsy-inner {
@@ -4501,7 +4593,7 @@ span {
     top: 3px;
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
-        transform: scale(0.5);
+    transform: scale(0.5);
     transition: opacity 200ms ease, -webkit-transform 0ms ease 200ms;
     transition: opacity 200ms ease, transform 0ms ease 200ms;
     transition: opacity 200ms ease, transform 0ms ease 200ms, -webkit-transform 0ms ease 200ms;
@@ -4516,7 +4608,7 @@ span {
     opacity: 0.1;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     transition: all 100ms cubic-bezier(0, 0, 0, .99);
 }
 
@@ -4540,7 +4632,7 @@ span {
     background: #303030;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     color: #fff;
     padding: 20px 20px;
     border-radius: 5px;
@@ -4607,7 +4699,7 @@ span {
     color: #fff;
     -webkit-transform: translate(-50%, -32px);
     -ms-transform: translate(-50%, -32px);
-        transform: translate(-50%, -32px);
+    transform: translate(-50%, -32px);
     position: absolute;
     left: 50%;
     font-weight: 800;
@@ -4637,7 +4729,7 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     margin-top: 65px;
     width: 230px;
     height: 40px;
@@ -4646,7 +4738,7 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(240, 71, 71, .3);
     -webkit-animation: darktheme 1s ease infinite;
-            animation: darktheme 1s ease infinite;
+    animation: darktheme 1s ease infinite;
 }
 
 .theme-light .btn.btn-settings:before {
@@ -4661,7 +4753,7 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     visibility: visible!important;
     font-size: 17px;
     font-weight: 700;
@@ -4682,7 +4774,8 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
 }
 
 .account {
-    z-index: 101!important
+    z-index: 101!important;
+    border: none;
 }
 
 .form.settings.user-settings-modal .settings-actions:before {
@@ -4760,7 +4853,7 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
     width: 240px!important;
     -webkit-transform: translate(0, 0)!important;
     -ms-transform: translate(0, 0)!important;
-        transform: translate(0, 0)!important;
+    transform: translate(0, 0)!important;
     background: transparent;
     height: 70px!important;
     pointer-events: none!important;
@@ -4827,8 +4920,8 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
 
 .status-picker .popout-menu-item:active {
     -webkit-transform: scale(0.85);
-        -ms-transform: scale(0.85);
-            transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
     transition: all 100ms cubic-bezier(0, 0, 0, 1), box-shadow 0ms;
     opacity: 1;
     box-shadow: 0 -10px 20px rgba(0, 0, 0, .15) inset, 0 1px 1px rgba(255, 255, 255, .05) inset, 0 0 0 0px #fff inset;
@@ -4918,7 +5011,7 @@ div.platform-osx .theme-light+span .user-settings-modal .tab-bar.SIDE .tab-bar-i
 }
 
 .connect-account-btn:active {
-    background: var(--accent);
+    background: var(--accent-color);
     transition: all 10ms ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .8), 0 2px 2px -2px rgba(255, 255, 255, .2) inset, 0 5px 10px rgba(25, 118, 210, .2);
 }
@@ -5003,7 +5096,7 @@ img[src="/assets/c795f9ef8be0d19a0555ee96213abd00.png"] {
     content: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggc3R5bGU9ImZpbGw6I2ZmZiIgZD0iTTE2IDMuMDM4Yy0uNTkuMjYtMS4yMi40MzctMS44ODUuNTE3LjY3Ny0uNDA3IDEuMTk4LTEuMDUgMS40NDMtMS44MTYtLjYzNC4zNy0xLjMzNy42NC0yLjA4NS43OS0uNTk4LS42NC0xLjQ1LTEuMDQtMi4zOTYtMS4wNC0xLjgxMiAwLTMuMjgyIDEuNDctMy4yODIgMy4yOCAwIC4yNi4wMy41MS4wODUuNzUtMi43MjgtLjEzLTUuMTQ3LTEuNDQtNi43NjYtMy40MkMuODMgMi41OC42NyAzLjE0LjY3IDMuNzVjMCAxLjE0LjU4IDIuMTQzIDEuNDYgMi43MzItLjUzOC0uMDE3LTEuMDQ1LS4xNjUtMS40ODctLjQxdi4wNGMwIDEuNTkgMS4xMyAyLjkxOCAyLjYzMyAzLjIyLS4yNzYuMDc0LS41NjYuMTE0LS44NjUuMTE0LS4yMSAwLS40MS0uMDItLjYxLS4wNTguNDIgMS4zMDQgMS42MyAyLjI1MyAzLjA3IDIuMjgtMS4xMi44OC0yLjU0IDEuNDA0LTQuMDcgMS40MDQtLjI2IDAtLjUyLS4wMTUtLjc4LS4wNDUgMS40Ni45MyAzLjE4IDEuNDc0IDUuMDQgMS40NzQgNi4wNCAwIDkuMzQtNSA5LjM0LTkuMzMgMC0uMTQgMC0uMjgtLjAxLS40Mi42NC0uNDYgMS4yLTEuMDQgMS42NC0xLjd6IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=)!important;
     -webkit-transform: scale(.8);
     -ms-transform: scale(.8);
-        transform: scale(.8)
+    transform: scale(.8)
 }
 
 *[style='background-image: url("/assets/c795f9ef8be0d19a0555ee96213abd00.png");'] {
@@ -5084,7 +5177,7 @@ img[src="/assets/4a3496c5b0924198ae0234331c912d1b.png"] {
 }
 
 .user-popout .username-wrapper .activity strong {
-    color: #738BD7;
+    color: var(--accent-color);
     font-weight: 800
 }
 
@@ -5130,7 +5223,7 @@ img[src="/assets/4a3496c5b0924198ae0234331c912d1b.png"] {
     display: block;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
-        transform: scale(1.2)
+    transform: scale(1.2)
 }
 
 .channel-textarea-emoji {
@@ -5525,7 +5618,7 @@ img[src="/assets/4a3496c5b0924198ae0234331c912d1b.png"] {
     margin-bottom: 10px;
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
-        transform: scale(1.3)
+    transform: scale(1.3)
 }
 
 .popout.popout-bottom[style*="z-index: 2000; visibility: visible;"] {
@@ -5543,7 +5636,7 @@ img[src="/assets/4a3496c5b0924198ae0234331c912d1b.png"] {
 a[href="/channels/@me"] .badge {
     -webkit-transform: translate(-15px);
     -ms-transform: translate(-15px);
-        transform: translate(-15px)
+    transform: translate(-15px)
 }
 
 .private-channels .channel .close {
@@ -5563,9 +5656,9 @@ a[href="/channels/@me"] .badge {
     width: 22px;
     height: 22px;
     position: absolute;
-    top: 6px;
-    right: 6px;
-    background-size: 50%;
+    top: 3px;
+    right: 5px;
+    background-size: 60%;
     background-position: 50%;
     background-repeat: no-repeat;
     border-radius: 3px;
@@ -5574,7 +5667,32 @@ a[href="/channels/@me"] .badge {
 
 .embed-tweet:after {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FscXVlXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSItOTUxIDUzMyAxNiAxNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtOTUxIDUzMyAxNiAxNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTS05MzUsNTM2Yy0wLjYsMC4zLTEuMiwwLjQtMS45LDAuNWMwLjctMC40LDEuMi0xLDEuNC0xLjhjLTAuNiwwLjQtMS4zLDAuNi0yLjEsMC44Yy0wLjYtMC42LTEuNS0xLTIuNC0xDQoJYy0xLjgsMC0zLjMsMS41LTMuMywzLjNjMCwwLjMsMCwwLjUsMC4xLDAuOGMtMi43LTAuMS01LjEtMS40LTYuOC0zLjRjLTAuMywwLjUtMC40LDEtMC40LDEuN2MwLDEuMSwwLjYsMi4xLDEuNSwyLjcNCgljLTAuNSwwLTEtMC4yLTEuNS0wLjR2MGMwLDEuNiwxLjEsMi45LDIuNiwzLjJjLTAuMywwLjEtMC42LDAuMS0wLjksMC4xYy0wLjIsMC0wLjQsMC0wLjYtMC4xYzAuNCwxLjMsMS42LDIuMywzLjEsMi4zDQoJYy0xLjEsMC45LTIuNSwxLjQtNC4xLDEuNGMtMC4zLDAtMC41LDAtMC44LDBjMS41LDAuOSwzLjIsMS41LDUsMS41YzYsMCw5LjMtNSw5LjMtOS4zYzAtMC4xLDAtMC4zLDAtMC40DQoJQy05MzYsNTM3LjMtOTM1LjQsNTM2LjctOTM1LDUzNkwtOTM1LDUzNnoiLz4NCjwvc3ZnPg0K);
-    background-color: #1DA1F2
+}
+
+.embed.embed-tweet {
+    background-color: #1DA1F2!important;
+}
+
+.embed.embed-tweet a.embed-title {
+    color: #1DA1F2!important;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+    background: #fff;
+    transition: 0ms;
+}
+
+.embed.embed-tweet a.embed-title:active {
+    background: #1DA1F2!important;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+    color: #fff!important;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+.embed.embed-tweet .embed-description {
+    color: rgba(255, 255, 255, .9)!important;
 }
 
 iframe[src*="https://www.youtube.com"]:after {
@@ -5637,7 +5755,7 @@ iframe[src*="https://www.youtube.com"]:after {
 
 .mentioned .mention:hover {
     text-decoration: none;
-    background: #738BD7!important;
+    background: var(--accent-color)!important;
     color: #fff;
 }
 
@@ -5657,7 +5775,7 @@ iframe[src*="https://www.youtube.com"]:after {
 }
 
 .message .username-wrapper.popout-open {
-    background: #738BD7;
+    background: var(--accent-color);
 }
 
 .message .username-wrapper.popout-open .user-name {
@@ -5895,12 +6013,12 @@ iframe[src*="https://www.youtube.com"]:after {
 .user-settings-modal-games .games-table .games-row .item-game .game-input:focus {
     color: #fff!important;
     border: none;
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent-color);
     border-radius: 0
 }
 
 .now-playing .checkbox .checkbox-inner input[type=checkbox]+span:before {
-    border-color: var(--accent)
+    border-color: var(--accent-color)
 }
 
 .now-playing .checkbox .checkbox-inner input[type=checkbox]:checked+span {
@@ -6001,7 +6119,7 @@ div.control-group .shortcut-recorder input[type=text]:focus {
 
 #theme-search:focus,
 #plugin-search:focus {
-    border-color: var(--accent)!important;
+    border-color: var(--accent-color)!important;
 }
 
 .ebr-top:after {
@@ -6015,7 +6133,7 @@ div.control-group .shortcut-recorder input[type=text]:focus {
     top: 33px;
     -webkit-transform: scale(.9);
     -ms-transform: scale(.9);
-        transform: scale(.9);
+    transform: scale(.9);
     opacity: 0.6;
 }
 
@@ -6062,7 +6180,7 @@ div.control-group .shortcut-recorder input[type=text]:focus {
 .region-select-modal .region-select-modal-option:active {
     background: #353535;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-    border-color: #738BD7;
+    border-color: var(--accent-color);
     transition: 0ms
 }
 
@@ -6133,7 +6251,7 @@ div.control-group .shortcut-recorder input[type=text]:focus {
 .guild-settings-modal .emoji-row .btn:hover,
 .guild-settings-modal .member-buttons .btn:hover,
 .instant-invites .instant-invite-buttons .btn:hover {
-    background: #738BD7;
+    background: var(--accent-color);
     color: #fff
 }
 
@@ -6296,7 +6414,7 @@ form:not(.user-settings-modal) .tab-bar.SIDE .tab-bar-item:before,
 .guild-settings-modal-emoji .emoji-row:hover .emoji-name:focus {
     background: transparent;
     border: none;
-    border-bottom: 2px solid #738BD7;
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .clipboard-input-inner input,
@@ -6363,11 +6481,6 @@ form:not(.user-settings-modal) .tab-bar.SIDE .tab-bar-item:before,
     color: rgba(255, 255, 255, .3)
 }
 
-#bd-customcss-attach-controls .checkbox-group .checkbox .checkbox-inner+span {
-    color: rgba(0, 0, 0, .9);
-    font-weight: 600
-}
-
 .channel-notification-settings .content,
 .channel-notification-settings .content .content-inner {
     background: transparent!important;
@@ -6421,7 +6534,7 @@ form:not(.user-settings-modal) .tab-bar.SIDE .tab-bar-item:before,
 #instant-invite-modal .copy:active {
     background-image: none!important;
     background: #fff;
-    color: #738BD7
+    color: var(--accent-color)
 }
 
 #instant-invite-modal .form-actions {
@@ -6461,7 +6574,7 @@ form:not(.user-settings-modal) .tab-bar.SIDE .tab-bar-item:before,
     top: 50%;
     -webkit-transform: translate(-50%, -33%);
     -ms-transform: translate(-50%, -33%);
-        transform: translate(-50%, -33%);
+    transform: translate(-50%, -33%);
 }
 
 .clipboard-input-copied {
@@ -6635,7 +6748,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .search-results-wrap .action-buttons {
     -webkit-transform: translate(-30px, 11px);
     -ms-transform: translate(-30px, 11px);
-        transform: translate(-30px, 11px)
+    transform: translate(-30px, 11px)
 }
 
 
@@ -6702,7 +6815,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .upload-area .upload-drop-modal {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
-        transform: scale(1.2);
+    transform: scale(1.2);
     transition: all 200ms ease;
     opacity: 0;
 }
@@ -6710,7 +6823,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .upload-area.in .upload-drop-modal {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     opacity: 1
 }
 
@@ -6755,7 +6868,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     border-radius: 100px;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
-        transform: translate(0, -50%);
+    transform: translate(0, -50%);
     opacity: 0.9;
 }
 
@@ -6805,7 +6918,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 }
 
 .emoji-picker .search-bar input:focus {
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .emoji-picker .search-bar input::-webkit-input-placeholder {
@@ -6818,7 +6931,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 }
 
 .emoji-picker .scroller .emoji-item:active {
-    box-shadow: 0 0 0 2px #738BD7;
+    box-shadow: 0 0 0 2px var(--accent-color);
     transition: 0ms
 }
 
@@ -7038,7 +7151,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 }
 
 .theme-dark .search-answer {
-    background: #738BD7
+    background: var(--accent-color)
 }
 
 .search-popout .option .non-text {
@@ -7108,14 +7221,14 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .search-popout .option:active strong,
 .search-popout .option.user:active .displayed-nick {
     color: #fff;
-    background: #738BD7;
+    background: var(--accent-color);
     padding: 4px 5px;
     border-radius: 2px;
     margin-right: 2px
 }
 
 .search-popout .search-option:active .filter {
-    background: #738BD7;
+    background: var(--accent-color);
 }
 
 .search-popout .date-picker {
@@ -7161,14 +7274,14 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 }
 
 .react-datepicker .react-datepicker__day:active {
-    background: #738BD7;
+    background: var(--accent-color);
     opacity: 1
 }
 
 .react-datepicker .react-datepicker__day--disabled:active,
 .react-datepicker .react-datepicker__day--outside-month:active {
     border: none!important;
-    background-color: #738BD7!important;
+    background-color: var(--accent-color)!important;
     color: #fff!important
 }
 
@@ -7223,7 +7336,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .create-guild-container .create-or-join {
     -webkit-transform: none!important;
     -ms-transform: none!important;
-        transform: none!important;
+    transform: none!important;
     opacity: 1;
     transition: 200ms ease;
 }
@@ -7250,7 +7363,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     transition: 300ms ease;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     opacity: 1;
 }
 
@@ -7264,7 +7377,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     transition: 300ms ease;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     opacity: 1;
 }
 
@@ -7277,7 +7390,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     transition: 200ms ease;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     z-index: 2;
     opacity: 1;
 }
@@ -7291,7 +7404,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     transition: 200ms ease;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-        transform: scale(1);
+    transform: scale(1);
     z-index: 2;
     opacity: 1;
 }
@@ -7305,7 +7418,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     transition: 200ms ease, opacity 150ms ease;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
-        transform: scale(0);
+    transform: scale(0);
     z-index: 1;
     opacity: 0;
 }
@@ -7319,7 +7432,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     transition: 200ms ease, opacity 150ms ease;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
-        transform: scale(0);
+    transform: scale(0);
     z-index: 1;
     opacity: 0;
 }
@@ -7327,7 +7440,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .create-guild-container .action:active {
     -webkit-transform: scale(1.05)!important;
     -ms-transform: scale(1.05)!important;
-        transform: scale(1.05)!important;
+    transform: scale(1.05)!important;
     transition: 100ms ease!important
 }
 
@@ -7348,7 +7461,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 .create-guild-container .action {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
-        transform: scale(0);
+    transform: scale(0);
     transition: 200ms ease;
 }
 
@@ -7362,7 +7475,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     opacity: 1;
     -webkit-transform: none!important;
     -ms-transform: none!important;
-        transform: none!important;
+    transform: none!important;
 }
 
 .create-guild-container .create-guild,
@@ -7371,7 +7484,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     opacity: 1;
     -webkit-transform: none!important;
     -ms-transform: none!important;
-        transform: none!important;
+    transform: none!important;
 }
 
 .create-guild-container .create-guild,
@@ -7418,7 +7531,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .create-guild-container .join-server .link-container input:focus {
     border: none!important;
-    border-bottom: 2px solid #738BD7!important
+    border-bottom: 2px solid var(--accent-color)!important
 }
 
 .create-guild-container .join-server .link-container label {
@@ -7438,7 +7551,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 }
 
 .region-select:active button {
-    background: var(--accent);
+    background: var(--accent-color);
     color: #fff
 }
 
@@ -7487,21 +7600,21 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     background-repeat: no-repeat;
     background-position: 40%;
     -webkit-transform: translate(40px);
-        -ms-transform: translate(40px);
-            transform: translate(40px);
+    -ms-transform: translate(40px);
+    transform: translate(40px);
 }
 
 .quickswitcher.dark .result.selected:after {
     opacity: 1;
     transition: 100ms ease 100ms;
     -webkit-transform: translate(0px);
-        -ms-transform: translate(0px);
-            transform: translate(0px);
+    -ms-transform: translate(0px);
+    transform: translate(0px);
 }
 
 .quickswitcher.dark .result.selected:active,
 .quickswitcher.dark .result.selected:active:after {
-    background-color: var(--accent);
+    background-color: var(--accent-color);
     transition: 0ms!important;
 }
 
@@ -7573,8 +7686,8 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .context-menu .context-menu {
     -webkit-transform: translate(0, -16px)!important;
-        -ms-transform: translate(0, -16px)!important;
-            transform: translate(0, -16px)!important;
+    -ms-transform: translate(0, -16px)!important;
+    transform: translate(0, -16px)!important;
 }
 
 .theme-dark.context-menu .item-subMenu {
@@ -7627,8 +7740,8 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .guild-header.popout-open~.scroller-wrap {
     -webkit-transform: translate(0, 40px);
-        -ms-transform: translate(0, 40px);
-            transform: translate(0, 40px);
+    -ms-transform: translate(0, 40px);
+    transform: translate(0, 40px);
     padding-bottom: 40px;
     transition: padding 0ms ease 200ms, -webkit-transform 200ms ease;
     transition: transform 200ms ease, padding 0ms ease 200ms;
@@ -7637,8 +7750,8 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 .guild-header.popout-open~.channel-list-top {
     -webkit-transform: translate(0, 40px);
-        -ms-transform: translate(0, 40px);
-            transform: translate(0, 40px);
+    -ms-transform: translate(0, 40px);
+    transform: translate(0, 40px);
     transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
     transition: transform 200ms ease, -webkit-transform 200ms ease
@@ -7665,16 +7778,16 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     left: 0px!important;
     top: 0px!important;
     -webkit-animation: slide-down 200ms ease, opacity 200ms ease, visibility 1ms ease;
-            animation: slide-down 200ms ease, opacity 200ms ease, visibility 1ms ease;
+    animation: slide-down 200ms ease, opacity 200ms ease, visibility 1ms ease;
     -webkit-flex-direction: row!important;
-        -ms-flex-direction: row!important;
-            flex-direction: row!important;
+    -ms-flex-direction: row!important;
+    flex-direction: row!important;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -7691,14 +7804,16 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     height: 100px!important;
     margin: 0px;
     -webkit-transform: none!important;
-        -ms-transform: none!important;
-            transform: none!important;
+    -ms-transform: none!important;
+    transform: none!important;
     pointer-events: none;
-    position:absolute;
+    position: absolute;
 }
-.tutorial-indicators+.theme-dark{
-	position:relative;
+
+.tutorial-indicators+.theme-dark {
+    position: relative;
 }
+
 .popout-bottom[style*="overflow: hidden; visibility: visible;"] .popout-menu * {
     pointer-events: auto;
 }
@@ -7774,20 +7889,19 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%) scale(1);
-        -ms-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
     transition: 0ms cubic-bezier(.52, 0, 0, 1);
     background-position: 50%;
-
 }
 
 .guilds-wrapper .guilds .guild .guild-inner a:hover:after {
     box-shadow: 0 2px 20px rgba(0, 0, 0, .4);
     transition: 0ms cubic-bezier(.3, 0, 0, 1);
     -webkit-transform: translate(-50%, -50%)scale(1);
-        -ms-transform: translate(-50%, -50%)scale(1);
-            transform: translate(-50%, -50%)scale(1);
+    -ms-transform: translate(-50%, -50%)scale(1);
+    transform: translate(-50%, -50%)scale(1);
 }
 
 .guilds-wrapper .guilds .guild .badge {
@@ -7842,7 +7956,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     background-position: 50%;
     background-color: #43B581!important;
     -webkit-animation: none!important;
-            animation: none!important;
+    animation: none!important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .2) inset;
 }
 
@@ -7968,19 +8082,19 @@ a:active .friends-icon {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     background: #393939;
 }
 
 .guild-channels .channel-text .badge {
     -webkit-transform: translate(0, 2px);
-        -ms-transform: translate(0, 2px);
-            transform: translate(0, 2px);
+    -ms-transform: translate(0, 2px);
+    transform: translate(0, 2px);
 }
 
 .context-menu .item.danger:hover {
-    color: #f04747!important;
+    color: #F04747!important;
 }
 
 .context-menu .item:active .checkbox span {
@@ -7989,11 +8103,11 @@ a:active .friends-icon {
 }
 
 .context-menu .item:active .checkbox span:before {
-    border-color: var(--accent)!important;
+    border-color: var(--accent-color)!important;
 }
 
 .context-menu .item.danger:active {
-    background: #f04747!important;
+    background: #F04747!important;
     color: #fff!important;
 }
 
@@ -8006,36 +8120,49 @@ a:active .friends-icon {
 }
 
 .guild.unread a:after {
-    box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
-    -webkit-animation:guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
-            animation:guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
+    box-shadow: 0 0 0 2px #303030 inset, 0 0 0 3px var(--notification-color), 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
+    -webkit-animation: guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
+    animation: guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
 }
+
 .dms .guild a:after {
-    box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
-    -webkit-animation:scale-center 1s cubic-bezier(.44, .37, 0, 1.25), guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
-            animation:scale-center 1s cubic-bezier(.44, .37, 0, 1.25), guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
+    box-shadow: 0 0 0 -2px #303030 inset, 0 0 0 -2px var(--notification-color), 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
+    -webkit-animation: scale-center 1s cubic-bezier(.44, .37, 0, 1.25), guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
+    animation: scale-center 1s cubic-bezier(.44, .37, 0, 1.25), guild-notifs .8s cubic-bezier(.2, 0, 0, 1);
 }
-@keyframes scale-center{
-	0%{
-		transform: translate(-50%, -50%) scale(0);
-	}
+
+@-webkit-keyframes scale-center {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+                transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+@keyframes scale-center {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(0);
+                transform: translate(-50%, -50%) scale(0);
+    }
 }
 
 .guild.unread a:hover:after {
-    box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
+    box-shadow: 0 0 0 2px #303030 inset, 0 0 0 3px var(--notification-color), 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
+}
+
+@-webkit-keyframes guild-notifs {
+    0% {
+        box-shadow: 0 0 0 -2px #303030 inset, 0 0 0 -15px var(--notification-color), 0 0 0 0px rgba(255, 255, 255, .8), 0 2px 20px rgba(0, 0, 0, .1);
+    }
 }
 
 @keyframes guild-notifs {
     0% {
-        box-shadow:0 0 0 -2px #303030 inset, 0 0 0 -15px #F04747, 0 0 0 0px rgba(255, 255, 255, .8), 0 2px 20px rgba(0, 0, 0, .1);
-    }
-    100% {
-        box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
+        box-shadow: 0 0 0 -2px #303030 inset, 0 0 0 -15px var(--notification-color), 0 0 0 0px rgba(255, 255, 255, .8), 0 2px 20px rgba(0, 0, 0, .1);
     }
 }
 
 .guild.unread.selected a:after {
-    box-shadow:0 0 0 2px #303030 inset, 0 0 0 3px #F04747, 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
+    box-shadow: 0 0 0 2px #303030 inset, 0 0 0 3px var(--notification-color), 0 0 0 23px rgba(255, 255, 255, .0), 0 2px 20px rgba(0, 0, 0, .1)!important;
 }
 
 .user-settings-modal-security .backup-codes .code {
@@ -8074,8 +8201,8 @@ a:active .friends-icon {
     left: 0;
     top: 0;
     -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
     transition: opacity 100ms ease, -webkit-transform 0ms ease 100ms;
     transition: transform 0ms ease 100ms, opacity 100ms ease;
     transition: transform 0ms ease 100ms, opacity 100ms ease, -webkit-transform 0ms ease 100ms;
@@ -8083,8 +8210,8 @@ a:active .friends-icon {
 
 .channel-notices .channel-notice .close:active:after {
     -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     opacity: .2;
     transition: opacity 100ms ease, -webkit-transform 200ms cubic-bezier(0, 0, 0, 1);
     transition: transform 200ms cubic-bezier(0, 0, 0, 1), opacity 100ms ease;
@@ -8152,7 +8279,7 @@ a:active .friends-icon {
 }
 
 .theme-dark .messages-popout-wrap .has-more button:active {
-    background: var(--accent);
+    background: var(--accent-color);
     color: #fff;
     transition: 0ms;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
@@ -8174,7 +8301,7 @@ a:active .friends-icon {
     box-shadow: 0 0 0 10px rgba(255, 255, 255, .1);
     transition: background-color 0ms;
     -webkit-animation: channel-arrow 100ms ease;
-            animation: channel-arrow 100ms ease;
+    animation: channel-arrow 100ms ease;
 }
 
 @-webkit-keyframes channel-arrow {
@@ -8200,7 +8327,7 @@ a:active .friends-icon {
 .context-menu .item:active .slider .slider-handle,
 .context-menu .item:active .slider-bar-fill {
     background: #fff;
-    color: #738BD7;
+    color: var(--accent-color);
 }
 
 .ui-button.outlined {
@@ -8215,8 +8342,8 @@ a:active .friends-icon {
     position: relative;
     z-index: 1000000;
     -webkit-transform: translate(0, -30px);
-        -ms-transform: translate(0, -30px);
-            transform: translate(0, -30px);
+    -ms-transform: translate(0, -30px);
+    transform: translate(0, -30px);
     color: rgba(255, 255, 255, .3);
     margin-left: 60px;
 }
@@ -8259,7 +8386,7 @@ a:active .friends-icon {
     padding-left: 2px;
     padding-right: 2px;
     color: #fff;
-    background: #738BD7;
+    background: var(--accent-color);
     transition: 0ms;
     opacity: 1!important
 }
@@ -8283,12 +8410,12 @@ a:active .friends-icon {
     display: none
 }
 
-
-/* -stuff that will be able to be enabled in BD 2.0-
 .scroller.guild-channels::-webkit-scrollbar {
     background: rgba(225, 225, 225, 0.05)!important;
-    width: 6px!important;
+    width: 5px!important;
+    display: var(--channels-scrollbar);
 }
+
 .scroller.guild-channels::-webkit-scrollbar-thumb:hover,
 .scroller.guild-channels::-webkit-scrollbar-thumb {
     border: none !important;
@@ -8296,10 +8423,74 @@ a:active .friends-icon {
     display: initial;
     border-radius: 0!important;
 }
+
 .scroller.guild-channels::-webkit-scrollbar-thumb:active {
     border: none !important;
     background-color: rgba(225, 225, 225, 0.2) !important;
     display: initial;
     border-radius: 0!important
 }
-*/
+
+.premium-settings .premium-header.splash {
+    margin-bottom: 0!important
+}
+
+.premium-settings.v1 .premium-features {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#permissions .permissions-helpdesk:hover,
+.guild-settings-modal-members .guild-settings-modal-members-footer a:hover,
+.guild-settings-modal-overview a:hover,
+.user-settings-modal a:hover,
+.form .control-group label a:hover {
+    opacity: 0.6;
+}
+
+.create-guild-container .action:hover.create .btn,
+.form .btn-primary:hover {
+    -webkit-filter: brightness(93%)contrast(110%);
+}
+
+
+/*-------------------------------------------*/
+
+.form .btn-primary:active {
+    background: #DCDCDC;
+}
+
+.theme-dark .recent-mentions-popout .tab-bar-item.selected {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.new-messages-indicator.new-messages-indicator-mention,
+.badge {
+    background-color: #F04747;
+}
+
+.user-settings-modal button.preview-sound:before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTMgOXY2aDRsNSA1VjRMNyA5SDN6bTEzLjUgM2MwLTEuNzctMS4wMi0zLjI5LTIuNS00LjAzdjguMDVjMS40OC0uNzMgMi41LTIuMjUgMi41LTQuMDJ6TTE0IDMuMjN2Mi4wNmMyLjg5Ljg2IDUgMy41NCA1IDYuNzFzLTIuMTEgNS44NS01IDYuNzF2Mi4wNmM0LjAxLS45MSA3LTQuNDkgNy04Ljc3cy0yLjk5LTcuODYtNy04Ljc3eiIvPiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+) !important;
+    background-color: var(--accent-color);
+    margin-left: -2px;
+    margin-top: -2px;
+    padding: 2px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--accent-color), 0 0 0 4px #212121, 0 0 0 6px transparent;
+    transition: 200ms ease;
+}
+
+.user-settings-modal button.preview-sound:hover:before {
+    box-shadow: 0 0 0 2px var(--accent-color), 0 0 0 4px #212121, 0 0 0 6px #fff;
+    transition: 50ms ease;
+}
+
+.user-settings-modal button.preview-sound:active:before {
+    box-shadow: 0 0 0 2px var(--accent-color), 0 0 0 4px #fff;
+    transition: 0ms;
+}
+
+.message-group .comment .markup {
+    color: rgba(255, 255, 255, .7);
+}
