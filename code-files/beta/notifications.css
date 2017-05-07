@@ -1,0 +1,4 @@
+body .ui-standard-sidebar-view #bd-settingspane-container .content-column.default[data-reactid*="$scroller.$tcolumn"] .ui-form-title.h2:after,
+body #bd-themes-pane .bda-slist:before {
+    content: "For announcements and changelog, go to the server bit.ly/BMTserver."!important;
+}
