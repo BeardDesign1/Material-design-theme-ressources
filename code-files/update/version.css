@@ -19,7 +19,11 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 }
 
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default[data-reactid*="$scroller.$tcolumn"] .bda-slist:before {
+<<<<<<< HEAD
     content: "Current version: v2.0.5\A \A Changelog:\A \A v2.0.5\A - Remade the settings animation with pure css, should run wayyy smoother.\A - Made the roles in the members panel colored again.\A - Added ripple effect in the settings close button.\A - Made the mentions as well as a lot more stuff work with the accent color.\A - Remade the instant invite panel.\A - Lots of bug fixing.\A \A v2.0.4\A - Themed the new settings.\A - Fixed the Deprecated settings bug.\A - Made the new settings switches into material switches.\A - Made an override system for BetterDiscord blue.\A - Edited icons in the settings panels/added icons for the BetterDiscord settings.\A - Added icons to the server settings.\A - Added an animation to most text fields.\A - Currently working on implementing a beta.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
+=======
+    content: "Current version: v2.0.4\A\A Changelog:\A v2.0.4\A - Themed the new settings.\A - Fixed the Deprecated settings bug.\A - Made the new settings switches into material switches.\A - Made an override system for BetterDiscord blue.\A - Edited icons in the settings panels/added icons for the BetterDiscord settings.\A - Added icons to the server settings.\A - Added an animation to most text fields.\A - Currently working on implementing a beta.\A \A v2.0.3\A - tweaked the look of the quickswitcher.\A - changed the look of the 'log out' and 'delete server' buttons.\A - fixed the look of a bunch of things.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
+>>>>>>> origin/master
 }
 .user-settings-account .flex-vertical:after {
     content: "Hi, I just created server where I post stuff about the theme and you can give me feedback,\A also there's a beta now :D. To download it join the server at >> bit.ly/BMTserver <<"!important;
@@ -42,6 +46,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     color: #fff;
     text-transform: initial;
     text-align:center;
+<<<<<<< HEAD
 }
 
 .user-settings-account .flex-vertical:after {
@@ -65,6 +70,31 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
 }
 
+=======
+}
+
+.user-settings-account .flex-vertical:after {
+    display: block;
+    position: relative;
+    padding: 10px 15px;
+    white-space: pre;
+    margin-bottom: -10px;
+    margin-top:15px;
+    border-radius: 2px;
+    font-weight: 600;
+    color: rgba(255,255,255,.4);
+    text-transform: initial;
+    background:rgba(255,255,255,.02);
+    transition:300ms ease;
+    text-align:center;
+}
+.user-settings-account .flex-vertical:hover:after {
+    background: #303030;
+    color: rgba(255,255,255,.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+>>>>>>> origin/master
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default[data-reactid*="$scroller.$tcolumn"] .bda-slist:before {
     display: block;
     position: relative;
@@ -8931,6 +8961,7 @@ div.platform-win .layer[layer-id="user-settings"] .ui-standard-sidebar-view .sid
 #bd-settings-sidebar span{
     color:rgba(255,255,255,.3)!important;
 }
+<<<<<<< HEAD
 .layer{
     transform:none!important;
     transition:0.3s cubic-bezier(.20,0,0,1);
@@ -9321,3 +9352,5 @@ div.platform-win .layer[layer-id="user-settings"] .ui-standard-sidebar-view .sid
 .ui-key-recorder .layout .ui-button:active{
     transition: all 50ms ease;
 }
+=======
+>>>>>>> origin/master
