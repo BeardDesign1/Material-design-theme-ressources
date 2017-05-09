@@ -21,9 +21,9 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default[data-reactid*="$scroller.$tcolumn"] .bda-slist:before {
     content: "Current version: v2.0.4\A\A Join it at bit.ly/BMTserver.\A \A Changelog:\A v2.0.4\A - Themed the new settings.\A - Fixed the Deprecated settings bug.\A - Made the new settings switches into material switches.\A - Made an override system for BetterDiscord blue.\A - Edited icons in the settings panels/added icons for the BetterDiscord settings.\A - Added icons to the server settings.\A - Added an animation to most text fields.\A - Currently working on implementing a beta.\A \A v2.0.3\A - tweaked the look of the quickswitcher.\A - changed the look of the 'log out' and 'delete server' buttons.\A - fixed the look of a bunch of things.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTbug to signal bugs or incoherences :)"!important;
 }
-
+.user-settings-account .flex-vertical:after,
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default[data-reactid*="$scroller.$tcolumn"] .ui-form-title.h2:after {
-    content: "▪ Hi, I just created server where I post stuff about the theme and you can give me feedback.\A Join it at >> bit.ly/BMTserver <<"!important;
+    content: "Hi, I just created server where I post stuff about the theme and you can give me feedback,\A also there's a beta now :D. To download it join the server at >> bit.ly/BMTserver <<"!important;
 }
 
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default[data-reactid*="$scroller.$tcolumn"] .ui-form-title.h2:after {
@@ -36,10 +36,33 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     margin-top:15px;
     border-radius: 2px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     text-transform: initial;
+    text-align:center;
 }
+
+.user-settings-account .flex-vertical:after {
+    display: block;
+    position: relative;
+    padding: 10px 15px;
+    white-space: pre;
+    margin-bottom: -10px;
+    margin-top:15px;
+    border-radius: 2px;
+    font-weight: 600;
+    color: rgba(255,255,255,.4);
+    text-transform: initial;
+    background:rgba(255,255,255,.02);
+    transition:300ms ease;
+    text-align:center;
+}
+.user-settings-account .flex-vertical:hover:after {
+    background: #303030;
+    color: rgba(255,255,255,.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default[data-reactid*="$scroller.$tcolumn"] .bda-slist:before {
     display: block;
     position: relative;
