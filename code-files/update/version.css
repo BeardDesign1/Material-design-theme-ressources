@@ -12,6 +12,13 @@ You are allowed to use this theme as it is, and edit it it AS LONG AS YOU KEEP I
 Sorry I have to be super aggressive in this legal stuff, but there has been some problems and I just dont want more :3
 ///////////////////////////////////////
 */
+#bd-settings-sidebar>span>span[style*="font-size:12px"]:after{
+    content: "Beard's Material Theme v2.0.5";
+    padding-left:10px;
+    display:block;
+    padding-top:5px;
+    margin-bottom:-10px;
+}
 
 .form.settings.user-settings-modal .settings-actions:before,
 .lastversion:after {
@@ -8922,13 +8929,7 @@ div.platform-win .layer[layer-id="user-settings"] .ui-standard-sidebar-view .sid
 .icon.icon-file.document{
     background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTQgMkg2Yy0xLjEgMC0xLjk5LjktMS45OSAyTDQgMjBjMCAxLjEuODkgMiAxLjk5IDJIMThjMS4xIDAgMi0uOSAyLTJWOGwtNi02em0yIDE2SDh2LTJoOHYyem0wLTRIOHYtMmg4djJ6bS0zLTVWMy41TDE4LjUgOUgxM3oiLz48L3N2Zz4=);
 }
-#bd-settings-sidebar>span>span[style*="font-size:12px"]:after{
-    content: "Beard's Material Theme v2.0.4";
-    padding-left:10px;
-    display:block;
-    padding-top:5px;
-    margin-bottom:-10px;
-}
+
 #bd-settings-sidebar span{
     color:rgba(255,255,255,.3)!important;
 }
