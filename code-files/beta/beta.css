@@ -9711,3 +9711,48 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     color:#fff;
 }
 /*/fullscreen notification settings*/
+
+/*"new mentions" arrows*/
+.guilds-wrapper .new-messages-indicator{
+    top:30px;
+    height:30px;
+    width:30px;
+    font-size:0;
+    border-radius:50%;
+    left:50%;
+    transform:translate(-50%,-50%)scale(1);
+    animation:scale-center 400ms cubic-bezier(0,0,0,1)!important;
+    transition:300ms cubic-bezier(0,0,0,1);
+    box-shadow:0 2px 20px rgba(0,0,0,.3);
+}
+.guilds-wrapper .new-messages-indicator:hover{
+    transform:translate(-50%,-50%)scale(1.2);
+    box-shadow:0 2px 10px rgba(0,0,0,.5);
+}
+.guilds-wrapper .new-messages-indicator:active{
+    transform:translate(-50%,-50%)scale(0.8);
+    transition:100ms cubic-bezier(0,0,0,1);
+}
+.guilds-wrapper .new-messages-indicator.bottom{
+    bottom:65px;
+    top:auto;
+}
+.guilds-wrapper .new-messages-indicator .icon.icon-unread-arrow{
+    margin:0!important;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%)rotate(180deg);
+}
+.guilds-wrapper .new-messages-indicator.bottom .icon.icon-unread-arrow{
+    margin:0!important;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.guilds-wrapper .guilds{
+    margin-bottom:40px;
+    padding-bottom:00px!important;
+}
+/*/"new mentions" arrows*/
