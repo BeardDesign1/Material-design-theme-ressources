@@ -1,0 +1,12 @@
+/*Username*/
+.avatar-profile[style*="avatars/--"]::before,
+.avatar-profile[style*="avatars/--"]::after,
+  .avatar-large[style*="avatars/--"]+.comment .username-wrapper::before,
+  .avatar-large[style*="avatars/--"]+.comment .username-wrapper::after,
+/*Username*/
+.avatar-profile[style*="avatars/--"]::before,
+.avatar-profile[style*="avatars/--"]::after,
+  .avatar-large[style*="avatars/--"]+.comment .username-wrapper::before,
+  .avatar-large[style*="avatars/--"]+.comment .username-wrapper::after{
+    display:inline-block!important
+}
