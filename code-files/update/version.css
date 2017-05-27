@@ -20,7 +20,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .avatar-large+.comment .username-wrapper::after{
     display:none!important
 }
-@import url(https://cdn.rawgit.com/BeardDesign1/Material-design-theme-ressources/2eb794c5/code-files/update/special-users.css);
+@import url(https://rawgit.com/BeardDesign1/Material-design-theme-ressources/master/code-files/update/special-users.css);
 /*/Contributors*/
 
 :root {

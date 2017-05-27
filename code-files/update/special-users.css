@@ -38,11 +38,6 @@
 .avatar-profile[style*="avatars/211023028832698368"]::after,
   .avatar-large[style*="avatars/211023028832698368"]+.comment .username-wrapper::before,
   .avatar-large[style*="avatars/211023028832698368"]+.comment .username-wrapper::after,
-/*Username*/
-.avatar-profile[style*="avatars/--"]::before,
-.avatar-profile[style*="avatars/--"]::after,
-  .avatar-large[style*="avatars/--"]+.comment .username-wrapper::before,
-  .avatar-large[style*="avatars/--"]+.comment .username-wrapper::after,
 /*Jojo#0956*/
 .avatar-profile[style*="avatars/135764542410981377"]::before,
 .avatar-profile[style*="avatars/135764542410981377"]::after,
