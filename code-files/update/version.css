@@ -11442,4 +11442,5 @@ body .citar-btn:active{
 }
 .bd-loaderv2{
     display: none;
+    opacity:0;
 }
