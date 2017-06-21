@@ -20,12 +20,12 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     --settings-scrollbar: var(--disabled);
     --disabled: none;
     --enabled: initial;
-    --version:"Beard's Material Theme v2.1.1";
+    --version:"Beard's Material Theme v2.1.2";
 }
 
 /*changelog*/
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before {
-    content: "Beard's Material theme v2.1.1\A \A Changelog:\A \A v2.1.1\A - bug fixing\A \A v2.1.0\A - bug fixing.\A - Changed the look of some stuff but nothing important.\A - Started translating some stuff into french for people with french on.\A -> Tell me in the server if you want me to translate the theme to your language.\A \A Full changelog on github or in the discord server.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
+    content: "Beard's Material theme v2.1.2\A \A Changelog:\A \A v2.1.2\A - new edit message animation.\A - bug fixing.\A \A v2.1.1\A - bug fixing.\A \A v2.1.0\A - bug fixing.\A - Changed the look of some stuff but nothing important.\A - Started translating some stuff into french for people with french on.\A -> Tell me in the server if you want me to translate the theme to your language.\A \A Full changelog on github or in the discord server.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
 }
 /*Account settings announcement*/
 .user-settings-account>h2.ui-form-title.margin-reset.margin-bottom-20+.flex-vertical::after {
@@ -134,6 +134,128 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 /*/Contributors*/
 
+/*Translation*/
+/*French*/
+html[lang="fr"] .content-region #bd-customcss-attach-controls::after{
+    content:"Pour ajouter des paramètres personnalisés au thème, copiez le code\A suivant dans votre 'custom CSS' et remplacez les choses que vous\A souhaitez changer:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A }\A\A N'oubliez pas d'enregisrer(save) et mettre a jour(update) quand vous\A avez fini!\A \A Et si vous ne voulez pas le copier manellement, allez a l'adresse:\A bit.ly/BMTsettings et copiez/collez directement le code."!important;
+}
+html[lang="fr"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
+html[lang="fr"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
+    content: "ACCEDER AUX PARAMETRES"!important;
+}
+html[lang="fr"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3),
+html[lang="fr"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3){
+    width: 250px;
+}
+html[lang="fr"] .theme-light .layer:first-of-type::before{
+    content: "Le mode sombre doit être activé pour que le thème marche correctement. Pour l'activer, allez dans paramètres > Apparence."!important;
+    width: 430px;
+}
+html[lang="fr"] .bd-blue .layer:first-of-type::before{
+    content: "L'option 'BetterDiscord Blue' doit être désactivée pour que le thème marche correctement. Pour l'activer, allez dans paramètres > core."!important;
+    width: 470px;
+}
+html[lang="fr"] .app::after{
+    content: "Conseil: si vous voulez avoir cette couleur en tant que couleur d'accent pour le theme, allez dans 'custom css' et changez la couleur d'accent en #3A71C1 ."!important;
+    width: 500px;
+}
+/*turkish(By @Midorina#5706)*/
+html[lang="tr"] .content-region #bd-customcss-attach-controls::after{
+    content:'Eğer temanıza özel ayarlar eklemek istiyorsanız, aşağıdaki\A kodları "Custom CSS" kısmına kopyalayıp, renk değerlerini istediğiniz\A gibi değiştirin:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A }\A \A İşiniz bittiğinde kaydetmeyi/güncellemeyi unutmayın!\A \A Ve eğer manuel kopyalayacak kadar tembelseniz,\A bit.ly/BMTsettings sitesine gidin ve direkt kopyala/yapıştır yapın.\A'!important;
+}
+html[lang="tr"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
+html[lang="tr"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
+    content: "AYARLARA GİT"!important;
+}
+html[lang="tr"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3),
+html[lang="tr"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3){
+    width: 180px;
+}
+html[lang="tr"] .theme-light .layer:first-of-type::before{
+    content: "Bu temanın düzgünce çalışması için Koyu temanın aktif olması gerekiyor. Bunu yapmak için Ayarlar > Görünüm."!important;
+    width: 430px;
+}
+html[lang="tr"] .bd-blue .layer:first-of-type::before{
+    content: 'Bu temanın düzgünce çalışması için "BetterDiscord Blue" ayarını devre dışı bırakmanız gerekiyor. Bunu yapmak için Ayarlar > BetterDiscord > Core.'!important;
+    width: 510px;
+}
+html[lang="tr"] .app::after{
+    content: 'İpucu: Eğer bu mavi tonunu vurgu rengi olarak kullanmak istiyorsanız, "Custom CSS" bölümüne gidip "Accent Color" değerini #3A71C1 yapın.'!important;
+    width: 470px;
+}
+/*Finnish(By @Asolus#0467)*/
+html[lang="fi"] .content-region #bd-customcss-attach-controls::after{
+    content:'Lisätäksesi mukautettuja asetuksia teemaan, kopioi seuraava koodi\A custom CSS -kohtaasi ja korvaa ne asiat, jotka haluat vaihtaa:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A }\A \A Älä unohda tallentaa/päivittää kun olet valmis!\A \A Jos olet liian laiska kopioimaan sitä manuaalisesti, mene osoitteeseen\A bit.ly/BMTsettings ja kopioi ja liitä koodi.\A'!important;
+}
+html[lang="fi"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
+html[lang="fi"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
+    content: 'MENE ASETUKSIIN'!important;
+}
+html[lang="fi"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3),
+html[lang="fi"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3){
+    width: 190px;
+}
+html[lang="fi"] .theme-light .layer:first-of-type::before{
+    content: 'Sinulla pitää olla dark mode -asetus käytössä teeman toimiakseen kunnolla. Ottaaksesi sen käyttöön, mene "settings" > "appearance"'!important;
+    width: 450px;
+}
+html[lang="fi"] .bd-blue .layer:first-of-type::before{
+    content: 'Sinulla pitää olla BetterDiscord blue -asetus poistettuna käytöstä teeman toimiakseen kunnolla. Poistaaksesi sen käytöstä, mene "settings" > "betterdiscord" > "core".'!important;
+    width: 570px;
+}
+html[lang="fi"] .app::after{
+    content: 'Vinkki: jos haluat tämän sinisen korostusväriksi teemalle, mene kohtaan "custom css" ja aseta korostusväriksi #3A71C1.'!important;
+    width: 440px;
+}
+/*Brazilian Portuguese(By @Viniuau#3029)*/
+html[lang="pt-BR"] .content-region #bd-customcss-attach-controls::after{
+    content:'Para adicionar configurações customizadas para o tema copie o seguinte\A código no seu custom CSS e recoloque as coisas que você quer mudar:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A }\A \A Não se esqueça de salvar quanto terminar!\A \A E se você é muito preguiçoso pra copiar manualmente, vá no\A bit.ly/BMTsettings e faça o copicola do código.'!important;
+}
+html[lang="pt-BR"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
+html[lang="pt-BR"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
+    content: 'VÁ PRA CONFIGURAÇÕES'!important;
+}
+html[lang="pt-BR"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3),
+html[lang="pt-BR"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3){
+    width: 240px;
+}
+html[lang="pt-BR"] .theme-light .layer:first-of-type::before{
+    content: 'Você precisa habilitar o modo escuro para o tema funfar. Para ativar, vá em Configurações > Aparência.'!important;
+    width: 430px;
+}
+html[lang="pt-BR"] .bd-blue .layer:first-of-type::before{
+    content: 'Você precisa desativar o "BetterDiscord blue" pra esse tema rodar na sua batata. Pra desativar esse baguio gringo, vá em Configurações > BetterDiscord > Core.'!important;
+    width: 570px;
+}
+html[lang="pt-BR"] .app::after{
+    content: 'Dica: se quer ter esse azul como a cor principal pro tema, vá em "custom css" e configure a "accent color" pra #3A71C1 .'!important;
+    width: 450px;
+}
+/*Template(By @)*/
+html[lang=""] .content-region #bd-customcss-attach-controls::after{
+    content:''!important;
+}
+html[lang=""] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
+html[lang=""] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
+    content: ''!important;
+}
+html[lang=""] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3),
+html[lang=""] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3){
+    width: 180px;
+}
+html[lang=""] .theme-light .layer:first-of-type::before{
+    content: ''!important;
+    width: 430px;
+}
+html[lang=""] .bd-blue .layer:first-of-type::before{
+    content: ''!important;
+    width: 510px;
+}
+html[lang=""] .app::after{
+    content: ''!important;
+    width: 470px;
+}
+/*/Translation*/
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .ui-form-title.h2::after {
     display: block;
     position: relative;
@@ -209,6 +331,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 
 /*/version hide*/
 /*-----ACCENT COLOR-----*/
+#bd-settings-sidebar .ui-tab-bar-item.selected,
 .theme-dark #friends .friends-header .tab-bar .tab-bar-item.tab-bar-item-primary.selected .badge,
 .theme-dark #friends .friends-header .tab-bar .tab-bar-item.tab-bar-item-primary:hover:not(.selected),
 .theme-dark #friends .friends-header .tab-bar .tab-bar-item.selected .badge,
@@ -3718,7 +3841,7 @@ div[style="height:30px;width:100%;background:#282B30;"] progress {
 
 .message-group .edit-message .channel-textarea-inner {
     padding: 0px!important;
-    padding-bottom: 5px!important
+    padding-bottom: 6px!important
 }
 
 .message-group .edit-message textarea {
@@ -3733,7 +3856,8 @@ div[style="height:30px;width:100%;background:#282B30;"] progress {
 
 .message-group:not(.hide-overflow) .comment::before {
     opacity: 0;
-    transition: all 200ms ease;
+    transform:translate(4px,-4px)scale(0);
+    transition: all 300ms cubic-bezier(0.3,0,0,1);
 }
 
 .message-group .btn-option {
@@ -4020,26 +4144,26 @@ span {
 .Select-option.is-selected .localized {
     color: #fff!important;
 }
-
+.modal-3HOjGZ .message-group .comment,
 .modal-content.form.confirm-message-modal .message-group .comment {
     background: rgba(0, 0, 0, .08);
 }
-
+.modal-3HOjGZ .message-group .comment::before,
 .modal-content.form.confirm-message-modal .message-group .comment::before {
     border-color: transparent rgba(0, 0, 0, .08) transparent transparent;
 }
-
+.modal-3HOjGZ .message-group .comment code,
 .modal-content.form.confirm-message-modal .message-group .comment code {
     background: rgba(0, 0, 0, .0)!important;
     border: none!important;
 }
-
+.modal-3HOjGZ .message-group .comment pre,
 .modal-content.form.confirm-message-modal .message-group .comment pre {
     background: rgba(0, 0, 0, .05)!important;
     border: none!important;
     border-radius: 3px!important;
 }
-
+.modal-3HOjGZ .message-group .comment code.inline,
 .modal-content.form.confirm-message-modal .message-group .comment code.inline {
     background: rgba(0, 0, 0, .08)!important;
 }
@@ -6540,37 +6664,67 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 
 /*File icons*/
-
 .icon.icon-file.ae {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTI4NSA0MDguOSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMjg1IDQwOC45IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6bm9uZTt9LnN0MXtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTS0yODUsNDA4LjloMjR2MjRoLTI0VjQwOC45eiIvPjxnPjxwb2x5Z29uIGNsYXNzPSJzdDEiIHBvaW50cz0iLTI3NS4yLDQyNC40IC0yNzQuMSw0MjQuNCAtMjc0LjYsNDIyLjggIi8+PHBhdGggY2xhc3M9InN0MSIgZD0iTS0yNzAuNSw0MjMuNmMwLTAuMS0wLjEtMC4xLTAuMi0wLjFjLTAuMSwwLTAuMiwwLTAuMywwYy0wLjEsMC0wLjIsMC0wLjIsMHMtMC4xLDAuMS0wLjIsMC4xYy0wLjEsMC4xLTAuMSwwLjEtMC4xLDAuMnMtMC4xLDAuMi0wLjEsMC4zaDEuMlY0MjRjMC0wLjEsMC0wLjIsMC0wLjJTLTI3MC40LDQyMy43LTI3MC41LDQyMy42eiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0tMjcxLDQxMC45aC04Yy0xLjEsMC0yLDAuOS0yLDJsMCwxNmMwLDEuMSwwLjksMiwyLDJoMTJjMS4xLDAsMi0wLjksMi0ydi0xMkwtMjcxLDQxMC45eiBNLTI3My42LDQyNmwtMC4zLTAuOWgtMS41bC0wLjMsMC45aC0wLjlsMS42LTQuM2gwLjhsMS42LDQuM0gtMjczLjZ6IE0tMjY5LjUsNDI0LjdoLTJjMCwwLjEsMCwwLjIsMC4xLDAuM3MwLjEsMC4yLDAuMiwwLjJjMC4xLDAuMSwwLjEsMC4xLDAuMiwwLjFzMC4yLDAsMC4zLDBjMC4yLDAsMC4zLDAsMC40LTAuMXMwLjItMC4xLDAuMy0wLjNsMC40LDAuNWMtMC4xLDAuMS0wLjEsMC4xLTAuMiwwLjJzLTAuMiwwLjEtMC4zLDAuMnMtMC4yLDAuMS0wLjMsMC4xYy0wLjEsMC0wLjMsMC0wLjQsMGMtMC4yLDAtMC41LDAtMC43LTAuMXMtMC40LTAuMi0wLjUtMC4zYy0wLjEtMC4xLTAuMi0wLjMtMC4zLTAuNWMtMC4xLTAuMi0wLjEtMC40LTAuMS0wLjZ2LTAuMWMwLTAuMiwwLTAuNSwwLjEtMC43czAuMi0wLjQsMC4zLTAuNWMwLjEtMC4xLDAuMy0wLjMsMC41LTAuM3MwLjQtMC4xLDAuNi0wLjFjMC4yLDAsMC40LDAsMC42LDAuMXMwLjMsMC4yLDAuNCwwLjNjMC4xLDAuMSwwLjIsMC4zLDAuMywwLjVzMC4xLDAuNCwwLjEsMC42VjQyNC43eiBNLTI3Miw0MTcuOXYtNS41bDUuNSw1LjVILTI3MnoiLz48L2c+PC9zdmc+);
     background-position: 50%;
     background-size: 140%;
 }
-
 .icon.icon-file.ai {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTI4NSA0MDguOSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMjg1IDQwOC45IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6bm9uZTt9LnN0MXtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTS0yODUsNDA4LjloMjR2MjRoLTI0VjQwOC45eiIvPjxnPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0tMjcxLDQxMC45aC04Yy0xLjEsMC0yLDAuOS0yLDJsMCwxNmMwLDEuMSwwLjksMiwyLDJoMTJjMS4xLDAsMi0wLjksMi0ydi0xMkwtMjcxLDQxMC45eiBNLTI3Mi43LDQyNmwtMC4zLTAuOWgtMS41bC0wLjMsMC45aC0wLjlsMS42LTQuM2gwLjhsMS42LDQuM0gtMjcyLjd6IE0tMjcwLjYsNDI2aC0wLjh2LTMuMmgwLjhWNDI2eiBNLTI3MC41LDQyMi4yYzAsMC4xLTAuMSwwLjEtMC4xLDAuMXMtMC4xLDAuMS0wLjEsMC4xcy0wLjEsMC0wLjIsMHMtMC4xLDAtMC4yLDBzLTAuMS0wLjEtMC4xLTAuMXMtMC4xLTAuMS0wLjEtMC4xYzAtMC4xLDAtMC4xLDAtMC4yYzAtMC4xLDAtMC4yLDAuMS0wLjNjMC4xLTAuMSwwLjItMC4xLDAuMy0wLjFjMC4xLDAsMC4xLDAsMC4yLDBzMC4xLDAuMSwwLjEsMC4xczAuMSwwLjEsMC4xLDAuMXMwLDAuMSwwLDAuMkMtMjcwLjUsNDIyLjEtMjcwLjUsNDIyLjEtMjcwLjUsNDIyLjJ6IE0tMjcyLDQxNy45di01LjVsNS41LDUuNUgtMjcyeiIvPjxwb2x5Z29uIGNsYXNzPSJzdDEiIHBvaW50cz0iLTI3NC4zLDQyNC40IC0yNzMuMyw0MjQuNCAtMjczLjgsNDIyLjggIi8+PC9nPjwvc3ZnPg==);
     background-position: 50%;
     background-size: 140%;
 }
-
+.icon.icon-file.archive{
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTk0NyA1MjkgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgLTk0NyA1MjkgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDpub25lO30uc3Qxe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTk0Nyw1MjloMjR2MjRoLTI0VjUyOXoiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNLTkzMyw1MzFoLThjLTEuMSwwLTIsMC45LTIsMmwwLDE2YzAsMS4xLDAuOSwyLDIsMmg0di0yaDJ2LTJoLTJ2LTJoMnYtMmgtMnYtMmgydjJoMnYyaC0ydjJoMnYyaC0ydjJoNmMxLjEsMCwyLTAuOSwyLTJ2LTEyTC05MzMsNTMxeiBNLTkzNCw1Mzh2LTUuNWw1LjUsNS41SC05MzR6Ii8+PC9zdmc+);
+    background-position: 50%;
+    background-size: 140%;
+}
+.icon.icon-file.document{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTQgMkg2Yy0xLjEgMC0xLjk5LjktMS45OSAyTDQgMjBjMCAxLjEuODkgMiAxLjk5IDJIMThjMS4xIDAgMi0uOSAyLTJWOGwtNi02em0yIDE2SDh2LTJoOHYyem0wLTRIOHYtMmg4djJ6bS0zLTVWMy41TDE4LjUgOUgxM3oiLz48L3N2Zz4=);
+    background-position: 50%;
+    background-size: 140%;
+}
 .icon.icon-file.webcode {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTI4NSA0MDguOSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMjg1IDQwOC45IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6bm9uZTt9LnN0MXtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTS0yODUsNDA4LjloMjR2MjRoLTI0VjQwOC45eiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0tMjcxLDQxMC45aC04Yy0xLjEsMC0yLDAuOS0yLDJ2MTZjMCwxLjEsMC45LDIsMiwyaDEyYzEuMSwwLDItMC45LDItMnYtMTJMLTI3MSw0MTAuOXogTS0yNzQuNSw0MjMuNmwtMS43LDAuNmwxLjcsMC42djAuOGwtMi41LTEuMXYtMC43bDIuNS0xLjFWNDIzLjZ6IE0tMjczLjYsNDI2LjRoLTAuNmwxLjYtNC42aDAuNkwtMjczLjYsNDI2LjR6IE0tMjY5LDQyNC41bC0yLjYsMS4xdi0wLjhsMS43LTAuNmwtMS43LTAuNnYtMC44bDIuNiwxLjFWNDI0LjV6IE0tMjcyLDQxNy45di01LjVsNS41LDUuNUgtMjcyeiIvPjwvc3ZnPg==);
     background-position: 50%;
     background-size: 140%;
-}
-
-.icon.icon-file {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTYgMmMtMS4xIDAtMS45OS45LTEuOTkgMkw0IDIwYzAgMS4xLjg5IDIgMS45OSAySDE4YzEuMSAwIDItLjkgMi0yVjhsLTYtNkg2em03IDdWMy41TDE4LjUgOUgxM3oiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==);
-    background-position: 50%;
-    background-size: 140%;
-    opacity: 0.9
 }
 .icon.icon-file.code{
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTE0ODcgMTQ4OSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMTQ4NyAxNDg5IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTE0NzMsMTQ5MWgtOGMtMS4xLDAtMiwwLjktMiwybDAsMTZjMCwxLjEsMC45LDIsMiwyaDEyYzEuMSwwLDItMC45LDItMnYtMTJMLTE0NzMsMTQ5MXogTS0xNDc1LjYsMTUwMi4xaC0wLjVjLTAuMiwwLTAuNCwwLjItMC40LDAuNHYwLjVjMCwwLjUtMC4yLDEtMC42LDEuM2MwLjQsMC4zLDAuNiwwLjgsMC42LDEuM3YwLjVjMCwwLjIsMC4yLDAuNCwwLjQsMC40aDAuNXYxaC0wLjVjLTAuOCwwLTEuNC0wLjYtMS40LTEuNHYtMC41YzAtMC41LTAuNC0wLjgtMC44LTAuOHYtMWMwLjUsMCwwLjgtMC40LDAuOC0wLjh2LTAuNWMwLTAuOCwwLjYtMS40LDEuNC0xLjRoMC41VjE1MDIuMXogTS0xNDcxLjYsMTUwNC44Yy0wLjUsMC0wLjgsMC40LTAuOCwwLjh2MC41YzAsMC44LTAuNiwxLjQtMS40LDEuNGgtMC41di0xaDAuNWMwLjIsMCwwLjQtMC4yLDAuNC0wLjR2LTAuNWMwLTAuNSwwLjItMSwwLjYtMS4zYy0wLjQtMC4zLTAuNi0wLjgtMC42LTEuM3YtMC41YzAtMC4yLTAuMi0wLjQtMC40LTAuNGgtMC41di0xaDAuNWMwLjgsMCwxLjQsMC42LDEuNCwxLjR2MC41YzAsMC41LDAuNCwwLjgsMC44LDAuOFYxNTA0Ljh6IE0tMTQ3NCwxNDk4di01LjVsNS41LDUuNUgtMTQ3NHoiLz48L3N2Zz4=);
     background-position: 50%;
     background-size: 140%;
 }
-
+/**/
+.upload-modal .inner .file .icon.ae {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTI4NSA0MDguOSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMjg1IDQwOC45IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6bm9uZTt9LnN0MXtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTS0yODUsNDA4LjloMjR2MjRoLTI0VjQwOC45eiIvPjxnPjxwb2x5Z29uIGNsYXNzPSJzdDEiIHBvaW50cz0iLTI3NS4yLDQyNC40IC0yNzQuMSw0MjQuNCAtMjc0LjYsNDIyLjggIi8+PHBhdGggY2xhc3M9InN0MSIgZD0iTS0yNzAuNSw0MjMuNmMwLTAuMS0wLjEtMC4xLTAuMi0wLjFjLTAuMSwwLTAuMiwwLTAuMywwYy0wLjEsMC0wLjIsMC0wLjIsMHMtMC4xLDAuMS0wLjIsMC4xYy0wLjEsMC4xLTAuMSwwLjEtMC4xLDAuMnMtMC4xLDAuMi0wLjEsMC4zaDEuMlY0MjRjMC0wLjEsMC0wLjIsMC0wLjJTLTI3MC40LDQyMy43LTI3MC41LDQyMy42eiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0tMjcxLDQxMC45aC04Yy0xLjEsMC0yLDAuOS0yLDJsMCwxNmMwLDEuMSwwLjksMiwyLDJoMTJjMS4xLDAsMi0wLjksMi0ydi0xMkwtMjcxLDQxMC45eiBNLTI3My42LDQyNmwtMC4zLTAuOWgtMS41bC0wLjMsMC45aC0wLjlsMS42LTQuM2gwLjhsMS42LDQuM0gtMjczLjZ6IE0tMjY5LjUsNDI0LjdoLTJjMCwwLjEsMCwwLjIsMC4xLDAuM3MwLjEsMC4yLDAuMiwwLjJjMC4xLDAuMSwwLjEsMC4xLDAuMiwwLjFzMC4yLDAsMC4zLDBjMC4yLDAsMC4zLDAsMC40LTAuMXMwLjItMC4xLDAuMy0wLjNsMC40LDAuNWMtMC4xLDAuMS0wLjEsMC4xLTAuMiwwLjJzLTAuMiwwLjEtMC4zLDAuMnMtMC4yLDAuMS0wLjMsMC4xYy0wLjEsMC0wLjMsMC0wLjQsMGMtMC4yLDAtMC41LDAtMC43LTAuMXMtMC40LTAuMi0wLjUtMC4zYy0wLjEtMC4xLTAuMi0wLjMtMC4zLTAuNWMtMC4xLTAuMi0wLjEtMC40LTAuMS0wLjZ2LTAuMWMwLTAuMiwwLTAuNSwwLjEtMC43czAuMi0wLjQsMC4zLTAuNWMwLjEtMC4xLDAuMy0wLjMsMC41LTAuM3MwLjQtMC4xLDAuNi0wLjFjMC4yLDAsMC40LDAsMC42LDAuMXMwLjMsMC4yLDAuNCwwLjNjMC4xLDAuMSwwLjIsMC4zLDAuMywwLjVzMC4xLDAuNCwwLjEsMC42VjQyNC43eiBNLTI3Miw0MTcuOXYtNS41bDUuNSw1LjVILTI3MnoiLz48L2c+PC9zdmc+);
+    background-position: 50%;
+    background-size: 140%;
+}
+.upload-modal .inner .file .icon.ai {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTI4NSA0MDguOSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMjg1IDQwOC45IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6bm9uZTt9LnN0MXtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTS0yODUsNDA4LjloMjR2MjRoLTI0VjQwOC45eiIvPjxnPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0tMjcxLDQxMC45aC04Yy0xLjEsMC0yLDAuOS0yLDJsMCwxNmMwLDEuMSwwLjksMiwyLDJoMTJjMS4xLDAsMi0wLjksMi0ydi0xMkwtMjcxLDQxMC45eiBNLTI3Mi43LDQyNmwtMC4zLTAuOWgtMS41bC0wLjMsMC45aC0wLjlsMS42LTQuM2gwLjhsMS42LDQuM0gtMjcyLjd6IE0tMjcwLjYsNDI2aC0wLjh2LTMuMmgwLjhWNDI2eiBNLTI3MC41LDQyMi4yYzAsMC4xLTAuMSwwLjEtMC4xLDAuMXMtMC4xLDAuMS0wLjEsMC4xcy0wLjEsMC0wLjIsMHMtMC4xLDAtMC4yLDBzLTAuMS0wLjEtMC4xLTAuMXMtMC4xLTAuMS0wLjEtMC4xYzAtMC4xLDAtMC4xLDAtMC4yYzAtMC4xLDAtMC4yLDAuMS0wLjNjMC4xLTAuMSwwLjItMC4xLDAuMy0wLjFjMC4xLDAsMC4xLDAsMC4yLDBzMC4xLDAuMSwwLjEsMC4xczAuMSwwLjEsMC4xLDAuMXMwLDAuMSwwLDAuMkMtMjcwLjUsNDIyLjEtMjcwLjUsNDIyLjEtMjcwLjUsNDIyLjJ6IE0tMjcyLDQxNy45di01LjVsNS41LDUuNUgtMjcyeiIvPjxwb2x5Z29uIGNsYXNzPSJzdDEiIHBvaW50cz0iLTI3NC4zLDQyNC40IC0yNzMuMyw0MjQuNCAtMjczLjgsNDIyLjggIi8+PC9nPjwvc3ZnPg==);
+    background-position: 50%;
+    background-size: 140%;
+}
+.upload-modal .inner .file .icon.archive{
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTk0NyA1MjkgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgLTk0NyA1MjkgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDpub25lO30uc3Qxe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTk0Nyw1MjloMjR2MjRoLTI0VjUyOXoiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNLTkzMyw1MzFoLThjLTEuMSwwLTIsMC45LTIsMmwwLDE2YzAsMS4xLDAuOSwyLDIsMmg0di0yaDJ2LTJoLTJ2LTJoMnYtMmgtMnYtMmgydjJoMnYyaC0ydjJoMnYyaC0ydjJoNmMxLjEsMCwyLTAuOSwyLTJ2LTEyTC05MzMsNTMxeiBNLTkzNCw1Mzh2LTUuNWw1LjUsNS41SC05MzR6Ii8+PC9zdmc+);
+    background-position: 50%;
+    background-size: 140%;
+}
+.upload-modal .inner .file .icon.document{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTQgMkg2Yy0xLjEgMC0xLjk5LjktMS45OSAyTDQgMjBjMCAxLjEuODkgMiAxLjk5IDJIMThjMS4xIDAgMi0uOSAyLTJWOGwtNi02em0yIDE2SDh2LTJoOHYyem0wLTRIOHYtMmg4djJ6bS0zLTVWMy41TDE4LjUgOUgxM3oiLz48L3N2Zz4=);
+    background-position: 50%;
+    background-size: 140%;
+}
+.upload-modal .inner .file .icon.webcode {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTI4NSA0MDguOSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMjg1IDQwOC45IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6bm9uZTt9LnN0MXtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTS0yODUsNDA4LjloMjR2MjRoLTI0VjQwOC45eiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0tMjcxLDQxMC45aC04Yy0xLjEsMC0yLDAuOS0yLDJ2MTZjMCwxLjEsMC45LDIsMiwyaDEyYzEuMSwwLDItMC45LDItMnYtMTJMLTI3MSw0MTAuOXogTS0yNzQuNSw0MjMuNmwtMS43LDAuNmwxLjcsMC42djAuOGwtMi41LTEuMXYtMC43bDIuNS0xLjFWNDIzLjZ6IE0tMjczLjYsNDI2LjRoLTAuNmwxLjYtNC42aDAuNkwtMjczLjYsNDI2LjR6IE0tMjY5LDQyNC41bC0yLjYsMS4xdi0wLjhsMS43LTAuNmwtMS43LTAuNnYtMC44bDIuNiwxLjFWNDI0LjV6IE0tMjcyLDQxNy45di01LjVsNS41LDUuNUgtMjcyeiIvPjwvc3ZnPg==);
+    background-position: 50%;
+    background-size: 140%;
+}
+.upload-modal .inner .file .icon.code{
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTE0ODcgMTQ4OSAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAtMTQ4NyAxNDg5IDI0IDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTE0NzMsMTQ5MWgtOGMtMS4xLDAtMiwwLjktMiwybDAsMTZjMCwxLjEsMC45LDIsMiwyaDEyYzEuMSwwLDItMC45LDItMnYtMTJMLTE0NzMsMTQ5MXogTS0xNDc1LjYsMTUwMi4xaC0wLjVjLTAuMiwwLTAuNCwwLjItMC40LDAuNHYwLjVjMCwwLjUtMC4yLDEtMC42LDEuM2MwLjQsMC4zLDAuNiwwLjgsMC42LDEuM3YwLjVjMCwwLjIsMC4yLDAuNCwwLjQsMC40aDAuNXYxaC0wLjVjLTAuOCwwLTEuNC0wLjYtMS40LTEuNHYtMC41YzAtMC41LTAuNC0wLjgtMC44LTAuOHYtMWMwLjUsMCwwLjgtMC40LDAuOC0wLjh2LTAuNWMwLTAuOCwwLjYtMS40LDEuNC0xLjRoMC41VjE1MDIuMXogTS0xNDcxLjYsMTUwNC44Yy0wLjUsMC0wLjgsMC40LTAuOCwwLjh2MC41YzAsMC44LTAuNiwxLjQtMS40LDEuNGgtMC41di0xaDAuNWMwLjIsMCwwLjQtMC4yLDAuNC0wLjR2LTAuNWMwLTAuNSwwLjItMSwwLjYtMS4zYy0wLjQtMC4zLTAuNi0wLjgtMC42LTEuM3YtMC41YzAtMC4yLTAuMi0wLjQtMC40LTAuNGgtMC41di0xaDAuNWMwLjgsMCwxLjQsMC42LDEuNCwxLjR2MC41YzAsMC41LDAuNCwwLjgsMC44LDAuOFYxNTA0Ljh6IE0tMTQ3NCwxNDk4di01LjVsNS41LDUuNUgtMTQ3NHoiLz48L3N2Zz4=);
+    background-position: 50%;
+    background-size: 140%;
+}
 /*/File icons*/
 
 .upload-area .upload-drop-modal {
@@ -8940,10 +9094,12 @@ div.platform-win .theme-light .layer[layer-id="user-settings"] .ui-standard-side
     -ms-transform: translate(0, 2px);
     transform: translate(0, 2px)
 }
+.layer[layer-id="user-settings"] #bd-settings-sidebar .ui-tab-bar-item,
 .item-3879bf,
 .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE .ui-tab-bar-item{
     display:flex;
 }
+.layer[layer-id="user-settings"] #bd-settings-sidebar .ui-tab-bar-item::before,
 .layer[layer-id="server-settings"] .item-3879bf::before,
 .layer[layer-id="user-settings"] .item-3879bf::before,
 .layer[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE .ui-tab-bar-item::before,
@@ -8959,12 +9115,14 @@ div.platform-win .theme-light .layer[layer-id="user-settings"] .ui-standard-side
     transform: translate(0, 2px);
     opacity:0.7;
 }
+.layer[layer-id="user-settings"] #bd-settings-sidebar .ui-tab-bar-item.selected::before,
 .layer[layer-id="server-settings"] .item-3879bf.itemDefaultSelected-1UAWLe::before,
 .layer[layer-id="user-settings"] .item-3879bf.itemDefaultSelected-1UAWLe::before,
 .layer[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE .ui-tab-bar-item.selected::before,
 .layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE .ui-tab-bar-item.selected::before{
     opacity:1;
 }
+.layer[layer-id="user-settings"] #bd-settings-sidebar .ui-tab-bar-item:hover::before,
 .layer[layer-id="server-settings"] .item-3879bf:hover::before,
 .layer[layer-id="user-settings"] .item-3879bf:hover::before,
 .layer[layer-id="server-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE .ui-tab-bar-item:hover::before,
@@ -9105,7 +9263,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     content: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTEzIDEzdjhoOHYtOGgtOHpNMyAyMWg4di04SDN2OHpNMyAzdjhoOFYzSDN6bTEzLjY2LTEuMzFMMTEgNy4zNCAxNi42NiAxM2w1LjY2LTUuNjYtNS42Ni01LjY1eiIvPiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+);
 }
 /*betterdiscord core*/
-.layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(3)::before,
+.layer[layer-id="user-settings"] #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(3)::before,
 .layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(3)::before{
     content:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FscXVlXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAwMCAyMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMDAwIDIwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNDAyLjIsNjMxLjdjLTkuNy0zNTMuNC0yODYuMi00OTYtNjQyLjYtNDk2SDY4LjR2NzE0LjFsNDQyLDM5OFY0OTAuN2gyNTdjMjc0LjUsMCwyNzQuNSwzNDQuOSwwLDM0NC45SDU5Ny42djMyOS41aDE2OS44YzI3NC41LDAsMjc0LjUsMzQ0LjgsMCwzNDQuOGgtNjk5djM1NC45aDY5MS4yYzM1Ni4zLDAsNjMyLjgtMTQyLjYsNjQyLjYtNDk2YzAtMTYyLjYtNDQuNS0yODQuMS0xMjIuOS0zNjguNkMxMzU3LjcsOTE1LjgsMTQwMi4yLDc5NC4zLDE0MDIuMiw2MzEuN3oiLz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTI2Mi41LDEzNS4yTDEyNjIuNSwxMzUuMmwtNzYuOCwwYzI2LjYsMTMuMyw1MS43LDI4LjEsNzUsNDQuM2M3MC43LDQ5LjEsMTI2LjEsMTExLjUsMTY0LjYsMTg1LjNjMzkuOSw3Ni42LDYxLjUsMTY1LjYsNjQuMywyNjQuNmwwLDEuMnYxLjJjMCwxNDEuMSwwLDU5Ni4xLDAsNzM3LjF2MS4ybDAsMS4yYy0yLjcsOTktMjQuMywxODgtNjQuMywyNjQuNmMtMzguNSw3My44LTkzLjgsMTM2LjItMTY0LjYsMTg1LjNjLTIyLjYsMTUuNy00Ni45LDMwLjEtNzIuNiw0My4xaDcyLjVjMzQ2LjIsMS45LDY3MS0xNzEuMiw2NzEtNTY3LjlWNzE2LjdDMTkzMy41LDMxMi4yLDE2MDguNywxMzUuMiwxMjYyLjUsMTM1LjJ6Ii8+PC9nPjwvc3ZnPg==)!important;
     width:22px;
@@ -9113,23 +9271,23 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     top:-4px;
 }
 /*betterdiscord emotes*/
-.layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(4)::before,
+.layer[layer-id="user-settings"] #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(4)::before,
 .layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(4)::before{
     content:url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTEuOTkgMkM2LjQ3IDIgMiA2LjQ4IDIgMTJzNC40NyAxMCA5Ljk5IDEwQzE3LjUyIDIyIDIyIDE3LjUyIDIyIDEyUzE3LjUyIDIgMTEuOTkgMnpNMTIgMjBjLTQuNDIgMC04LTMuNTgtOC04czMuNTgtOCA4LTggOCAzLjU4IDggOC0zLjU4IDgtOCA4em0zLjUtOWMuODMgMCAxLjUtLjY3IDEuNS0xLjVTMTYuMzMgOCAxNS41IDggMTQgOC42NyAxNCA5LjVzLjY3IDEuNSAxLjUgMS41em0tNyAwYy44MyAwIDEuNS0uNjcgMS41LTEuNVM5LjMzIDggOC41IDggNyA4LjY3IDcgOS41IDcuNjcgMTEgOC41IDExem0zLjUgNi41YzIuMzMgMCA0LjMxLTEuNDYgNS4xMS0zLjVINi44OWMuOCAyLjA0IDIuNzggMy41IDUuMTEgMy41eiIvPjwvc3ZnPg==);
 }
 /*betterdiscord custom css*/
-.layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(5)::before,
+.layer[layer-id="user-settings"] #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(5)::before,
 .layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(5)::before{
     content:url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+ICAgIDxwYXRoIGQ9Ik0yMi43IDE5bC05LjEtOS4xYy45LTIuMy40LTUtMS41LTYuOS0yLTItNS0yLjQtNy40LTEuM0w5IDYgNiA5IDEuNiA0LjdDLjQgNy4xLjkgMTAuMSAyLjkgMTIuMWMxLjkgMS45IDQuNiAyLjQgNi45IDEuNWw5LjEgOS4xYy40LjQgMSAuNCAxLjQgMGwyLjMtMi4zYy41LS40LjUtMS4xLjEtMS40eiIvPjwvc3ZnPg==);
     transform:none;
 }
 /*betterdiscord plugins*/
-.layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(6)::before,
+.layer[layer-id="user-settings"] #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(6)::before,
 .layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(6)::before{
     content:url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMjAuNSAxMUgxOVY3YzAtMS4xLS45LTItMi0yaC00VjMuNUMxMyAyLjEyIDExLjg4IDEgMTAuNSAxUzggMi4xMiA4IDMuNVY1SDRjLTEuMSAwLTEuOTkuOS0xLjk5IDJ2My44SDMuNWMxLjQ5IDAgMi43IDEuMjEgMi43IDIuN3MtMS4yMSAyLjctMi43IDIuN0gyVjIwYzAgMS4xLjkgMiAyIDJoMy44di0xLjVjMC0xLjQ5IDEuMjEtMi43IDIuNy0yLjcgMS40OSAwIDIuNyAxLjIxIDIuNyAyLjdWMjJIMTdjMS4xIDAgMi0uOSAyLTJ2LTRoMS41YzEuMzggMCAyLjUtMS4xMiAyLjUtMi41UzIxLjg4IDExIDIwLjUgMTF6Ii8+PC9zdmc+);
 }
 /*betterdiscord themes*/
-.layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(7)::before,
+.layer[layer-id="user-settings"] #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(7)::before,
 .layer[layer-id="user-settings"] .ui-standard-sidebar-view .sidebar-region .ui-tab-bar.SIDE #bd-settings-sidebar .ui-tab-bar-item:nth-of-type(7)::before{
     content:url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTIuNTMgMTkuNjVsMS4zNC41NnYtOS4wM2wtMi40MyA1Ljg2Yy0uNDEgMS4wMi4wOCAyLjE5IDEuMDkgMi42MXptMTkuNS0zLjdMMTcuMDcgMy45OGMtLjMxLS43NS0xLjA0LTEuMjEtMS44MS0xLjIzLS4yNiAwLS41My4wNC0uNzkuMTVMNy4xIDUuOTVjLS43NS4zMS0xLjIxIDEuMDMtMS4yMyAxLjgtLjAxLjI3LjA0LjU0LjE1LjhsNC45NiAxMS45N2MuMzEuNzYgMS4wNSAxLjIyIDEuODMgMS4yMy4yNiAwIC41Mi0uMDUuNzctLjE1bDcuMzYtMy4wNWMxLjAyLS40MiAxLjUxLTEuNTkgMS4wOS0yLjZ6TTcuODggOC43NWMtLjU1IDAtMS0uNDUtMS0xcy40NS0xIDEtMSAxIC40NSAxIDEtLjQ1IDEtMSAxem0tMiAxMWMwIDEuMS45IDIgMiAyaDEuNDVsLTMuNDUtOC4zNHY2LjM0eiIvPiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+);
 }
@@ -9452,33 +9610,36 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .inputWrapper-3xoRWR{
     overflow: hidden;
 }
-.ui-standard-sidebar-view input[type="tel"],
-.ui-standard-sidebar-view input[type="tel"]:hover,
-.ui-standard-sidebar-view input[type="number"],
-.ui-standard-sidebar-view input[type="number"]:hover,
-.ui-standard-sidebar-view input[type="url"],
-.ui-standard-sidebar-view input[type="url"]:hover,
-.ui-standard-sidebar-view input[type="email"],
-.ui-standard-sidebar-view input[type="email"]:hover,
-.ui-standard-sidebar-view input[type="password"],
-.ui-standard-sidebar-view input[type="password"]:hover,
-.ui-standard-sidebar-view input[type="text"],
-.ui-standard-sidebar-view input[type="text"]:hover,
+.inputWrapper-3xoRWR textarea,
+.inputWrapper-3xoRWR textarea:hover,
+.inputWrapper-3xoRWR input[type="tel"],
+.inputWrapper-3xoRWR input[type="tel"]:hover,
+.inputWrapper-3xoRWR input[type="number"],
+.inputWrapper-3xoRWR input[type="number"]:hover,
+.inputWrapper-3xoRWR input[type="url"],
+.inputWrapper-3xoRWR input[type="url"]:hover,
+.inputWrapper-3xoRWR input[type="email"],
+.inputWrapper-3xoRWR input[type="email"]:hover,
+.inputWrapper-3xoRWR input[type="password"],
+.inputWrapper-3xoRWR input[type="password"]:hover,
+.inputWrapper-3xoRWR input[type="text"],
+.inputWrapper-3xoRWR input[type="text"]:hover,
 .theme-dark .ui-text-input .input,
 .theme-dark .ui-text-input .input:hover{
-    background:transparent;
+    background:transparent!important;
     border:none;
     box-shadow:0 2px 0 rgba(255,255,255,.05),-660px 2px 0 var(--accent-color);
     margin-bottom:2px!important;
     transition:200ms ease;
     border-radius:0;
 }
-.ui-standard-sidebar-view input[type="password"]:focus,
-.ui-standard-sidebar-view input[type="tel"]:focus,
-.ui-standard-sidebar-view input[type="number"]:focus,
-.ui-standard-sidebar-view input[type="url"]:focus,
-.ui-standard-sidebar-view input[type="email"]:focus,
-.ui-standard-sidebar-view input[type="text"]:focus,
+.inputWrapper-3xoRWR textarea:focus,
+.inputWrapper-3xoRWR input[type="password"]:focus,
+.inputWrapper-3xoRWR input[type="tel"]:focus,
+.inputWrapper-3xoRWR input[type="number"]:focus,
+.inputWrapper-3xoRWR input[type="url"]:focus,
+.inputWrapper-3xoRWR input[type="email"]:focus,
+.inputWrapper-3xoRWR input[type="text"]:focus,
 .theme-dark .ui-text-input .input:focus{
     background:transparent;
     border:none;
@@ -9579,15 +9740,13 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .theme-dark .ui-slider .slider-grabber .bubble::before{
     display:none;
 }
-.icon.icon-file.archive{
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTk0NyA1MjkgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgLTk0NyA1MjkgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDpub25lO30uc3Qxe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTk0Nyw1MjloMjR2MjRoLTI0VjUyOXoiLz48cGF0aCBjbGFzcz0ic3QxIiBkPSJNLTkzMyw1MzFoLThjLTEuMSwwLTIsMC45LTIsMmwwLDE2YzAsMS4xLDAuOSwyLDIsMmg0di0yaDJ2LTJoLTJ2LTJoMnYtMmgtMnYtMmgydjJoMnYyaC0ydjJoMnYyaC0ydjJoNmMxLjEsMCwyLTAuOSwyLTJ2LTEyTC05MzMsNTMxeiBNLTkzNCw1Mzh2LTUuNWw1LjUsNS41SC05MzR6Ii8+PC9zdmc+)
-}
-.icon.icon-file.document{
-    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTQgMkg2Yy0xLjEgMC0xLjk5LjktMS45OSAyTDQgMjBjMCAxLjEuODkgMiAxLjk5IDJIMThjMS4xIDAgMi0uOSAyLTJWOGwtNi02em0yIDE2SDh2LTJoOHYyem0wLTRIOHYtMmg4djJ6bS0zLTVWMy41TDE4LjUgOUgxM3oiLz48L3N2Zz4=);
-}
 
 #bd-settings-sidebar span{
     color:rgba(255,255,255,.3)!important;
+}
+/*settings animation*/
+.layer.animating{
+    pointer-events: initial!important;
 }
 .layer{
     transform:none!important;
@@ -9668,9 +9827,6 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     box-shadow:0 0 0 2px rgba(255,255,255,.2) inset;
     position: relative;
 }
-
-
-
 .ui-standard-sidebar-view .sidebar-region .scroller::-webkit-scrollbar{
     width:10px;
 }
@@ -10096,10 +10252,9 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .upload-modal .channel-textarea-inner textarea{
     margin-right:45px;
 }
-.upload-modal .footer .button:first-of-type,
 .upload-modal .footer,
 .upload-modal{
-    background:var(--accent-color);
+    background:#212121;
 }
 .upload-modal .inner .file .icon.image{
     border-color:var(--accent-color);
@@ -11018,9 +11173,6 @@ body .citar-btn:active{
 .chat .jump-to-present-bar .spinner *{
     display: none;
 }
-.dark-elevation-high, .theme-dark .elevation-high{
-    background:transparent!important;
-}
 .message-group .action-buttons {
     background: transparent!important;
     box-shadow: none!important;
@@ -11045,7 +11197,7 @@ body .citar-btn:active{
     color:rgba(255,255,255,.3)!important;
 }
 .message-group .comment .markup{
-    transition: all 150ms ease;
+    transition: all 200ms ease;
 }
 .theme-dark #friends .friends-header .tab-bar .tab-bar-item .badge,
 .theme-dark #friends .friends-header .tab-bar .tab-bar-item.tab-bar-item-primary .badge{
@@ -11065,7 +11217,7 @@ body .citar-btn:active{
     background: #262626!important;
 }
 /*animated scroller*/
-
+.scroller-fzNley.sidebar-region-scroller::-webkit-scrollbar,
 .private-channels .scroller::-webkit-scrollbar,
 .channels-wrap .scroller-NXV0-d::-webkit-scrollbar,
 .emoji-picker .scroller::-webkit-scrollbar{
@@ -11073,6 +11225,10 @@ body .citar-btn:active{
     border-radius:0!important;
     width:8px!important;
 }
+.scroller-fzNley.sidebar-region-scroller::-webkit-scrollbar{
+    background:#141414!important;
+}
+.scroller-fzNley.sidebar-region-scroller::-webkit-scrollbar-thumb,
 .private-channels .scroller::-webkit-scrollbar-thumb,
 .channels-wrap .scroller-NXV0-d::-webkit-scrollbar-thumb,
 .emoji-picker .scroller::-webkit-scrollbar-thumb{
@@ -11082,16 +11238,22 @@ body .citar-btn:active{
     visibility: visible!important;
     border-left:4px solid #212121!important;
 }
+.scroller-fzNley.sidebar-region-scroller::-webkit-scrollbar-thumb{
+    border-left:4px solid #141414!important;
+}
+.scroller-fzNley.sidebar-region-scroller::-webkit-scrollbar-thumb:hover,
 .private-channels .scroller::-webkit-scrollbar-thumb:hover,
 .channels-wrap .scroller-NXV0-d::-webkit-scrollbar-thumb:hover,
 .emoji-picker .scroller::-webkit-scrollbar-thumb:hover{
     background:rgba(255,255,255,.1)!important;
 }
+.scroller-fzNley.sidebar-region-scroller::-webkit-scrollbar-thumb:active,
 .private-channels .scroller::-webkit-scrollbar-thumb:active,
 .channels-wrap .scroller-NXV0-d::-webkit-scrollbar-thumb:active,
 .emoji-picker .scroller::-webkit-scrollbar-thumb:active{
     background:rgba(255,255,255,.2)!important;
 }
+.scroller-fzNley.sidebar-region-scroller::-webkit-scrollbar-track,
 .private-channels .scroller::-webkit-scrollbar-track,
 .channels-wrap .scroller-NXV0-d::-webkit-scrollbar-track,
 .emoji-picker .scroller::-webkit-scrollbar-track{
@@ -11138,4 +11300,146 @@ body .citar-btn:active{
 .ui-form-title.h2[data-reactid*="$scroller.$pcolumn"]::after,
 .bda-slist[data-reactid*="$plugin-list"]::before {
     display: none!important;
+}
+/*upload*/
+.message-group .comment .attachment .upload>.progress{
+    background:rgba(255,255,255,.15);
+    border-radius:0px;
+    height: 3px;
+    margin-top:3px;
+    animation:height 500ms ease;
+}
+.message-group .comment .attachment .upload>.progress .progress-bar{
+    background:var(--accent-color);
+    border-radius:0px;
+    transition:100ms ease;
+}
+.message-group .comment .attachment .upload>.speed{
+    color:rgba(255,255,255,.3);
+    margin:0 0;
+}
+.message-group .comment .attachment .metadata{
+    color:rgba(255,255,255,.3);
+}
+.upload-modal .inner{
+    border:none;
+}
+.upload-modal .inner .file .icon{
+    width:45px;
+    height:55px;
+    margin-top:5px;
+    margin-left:25px;
+    margin-right:10px
+}
+.upload-modal .inner .file .description .filename{
+    font-size:20px;
+    height:27px;
+}
+.upload-modal .inner .file .description{
+    padding-top:23px;
+}
+.upload-modal .inner .file{
+    height:85px;
+    padding-top:10px;
+}
+.modal-2LIEKY .message-25xg43 .comment,
+.upload-modal .inner .comment{
+    background:rgba(255,255,255,.05);
+}
+.modal-2LIEKY .message-25xg43 .comment::before,
+.upload-modal .inner .comment::before{
+    border-color: transparent rgba(255,255,255,.05) transparent transparent;
+}
+.buttonPrimaryLinkDefault-1PQflF,
+.upload-modal .footer .button{
+    background:#353535;
+    margin-right:5px;
+    transition:150ms ease;
+}
+.buttonPrimaryLinkDefault-1PQflF:hover,
+.upload-modal .footer .button:hover{
+    background:#404040;
+    transform:translate(0,-1px);
+    text-decoration:none!important;
+}
+.upload-modal .footer .button-primary{
+    background:var(--accent-color);
+    color:#fff;
+}
+.upload-modal .footer .button-primary:hover{
+    background:var(--accent-color);
+    opacity:1;
+    filter:brightness(1.1);
+}
+.buttonPrimaryLinkDefault-1PQflF:active,
+.upload-modal .footer .button:active{
+    background:#D4D4D4;
+    transform:translate(0,2px);
+    text-decoration:none;
+    color:#212121;
+    transition:50ms ease;
+    filter:brightness(1);
+}
+.upload-modal{
+    border-radius:5px;
+}
+/*/upload*/
+.theme-dark .message-25xg43{
+    background:transparent;
+    box-shadow: none;
+}
+.theme-dark .buttonPrimaryLinkDefault-1PQflF:active .contents-4L4hQM,
+.theme-dark .buttonPrimaryLinkDefault-1PQflF:hover .contents-4L4hQM{
+    background-image:none;
+}
+.message-group .edit-message .edit-operation{
+    height:12px;
+    animation:height 100ms cubic-bezier(0,0,0,1), opacity 500ms ease;
+}
+.chat .message-group .channel-textarea .channel-textarea-inner textarea{
+    font-size:15px;
+    line-height:1;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 2px;
+    margin-left:0;
+}
+.comment .message+div .edit-message .avatar-large{
+    display: none;
+}
+.message+div .edit-message{
+    margin-left:0;
+    padding-top:0!important;
+    margin-top:0!important;
+}
+.message+div .edit-message .edit-container-outer{
+    margin-left:0px;
+    display: block;
+}
+.user{
+    background:#fff!important;
+}
+.checked-2TahvT .polyline-2vCKHw[stroke="#7289da"]{
+    stroke:var(--accent-color);
+}
+.checked-2TahvT .polyline-2vCKHw[stroke="#faa61a"]{
+    stroke:#faa61a;
+}
+.checked-2TahvT .polyline-2vCKHw[stroke="#f04747"]{
+    stroke:#f04747;
+}
+.checked-2TahvT .polyline-2vCKHw[stroke="#43b581"]{
+    stroke:#43b581;
+}
+.theme-dark .desc-2dKaro{
+    color:rgba(255,255,255,.3);
+}
+.theme-dark .cardPrimaryEditable-2IQ7-V[style*="background-color"] .desc-2dKaro{
+    color:rgba(255,255,255,.8);
+}
+.item-3879bf.selected-eNoxEK::before{
+    opacity:1!important;
+}
+.bd-loaderv2{
+    display: none;
 }
