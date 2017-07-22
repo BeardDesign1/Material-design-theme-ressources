@@ -21,13 +21,13 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     --settings-scrollbar: var(--disabled);
     --disabled: none;
     --enabled: initial;
-    --version:"Beard's Material Theme v2.1.6";
+    --version:"Beard's Material Theme v2.1.7";
     --user-avatar-url:url("");
 }
 
 /*changelog*/
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before {
-    content: "Beard's Material theme v2.1.6\A \A Changelog:\A \A v2.1.6\A - Added more ripples in a bunch of places, click around and see.\A - Changed the animation for the user popouts, pins/mentions and emoji panel.\A - Added an 'out' animation for the user popouts, pins/mentions and emoji panel.\A - Fixed the look of the chatbox in canary.\A - Fixed some more bugs.\A \A v2.1.5\A - uuh fixed a lot of bugs and tweaked some stuff i guess,\A I took a pause for a while so idk everything I did .-.\A \A Full changelog on github or in the discord server.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
+    content: "Beard's Material theme v2.1.7\A \A Changelog:\A \A v2.1.7\A - Bug fixing. \A v2.1.6\A - Added more ripples in a bunch of places, click around and see.\A - Changed the animation for the user popouts, pins/mentions and emoji panel.\A - Added an 'out' animation for the user popouts, pins/mentions and emoji panel.\A - Fixed the look of the chatbox in canary.\A - Fixed some more bugs.\A \A Full changelog on github or in the discord server.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
 }
 /*Account settings announcement*/
 .user-settings-account>h2.ui-form-title.margin-reset.margin-bottom-20+.flex-vertical::after {
@@ -51,6 +51,26 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .avatar-profile[style*="avatars/--"]::after,
   .avatar-large[style*="avatars/--"]+.comment .timestamp::before,
   .avatar-large[style*="avatars/--"]+.comment .timestamp::after,
+/*PixelatedBulb#2816*/
+.avatar-profile[style*="avatars/168303479054401537"]::before,
+.avatar-profile[style*="avatars/168303479054401537"]::after,
+  .avatar-large[style*="avatars/168303479054401537"]+.comment .timestamp::before,
+  .avatar-large[style*="avatars/168303479054401537"]+.comment .timestamp::after,
+/*PoorPockets McNewHolͪdͥ#8740*/
+.avatar-profile[style*="avatars/277173061973835778"]::before,
+.avatar-profile[style*="avatars/277173061973835778"]::after,
+  .avatar-large[style*="avatars/277173061973835778"]+.comment .timestamp::before,
+  .avatar-large[style*="avatars/277173061973835778"]+.comment .timestamp::after,
+/*FroztySeven#9632*/
+.avatar-profile[style*="avatars/155407912481718272"]::before,
+.avatar-profile[style*="avatars/155407912481718272"]::after,
+  .avatar-large[style*="avatars/155407912481718272"]+.comment .timestamp::before,
+  .avatar-large[style*="avatars/155407912481718272"]+.comment .timestamp::after,
+/*SuperagiusRobloxian#5861*/
+.avatar-profile[style*="avatars/281486586749911041"]::before,
+.avatar-profile[style*="avatars/281486586749911041"]::after,
+  .avatar-large[style*="avatars/281486586749911041"]+.comment .timestamp::before,
+  .avatar-large[style*="avatars/281486586749911041"]+.comment .timestamp::after,
 /*╲⎝⧹𝓢𝓾𝓹𝓮𝓻𝓦𝓸𝔀121⧸⎠╱#5390*/
 .avatar-profile[style*="avatars/280188541538140160"]::before,
 .avatar-profile[style*="avatars/280188541538140160"]::after,
@@ -1226,6 +1246,7 @@ html[lang="de"] .app::after{
 
 .guilds-wrapper .guilds .guild {
     opacity: 1;
+    transform:translate(0,0)!important;
     transition: all 0ms ease!important;
 }
 
@@ -1262,10 +1283,7 @@ html[lang="de"] .app::after{
 }
 
 .guilds-wrapper .guilds .guild {
-    padding: 7px 14px;
     transition: all 10ms ease;
-    -ms-transform: translate(-13px)!important;
-    transform: translate(-13px)!important;
     margin-bottom: 0px!important;
     z-index: 5;
 }
@@ -1318,7 +1336,9 @@ html[lang="de"] .app::after{
 .guilds-wrapper .guilds {
     padding-top: 0!important;
 }
-
+.guilds-wrapper .guilds{
+  padding:0;
+}
 .guilds-wrapper .guilds .guild.unread::before {
     display: none;
 }
@@ -1336,12 +1356,12 @@ html[lang="de"] .app::after{
     font-size: 32px;
     font-weight: 600;
     margin: 0px!important;
-    position: fixed;
-    left: 15px;
+    position: fixed!important;
+    left: 0;
     bottom: 0px;
     color: transparent;
-    height: 70px;
-    width: 80px;
+    height: 70px!important;
+    width: 100%!important;
     padding: 0;
     z-index: 1000;
 }
@@ -1350,7 +1370,8 @@ html[lang="de"] .app::after{
     background: var(--accent-color);
     transition: all 200ms ease!important;
     position: absolute;
-    left: 8px;
+    left: 50%;
+    transform: translate(-50%);
     bottom: 20px;
     z-index: 1;
     content: "";
@@ -7637,16 +7658,21 @@ body:active .popout-bottom:not(:active) .popout-menu:not(:active){
     background-size: 50%;
     background-repeat: no-repeat;
 }
-
+.guilds.scroller::-webkit-scrollbar{
+  display: none;
+}
+.guilds-wrapper .guilds .guild .guild-inner{
+  position: relative;
+}
 .guilds-wrapper .guilds .guild .guild-inner a {
     left: 0;
     top: 0;
-    width: 54px;
-    height: 50px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 8px;
-    padding-right: 8px;
+    width:100%;
+    height: 64px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     display: block;
     z-index: 3;
 }
@@ -7719,9 +7745,11 @@ body:active .popout-bottom:not(:active) .popout-menu:not(:active){
     padding: 0;
     width: 70px;
     height: 64px;
-    margin-left: 3px;
+    margin-left: 0!important;
 }
-
+.guilds-wrapper .guilds .dms{
+  width:auto;
+}
 .guilds .guild-placeholder {
     height: 64px!important;
     padding: 0!important;
@@ -7801,6 +7829,7 @@ a:active .friends-icon {
     text-overflow: ellipsis;
     overflow: hidden;
     border-radius: 0!important;
+    line-height:64px;
 }
 
 .guilds-wrapper .guilds .guild .guild-inner a[style*="font-size"]::after {
@@ -8078,120 +8107,6 @@ a:active .friends-icon {
     color: rgba(255, 255, 255, .5);
 }
 
-.bf-toolbar {
-    position: absolute;
-    color: rgba(255, 255, 255, .5);
-    width:auto!important;
-    right:0;
-    bottom:auto;
-    border-radius:0;
-    margin:0!important;
-    margin-right:10px!important;
-    height:27px!important;
-    top:0px;
-    transform:translate(0,-100%);
-    opacity:1;
-    display:block!important;
-    overflow: hidden!important;
-    pointer-events: none;
-    padding:10px 40px 15px 20px!important;
-    cursor:pointer;
-}
-.message-group .bf-toolbar{
-    padding:10px 20px 15px 20px!important;
-    animation:slide-up 300ms cubic-bezier(0,0,0,1), opacity 300ms ease
-}
-.upload-modal .bf-toolbar{
-    padding:10px 20px 15px 20px!important;
-    bottom:0!important;
-    top:auto!important;
-    left:50%;
-    right:auto;
-    transform:translate(-50%,100%);
-}
-.upload-modal .bf-toolbar div:hover{
-    background:rgba(255,255,255,.1)!important;
-}
-.upload-modal .bf-toolbar div:active{
-    background:rgba(0,0,0,.1)!important;
-}
-.upload-modal .bf-toolbar:before{
-    background:var(--accent-color)!important;
-}
-.upload-modal .bf-toolbar div,
-.upload-modal .bf-toolbar:before,
-.message-group .bf-toolbar div,
-.message-group .bf-toolbar:before{
-    transform:translate(0,0);
-}
-.upload-modal .bf-toolbar:after,
-.message-group .bf-toolbar:after{
-    display: none;
-}
-.bf-toolbar:hover{
-    pointer-events: initial;
-}
-.bf-toolbar div{
-    transform:translate(0,55px);
-    transition:all 50ms,transform 200ms ease!important;
-    position:relative;
-    pointer-events: initial;
-    border-radius:2px;
-}
-.bf-toolbar div:hover{
-    background:#2B2B2B!important;
-    color:rgba(255,255,255,.9);
-}
-.bf-toolbar div:active{
-    background:#212121!important;
-    transition:all 0ms,transform 200ms ease!important;
-}
-.bf-toolbar:hover div{
-    transform:translate(0,0);
-    transition:all 50ms,transform 200ms cubic-bezier(0,0,0,1)!important;
-}
-.bf-toolbar:before {
-    content:"";
-    display: block;
-    width:calc(100% - 20px);
-    height:calc(100% - 15px);
-    position: absolute;
-    z-index: -1;
-    background:#353535;
-    pointer-events: initial;
-    left:10px;
-    top:5px;
-    border-radius:3px;
-    transform:translate(0,55px);
-    transition:all 200ms ease!important;
-    box-shadow: 0 5px 10px rgba(0,0,0,.1);
-}
-.bf-toolbar:hover:before {
-    transform:translate(0,0px);
-    transition:all 200ms cubic-bezier(0,0,0,1)!important;
-}
-
-.bf-toolbar:after {
-    content:"";
-    display:block;
-    background:url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTcuNDEgMTUuNDFMMTIgMTAuODNsNC41OSA0LjU4TDE4IDE0bC02LTYtNiA2eiIvPiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+);
-    height:30px;
-    width:30px;
-    right:15px;
-    position: absolute;
-    pointer-events: initial;
-    bottom:0;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    transition:all 200ms ease!important;
-    opacity: .3;
-}
-.bf-toolbar:hover:after {
-    transform:translate(0,-14px)rotate(-90deg);
-    transition:all 200ms cubic-bezier(0,0,0,1)!important;
-    opacity: .9;
-}
-
 .status-unknown {
     border-color: rgba(255, 255, 255, .5);
 }
@@ -8423,7 +8338,7 @@ a:active .friends-icon {
     -ms-transform: translate(0, -1px);
     transform: translate(0, -1px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, .2);
-    transition: all 150ms cubic-bezier(0,0,0,1);
+    transition:all 100ms ease, transform 150ms cubic-bezier(0,0,0,1)
 }
 .form-actions .btn-default:active,
 .form.deprecated .btn-primary:active,
@@ -11234,6 +11149,7 @@ body .citar-btn:active{
     background:#404040;
     transform:translate(0,-1px);
     text-decoration:none!important;
+    color:#fff;
 }
 .upload-modal .footer .button-primary{
     background:var(--accent-color);
@@ -11615,7 +11531,7 @@ html[lang="ko"] .upload-modal-in .upload-drop-modal .bgScale{
 .need-help-modal.deprecated .footer{
     background:#252525;
     border:none;
-}
+}/* temporarly disabled
 .modal-content.need-help-modal .form-inner ul{
     display: flex;
     flex-direction: row;
@@ -11713,7 +11629,7 @@ html[lang="ko"] .upload-modal-in .upload-drop-modal .bgScale{
 }
 .need-help-modal.deprecated ul li+li{
     margin-top:0;
-}
+}*/
 .need-help-modal .header input[type=text] {
     border-radius: 0px!important;
     box-shadow: 0 -2px 0 rgba(255, 255, 255, .05) inset!important;
@@ -12799,12 +12715,12 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
   opacity: 1
 }
 /*bunch more ripples*/
-
+#user-profile-modal .guilds .section .connected-accounts .connected-account a .connected-account-open-icon,
 .messages-popout .message-group .action-buttons .close-button{
   position: relative;
 }
 /*medium*/
-
+#user-profile-modal .guilds .section .connected-accounts .connected-account a .connected-account-open-icon::after,
 .container-iksrDt .avatar-small::after{
     content:"";
     background:#fff;
@@ -12819,7 +12735,9 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
     transition:all 300ms ease, visibility 0ms 300ms;
     animation-fill-mode: forwards;
     visibility: hidden;
+    pointer-events: none;
 }
+#user-profile-modal .guilds .section .connected-accounts .connected-account a .connected-account-open-icon:active::after,
 .container-iksrDt .avatar-small:active::after{
     opacity:0.1;
     transition:all 300ms ease, visibility 0ms;
@@ -12844,6 +12762,7 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
     transition:all 300ms ease, visibility 0ms 300ms;
     animation-fill-mode: forwards;
     visibility: hidden;
+    pointer-events: none;
 }
 .message-group .btn-reaction:active::after,
 .message-group .btn-option:active::after,
@@ -12871,6 +12790,7 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
     transition:all 300ms ease, visibility 0ms 300ms;
     animation-fill-mode: forwards;
     visibility: hidden;
+    pointer-events: none;
 }
 .avatar-uploader .avatar-uploader-inner:active::after,
 #user-profile-modal .header .additional-actions-icon:active::after,
@@ -12891,6 +12811,7 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
   animation:scale-center 100ms cubic-bezier(.2,0,0,1),opacity 50ms ease;
 }
 /*popout buttons*/
+#user-profile-modal .header .additional-actions-icon.popout-open::after,
 .message-group .btn-option.popout-open::after,
 .message-group .btn-reaction.popout-open::after{
   opacity:.15;
@@ -12903,10 +12824,89 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
 }
 
 .buttonGreenFilled-6QHNrw{
-    background:#353535;
-    color:var(--accent-color);
+    color:#fff;
+    background:var(--accent-color);
 }
 .buttonGreenFilledDefault-_lLQaz:hover{
     background:var(--accent-color);
     color:#fff;
+}
+#rtc-debug-modal .diagnostics-checkbox.error:after,
+#rtc-debug-modal .diagnostics-checkbox.error:before{
+  display: none;
+}
+#rtc-debug-modal .diagnostics-checkbox.error{
+  background-image:url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTE5IDYuNDFMMTcuNTkgNSAxMiAxMC41OSA2LjQxIDUgNSA2LjQxIDEwLjU5IDEyIDUgMTcuNTkgNi40MSAxOSAxMiAxMy40MSAxNy41OSAxOSAxOSAxNy41OSAxMy40MSAxMnoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==)!important;
+  background-position: 50%;
+  background-size:110%;
+}
+/*betterformatting*/
+.bf-toolbar:before{
+  background:#363636!important;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2)
+}
+.bf-toolbar{
+  padding: 10px 50px 15px 20px!important;
+}
+.bf-toolbar:before{
+  width: calc(100% - 25px)!important;
+  height: calc(100% - 15px)!important;
+  left: 10px!important;
+  top: 5px!important;
+}
+.bf-toolbar .bf-arrow{
+  right: 20px!important;
+}
+.bf-toolbar div:not(.bf-arrow):hover{
+  background: rgba(255,255,255,.1)!important;
+}
+.bf-toolbar div:not(.bf-arrow):active{
+  background: rgba(0,0,0,.2)!important;
+}
+/*/betterformatting*/
+.chat>.title-wrap>.title.channel-group-dm .channel-name{
+  background:transparent;
+  border:none;
+  padding-top:4px;
+  border-bottom:2px solid transparent;
+  transition:200ms ease;
+}
+.chat>.title-wrap.title-wrap-dark .title.channel-group-dm .channel-name.focus,
+.chat>.title-wrap.title-wrap-dark .title.channel-group-dm .channel-name:hover{
+  background:transparent;
+  border:none;
+  border-radius:0;
+}
+.chat>.title-wrap.title-wrap-dark .title.channel-group-dm .channel-name:hover{
+  border-bottom:2px solid rgba(255,255,255,.1);
+  transition:200ms ease;
+}
+.chat>.title-wrap.title-wrap-dark .title.channel-group-dm .channel-name.focus{
+  border-bottom:2px solid var(--accent-color);
+  transition:0ms;
+}
+.textArea-20yzAH{
+  padding-left: 25px;
+}
+.channelTextArea-1HTP3C .inner-3if5cm>.flex-lFgbSz.flex-3B1Tl4.horizontal-2BEEBe.horizontal-2VE-Fw.flex-3B1Tl4.directionRow-yNbSvJ.justifyStart-2yIZo0.alignStretch-1hwxMa.noWrap-v6g9vO~.textArea-20yzAH{
+  padding-left: 0;
+}
+.reactions .btn-reaction{
+  margin-top:0px;
+}
+.diversity-selector .popout .item:hover{
+  background-color: rgba(255,255,255,.05)
+}
+.upload-modal .textArea-20yzAH{
+  padding:10px 0 10px 10px;
+  margin-right:38px;
+}
+.upload-modal .inner-3if5cm{
+  border-radius:3px;
+}
+.upload-modal .emojiButton-38mF6t{
+  width:38px;
+}
+.user-info-editing .horizontal-2BEEBe>.flex-lFgbSz,.user-info-editing .horizontal-2BEEBe>.flexChild-1KGW5q{
+  margin-right: 0
 }
