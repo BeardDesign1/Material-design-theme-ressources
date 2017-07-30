@@ -13134,5 +13134,8 @@ button.buttonGreyGhostDefault-2h5dqi.buttonGhostDefault-2NFSwJ.buttonDefault-2OL
 div.user-settings-locale div[class*=checked] polyline {
     stroke: #fff!important;
 }
+.checkbox .checkbox-inner input[type=checkbox]+span::before {
+    border-color: #fff;
+}
 
 /* Made by SuperagiusRobloxian */
