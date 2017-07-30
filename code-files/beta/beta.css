@@ -21,20 +21,20 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     --settings-scrollbar: var(--disabled);
     --disabled: none;
     --enabled: initial;
-    --version:"Beard's Material Theme v2.1.9";
+    --version:"Beard's Material Theme v2.2.0";
     --user-avatar-url:url("");
 }
 
 /*changelog*/
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before {
-    content: "Beard's Material theme v2.1.9\A \A Changelog:\A \A v2.1.9\A - Themed many areas to more closely comply with material design.\A - All accent color areas are now dynamic.\A - Fixed multiple bugs.\A - Fixed a bug with the changelog not appearing.\A v2.1.8\A - Made more things match the accent color.\A - Rethemed the Send Friend Request button to match the accent color.\A - Bug fixes and improvements.\A v2.1.7\A - Bug fixing.\A \A Full changelog on github or in the discord server.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
+    content: "Beard's Material theme v2.2.0\A \A Changelog:\A \A v2.1.9\A - Themed many areas to more closely comply with material design.\A - All accent color areas are now dynamic.\A - Fixed multiple bugs.\A - Fixed a bug with the changelog not appearing.\A v2.1.8\A - Made more things match the accent color.\A - Rethemed the Send Friend Request button to match the accent color.\A - Bug fixes and improvements.\A v2.1.7\A - Bug fixing.\A \A Full changelog on github or in the discord server.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
 }
 /*Account settings announcement*/
 .user-settings-account>h2.ui-form-title.margin-reset.margin-bottom-20+.flex-vertical::after {
     content: none!important;
 }
 /*Themes settings announcement*/
-#bd-settingspane-container .content-column.default .ui-form-title.h2::after {
+.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::after {
     content: "Hi, I just created server where I post stuff about the theme and you can give me feedback,\A also there's a beta now :D. To download it join the server at >> bit.ly/BMTserver <<\A\A It's also how to report bugs now, the other links don't work anymore."!important;
 }
 
@@ -352,20 +352,21 @@ html[lang="de"] .app::after{
     width: 470px;
 }
 /*/Translation*/
-.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .ui-form-title.h2::after {
+.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::after {
     display: block;
     position: relative;
     background: var(--accent-color);
     padding: 10px 15px;
     white-space: pre;
     margin-bottom: -10px;
-    margin-top:15px;
+    margin-bottom:5px;
     border-radius: 2px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
     font-weight: 600;
     color: #fff;
     text-transform: initial;
     text-align:center;
+    order:-10;
 }
 #bd-settings-sidebar>span>span::after{
     padding-left:10px;
@@ -374,7 +375,10 @@ html[lang="de"] .app::after{
     margin-bottom:-10px;
     content: var(--version);
 }
-
+.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist{
+  display:flex;
+  flex-direction:column;
+}
 .user-settings-account>h2.ui-form-title.margin-reset.margin-bottom-20+.flex-vertical::after {
     display: block;
     position: relative;
@@ -424,7 +428,6 @@ html[lang="de"] .app::after{
 .bda-name[data-reactid*="$Beard_s_Material_theme_for_Discord"]::after {
     content:" by BeardDesign";
 }
-
 /*/version hide*/
 /*-----ACCENT COLOR-----*/
 #bd-settings-sidebar .ui-tab-bar-item.selected,
@@ -10058,7 +10061,6 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 }
 .ui-standard-sidebar-view .bda-slist .bda-description[data-reactid*="$Beard_s_Material_theme_for_Discord."]{
     display:none;
-
 }
 .ui-standard-sidebar-view .bda-slist .scroller-wrap[data-reactid*="$Beard_s_Material_theme_for_Discord."]{
     position:relative;
@@ -11079,8 +11081,6 @@ body .citar-btn:active{
     color:rgba(255,255,255,.7);
     background:rgba(255,255,255,.05);
 }
-.ui-form-title.h2[data-reactid*="$scroller.$espanel"]::after,
-.ui-form-title.h2[data-reactid*="$scroller.$pcolumn"]::after,
 .bda-slist[data-reactid*="$plugin-list"]::before {
     display: none!important;
 }
@@ -12913,9 +12913,11 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
 
 /* Made by SuperagiusRobloxian */
 
+/*
 #user-profile-modal .actions .btn.add-friend {
     background: var(--accent-color)!important;
 }
+*/
 #friends .btn:hover {
     background-color: var(--accent-color);
 }
@@ -12948,18 +12950,6 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
 }
 .ui-standard-sidebar-view #editor-detached button {
     background: var(--accent-color);
-} 
-.channel-members .member:hover .renamer-tag, .channel-members .member .member-activity, .channel-members .member:hover .member-username-inner {
-     transform: translate(5px);
-}
-.channel-members .member:hover .renamer-tag, .channel-members .member .member-activity, .channel-members .member:hover .member-username-inner {
-     transition: all 100ms cubic-bezier(.43, 0, 0, 1);
-}
-.channel-members .member:hover .kawaii-tag, .channel-members .member .member-activity, .channel-members .member:hover .member-username-inner {
-    transform: translate(5px);
-}
-.channel-members .member:hover .kawaii-tag, .channel-members .member .member-activity, .channel-members .member:hover .member-username-inner {
-     transition: all 100ms cubic-bezier(.43, 0, 0, 1);
 }
 .kawaii-tag-bright {
     color: #fff!important;
@@ -12979,54 +12969,21 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
 #bd-settings-sidebar a {
     color: var(--accent-color) !important;
 }
-.theme-dark .chat .welcome-message a {
-    color: var(--accent-color) !important;
-}
-.messages-wrapper .messages .message-group a {
-    color: var(--accent-color) !important;
-}
-.create-guild-container.deprecated .join-server .sample-link {
-    color: var(--accent-color)!important;
-}
 .search-popout .date-picker .date-picker-hint .hint-value {
     background-color: var(--accent-color)!important;
 }
-.app a, .connecting a {
-    color: var(--accent-color);
-}
 .need-help-modal.deprecated a {
     color: var(--accent-color);
-}
-.modal-3HOjGZ a, .markdown-modal a, .theme-dark .chat .title-wrap .topic a, .theme-dark .chat .welcome-message a, .friends-table .messages .message-group a, .messages-wrapper .messages .message-group a {
-    color: var(--accent-color) !important;
-}
-.modal-3HOjGZ a:hover, .markdown-modal a:hover, .theme-dark .chat .title-wrap .topic a:hover, .theme-dark .chat .welcome-message a:hover, .friends-table .messages .message-group a:hover, .messages-wrapper .messages .message-group a:hover {
-    color: var(--accent-color)!important;
-}
-.theme-dark .channel-textarea-emoji, .theme-dark .emojiButton-38mF6t {
-    margin-right: 10px;
-}
-.message-group .edit-message .edit-operation {
-    margin-right: 10px;
-}
-.modal-3HOjGZ a, .markdown-modal a, .theme-dark .chat .title-wrap .topic a, .theme-dark .chat .welcome-message a, .friends-table .messages .message-group a, .messages-wrapper .messages .message-group a {
-    color: var(--accent-color);
-}
-#autocomplete-popout h3 {
-    color: #fff;
 }
 .emoji-picker .sticky-header {
     width: 98%!important;
 }
 .theme-dark .ui-color-picker-custom {
     background: #303030!important;
-    border-radius: 5px!important;
+    border-radius: 4px!important;
 }
 .theme-dark #friends .friends-header .tab-bar .tab-bar-item.tab-bar-item-primary.selected {
     color: #36393e!important;
-}
-.header-toolbar button[type="button"] {
-    display: inline-block;
 }
 .guilds-wrapper .guilds .friends-online {
     margin-left:35px;
@@ -13043,45 +13000,24 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
 .bot-tag.bot-tag-invert {
     color: var(--accent-color)!important;
 }
-.user-popout .note textarea {
-    color: #fff;
-}
-.button-2t3of8 {
-    margin-left: 5px;
-}
 .search-results-wrap .search-result {
     margin-left: 20px;
 }
 .theme-dark .search-results-wrap .channel-separator .channel-name {
     margin-left: 20px;
 }
-a {
-    color: var(--accent-color);
-}
 .user-settings-connections .connection-header {
     border-bottom: none;
-    border-radius: 5px 5px 0 0;
 }
-.horizontal-2BEEBe>.flex-lFgbSz:last-child, .horizontal-2BEEBe>.flexChild-1KGW5q:last-child {
+.horizontal-2BEEBe>.flex-lFgbSz:last-child,
+.horizontal-2BEEBe>.flexChild-1KGW5q:last-child {
     margin-right: 10px;
 }
 .theme-dark .copyInputDefault-36NOFa {
     border: none;
 }
-.theme-dark .buttonGreyGhost-SfY7zU {
-    height: 4px;
-}
 .buttonGreyLinkDefault-3eCAFJ {
     color: #fff;
-}
-.theme-dark .message-group .comment .markup pre {
-    background: #212121;
-}
-.friends-table .messages .message-group .comment .markup code.inline, .friends-table .messages .message-group .comment .markup pre code, .messages-wrapper .messages .message-group .comment .markup code.inline, .messages-wrapper .messages .message-group .comment .markup pre code {
-    border: 0px!important;
-}
-div[class*=checked] polyline {
-    stroke: var(--accent-color);
 }
 .renamer-modal .form header {
     color: #f6f6f7;
@@ -13089,53 +13025,22 @@ div[class*=checked] polyline {
 .renamer-modal a.modal-reset-text {
     color: rgba(255,255,255,.8)!important;
 }
-
-a:link {
-    color:var(--accent-color)!important;
-}
-::selection {
-  background: var(--accent-color)!important;
-}
 .cm-s-material .CodeMirror-guttermarker, .cm-s-material .CodeMirror-guttermarker-subtle, .cm-s-material .CodeMirror-linenumber {
     color: #fff;
 }
-.ui-standard-sidebar-view #bd-customcss-attach-controls button, .bd-detached-css-editor #bd-customcss-attach-controls button {
-    width: 100px;
+.ui-standard-sidebar-view #bd-customcss-attach-controls button,
+.bd-detached-css-editor #bd-customcss-attach-controls button {
     border-radius: 3px!important;
     margin-right: 5px;
 }
+
 #bd-customcss-detach-controls-button span {
     font-size: 12px!important;
-}
-.content-region #bd-customcss-attach-controls::before {
-    border-radius: 5px;
-}
-.ui-standard-sidebar-view .bda-slist .scroller-wrap[data-reactid*="$Beard_s_Material_theme_for_Discord."]::after {
-    color: #fff;
 }
 .ui-standard-sidebar-view .bda-slist .bda-description[data-reactid*="$Beard_s_Material_theme_for_Discord."] {
     display: none!important;
 }
-.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .ui-form-title.h2+.bd-pfbtn {
-    height: 30px;
-    top: 50px;
-    left: 115px;
-}
-.ui-input-button:hover .ui-input-button-ui-button, .ui-input-button:hover .ui-button {
-    margin-top: 4px!important;
-    border-radius: 3px!important;
-    margin-right: 5px!important;
-}
-button.buttonGreyGhostDefault-2h5dqi.buttonGhostDefault-2NFSwJ.buttonDefault-2OLW-v.button-2t3of8.buttonGhost-2Y7zWJ.buttonGreyGhost-SfY7zU.minGrow-1W9N45.min-K7DTfI.ui-input-button-ui-button.key-recorder-button {
-    margin-top: 5px!important;
-    margin-right: 5px!important;
-    border-radius: 3px!important;
-}
 div.user-settings-locale div[class*=checked] polyline {
     stroke: #fff!important;
 }
-.checkbox .checkbox-inner input[type=checkbox]+span::before {
-    border-color: #fff;
-}
-
 /* Made by SuperagiusRobloxian */
