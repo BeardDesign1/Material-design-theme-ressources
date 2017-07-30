@@ -21,13 +21,13 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     --settings-scrollbar: var(--disabled);
     --disabled: none;
     --enabled: initial;
-    --version:"Beard's Material Theme v2.1.7";
+    --version:"Beard's Material Theme v2.1.9";
     --user-avatar-url:url("");
 }
 
 /*changelog*/
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before {
-    content: "Beard's Material theme v2.1.7\A \A Changelog:\A \A v2.1.7\A - Bug fixing. \A v2.1.6\A - Added more ripples in a bunch of places, click around and see.\A - Changed the animation for the user popouts, pins/mentions and emoji panel.\A - Added an 'out' animation for the user popouts, pins/mentions and emoji panel.\A - Fixed the look of the chatbox in canary.\A - Fixed some more bugs.\A \A Full changelog on github or in the discord server.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
+    content: "Beard's Material theme v2.1.9\A \A Changelog:\A \A v2.1.9\A - Themed many areas to more closely comply with material design.\A - All accent color areas are now dynamic.\A - Fixed multiple bugs.\A - Fixed a bug with the changelog not appearing.\A v2.1.8\A - Made more things match the accent color.\A - Rethemed the Send Friend Request button to match the accent color.\A - Bug fixes and improvements.\A v2.1.7\A - Bug fixing.\A \A Full changelog on github or in the discord server.\A \A If you want a scrollbar in your server channels list:\A Go to bit.ly/ChannelScroll and copy the text to your custom css.\A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
 }
 /*Account settings announcement*/
 .user-settings-account>h2.ui-form-title.margin-reset.margin-bottom-20+.flex-vertical::after {
@@ -12910,3 +12910,226 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
 .user-info-editing .horizontal-2BEEBe>.flex-lFgbSz,.user-info-editing .horizontal-2BEEBe>.flexChild-1KGW5q{
   margin-right: 0
 }
+
+/* Made by SuperagiusRobloxian */
+
+#user-profile-modal .actions .btn.add-friend {
+    background: var(--accent-color)!important;
+}
+#friends .btn:hover {
+    background-color: var(--accent-color);
+}
+#friends .btn {
+    background-color: var(--accent-color);
+}
+#user-profile-modal .actions .btn.disabled {
+    opacity: 0.3;
+    background: var(--accent-color)!important;
+    color: #fff;
+    border: 1px solid var(--accent-color);
+}
+.renamer-modal .btn-primary {
+    min-width: 70px;
+    left: 75px;
+}
+.renamer-modal .btn-default {
+    min-width: 70px;
+    left: -80px;
+}
+.ui-color-picker-swatch.selected {
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+}
+.ui-color-picker-swatch {
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+}
+.ui-standard-sidebar-view #editor-detached button {
+    background: var(--accent-color);
+} 
+.channel-members .member:hover .renamer-tag, .channel-members .member .member-activity, .channel-members .member:hover .member-username-inner {
+     transform: translate(5px);
+}
+.channel-members .member:hover .renamer-tag, .channel-members .member .member-activity, .channel-members .member:hover .member-username-inner {
+     transition: all 100ms cubic-bezier(.43, 0, 0, 1);
+}
+.channel-members .member:hover .kawaii-tag, .channel-members .member .member-activity, .channel-members .member:hover .member-username-inner {
+    transform: translate(5px);
+}
+.channel-members .member:hover .kawaii-tag, .channel-members .member .member-activity, .channel-members .member:hover .member-username-inner {
+     transition: all 100ms cubic-bezier(.43, 0, 0, 1);
+}
+.kawaii-tag-bright {
+    color: #fff!important;
+}
+.kawaii-tag {
+    background: var(--accent-color);
+}
+.bot-tag {
+    font-weight: 600;
+}
+.bot-tag.bot-tag-invert {
+    font-weight: 600;
+}
+.bot-tag {
+    background: var(--accent-color);
+}
+#bd-settings-sidebar a {
+    color: var(--accent-color) !important;
+}
+.theme-dark .chat .welcome-message a {
+    color: var(--accent-color) !important;
+}
+.messages-wrapper .messages .message-group a {
+    color: var(--accent-color) !important;
+}
+.create-guild-container.deprecated .join-server .sample-link {
+    color: var(--accent-color)!important;
+}
+.search-popout .date-picker .date-picker-hint .hint-value {
+    background-color: var(--accent-color)!important;
+}
+.app a, .connecting a {
+    color: var(--accent-color);
+}
+.need-help-modal.deprecated a {
+    color: var(--accent-color);
+}
+.modal-3HOjGZ a, .markdown-modal a, .theme-dark .chat .title-wrap .topic a, .theme-dark .chat .welcome-message a, .friends-table .messages .message-group a, .messages-wrapper .messages .message-group a {
+    color: var(--accent-color) !important;
+}
+.modal-3HOjGZ a:hover, .markdown-modal a:hover, .theme-dark .chat .title-wrap .topic a:hover, .theme-dark .chat .welcome-message a:hover, .friends-table .messages .message-group a:hover, .messages-wrapper .messages .message-group a:hover {
+    color: var(--accent-color)!important;
+}
+.theme-dark .channel-textarea-emoji, .theme-dark .emojiButton-38mF6t {
+    margin-right: 10px;
+}
+.message-group .edit-message .edit-operation {
+    margin-right: 10px;
+}
+.modal-3HOjGZ a, .markdown-modal a, .theme-dark .chat .title-wrap .topic a, .theme-dark .chat .welcome-message a, .friends-table .messages .message-group a, .messages-wrapper .messages .message-group a {
+    color: var(--accent-color);
+}
+#autocomplete-popout h3 {
+    color: #fff;
+}
+.emoji-picker .sticky-header {
+    width: 98%!important;
+}
+.theme-dark .ui-color-picker-custom {
+    background: #303030!important;
+    border-radius: 5px!important;
+}
+.theme-dark #friends .friends-header .tab-bar .tab-bar-item.tab-bar-item-primary.selected {
+    color: #36393e!important;
+}
+.header-toolbar button[type="button"] {
+    display: inline-block;
+}
+.guilds-wrapper .guilds .friends-online {
+    margin-left:35px;
+    transform:translate(-50%,0);
+}
+.message-group .btn-quote {
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.kawaii-tag-invert {
+    background: #fff!important;
+    color: var(--accent-color)!important;
+}
+.bot-tag.bot-tag-invert {
+    color: var(--accent-color)!important;
+}
+.user-popout .note textarea {
+    color: #fff;
+}
+.button-2t3of8 {
+    margin-left: 5px;
+}
+.search-results-wrap .search-result {
+    margin-left: 20px;
+}
+.theme-dark .search-results-wrap .channel-separator .channel-name {
+    margin-left: 20px;
+}
+a {
+    color: var(--accent-color);
+}
+.user-settings-connections .connection-header {
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+.horizontal-2BEEBe>.flex-lFgbSz:last-child, .horizontal-2BEEBe>.flexChild-1KGW5q:last-child {
+    margin-right: 10px;
+}
+
+.ui-standard-sidebar-view, .ui-standard-sidebar-view * {
+    border: none;
+}
+.theme-dark .copyInputDefault-36NOFa {
+    border: none;
+}
+.theme-dark .buttonGreyGhost-SfY7zU {
+    height: 4px;
+}
+.buttonGreyLinkDefault-3eCAFJ {
+    color: #fff;
+}
+.theme-dark .message-group .comment .markup pre {
+    background: #212121;
+}
+.friends-table .messages .message-group .comment .markup code.inline, .friends-table .messages .message-group .comment .markup pre code, .messages-wrapper .messages .message-group .comment .markup code.inline, .messages-wrapper .messages .message-group .comment .markup pre code {
+    border: 0px!important;
+}
+div[class*=checked] polyline {
+	stroke: var(--accent-color);
+}
+.renamer-modal .form header {
+    color: #f6f6f7;
+}
+.renamer-modal a.modal-reset-text {
+    color: rgba(255,255,255,.8)!important;
+}
+
+a:link {
+	color:var(--accent-color)!important;
+}
+::selection {
+  background: var(--accent-color)!important;
+}
+.cm-s-material .CodeMirror-guttermarker, .cm-s-material .CodeMirror-guttermarker-subtle, .cm-s-material .CodeMirror-linenumber {
+    color: #fff;
+}
+.checkbox .checkbox-inner+span {
+    color: #fff;
+}
+.checkbox .checkbox-inner input[type=checkbox]+span::before {
+    border: 20px solid #fff;
+}
+.ui-standard-sidebar-view #bd-customcss-attach-controls button, .bd-detached-css-editor #bd-customcss-attach-controls button {
+    width: 100px;
+    border-radius: 3px!important;
+    margin-right: 5px;
+}
+#bd-customcss-detach-controls-button span {
+    font-size: 12px!important;
+}
+.content-region #bd-customcss-attach-controls::before {
+    border-radius: 5px;
+}
+.ui-standard-sidebar-view .bda-slist .scroller-wrap[data-reactid*="$Beard_s_Material_theme_for_Discord."]::after {
+    color: #fff;
+}
+.ui-standard-sidebar-view .bda-slist .bda-description[data-reactid*="$Beard_s_Material_theme_for_Discord."] {
+    display: none!important;
+}
+.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .ui-form-title.h2+.bd-pfbtn {
+    height: 30px;
+    top: 50px;
+    left: 115px;
+}
+
+/* Made by SuperagiusRobloxian */
