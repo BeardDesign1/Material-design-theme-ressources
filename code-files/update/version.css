@@ -13085,7 +13085,7 @@ a {
     border: 0px!important;
 }
 div[class*=checked] polyline {
-	stroke: var(--accent-color);
+    stroke: var(--accent-color);
 }
 .renamer-modal .form header {
     color: #f6f6f7;
@@ -13095,19 +13095,13 @@ div[class*=checked] polyline {
 }
 
 a:link {
-	color:var(--accent-color)!important;
+    color:var(--accent-color)!important;
 }
 ::selection {
   background: var(--accent-color)!important;
 }
 .cm-s-material .CodeMirror-guttermarker, .cm-s-material .CodeMirror-guttermarker-subtle, .cm-s-material .CodeMirror-linenumber {
     color: #fff;
-}
-.checkbox .checkbox-inner+span {
-    color: #fff;
-}
-.checkbox .checkbox-inner input[type=checkbox]+span::before {
-    border: 20px solid #fff;
 }
 .ui-standard-sidebar-view #bd-customcss-attach-controls button, .bd-detached-css-editor #bd-customcss-attach-controls button {
     width: 100px;
@@ -13130,6 +13124,19 @@ a:link {
     height: 30px;
     top: 50px;
     left: 115px;
+}
+.ui-input-button:hover .ui-input-button-ui-button, .ui-input-button:hover .ui-button {
+    margin-top: 4px!important;
+    border-radius: 3px!important;
+    margin-right: 5px!important;
+}
+button.buttonGreyGhostDefault-2h5dqi.buttonGhostDefault-2NFSwJ.buttonDefault-2OLW-v.button-2t3of8.buttonGhost-2Y7zWJ.buttonGreyGhost-SfY7zU.minGrow-1W9N45.min-K7DTfI.ui-input-button-ui-button.key-recorder-button {
+    margin-top: 5px!important;
+    margin-right: 5px!important;
+    border-radius: 3px!important;
+}
+div.user-settings-locale div[class*=checked] polyline {
+    stroke: #fff!important;
 }
 
 /* Made by SuperagiusRobloxian */
