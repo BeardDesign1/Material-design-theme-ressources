@@ -13036,5 +13036,10 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
     margin-right: 10px;
     margin-top: 3px;
 }
+.kawaii-tag-invert {
+    background: #fff!important;
+    color: var(--accent-color)!important;
+}
+.bot-tag.bot-tag-invert {
 
 /* Made by SuperagiusRobloxian */
