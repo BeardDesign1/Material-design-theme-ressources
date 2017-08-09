@@ -14,14 +14,18 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 ///////////////////////////////////////
 */
 
+/*changelog*/
+.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before {
+    content: "Beard's Material theme v2.2.2\A \A Changelog:\A \Av2.2.2\A - Bug fixing.\A \A v2.2.1\A - Themed the DirectDownload plugin.\A - Themed the Server Sorter plugin.\A - fixed a whole bunch of stuff\A - Started using variables a lot more for more user customisation in the future.\A \A v2.1.7\A - Bug fixing.\A \A v2.1.6\A - Added more ripples in a bunch of places, click around and see.\A - Changed the animation for the user popouts, pins/mentions and emoji panel.\A - Added an 'out' animation for the user popouts, pins/mentions and emoji panel.\A - Fixed the look of the chatbox in canary.\A - Fixed some more bugs.\A \A Full changelog on github or in the discord server.\A \A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
+}
 :root {
+    --version:"Beard's Material Theme v2.2.2";
     --accent-color: #7289DA;
     --notification-color: var(--white10);
     --channels-scrollbar: var(--disabled);
     --settings-scrollbar: var(--disabled);
     --disabled: none;
     --enabled: initial;
-    --version:"Beard's Material Theme v2.2.1";
     --user-avatar-url:url("");
     /*MAIN COLORS*/
     --lvl1:#303030;/*var(--lvl1)*/
@@ -52,11 +56,6 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     --black9:rgba(0,0,0,.9);/*var(--black9)*/
     --black10:rgba(0,0,0,1);/*var(--black10)*/
 }
-
-/*changelog*/
-.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before {
-    content: "Beard's Material theme v2.2.1\A \A Changelog:\A \A v2.2.1\A - Themed the DirectDownload plugin.\A - Themed the Server Sorter plugin.\A - fixed a whole bunch of stuff\A - Started using variables a lot more for more user customisation in the future.\A \A v2.1.7\A - Bug fixing.\A \A v2.1.6\A - Added more ripples in a bunch of places, click around and see.\A - Changed the animation for the user popouts, pins/mentions and emoji panel.\A - Added an 'out' animation for the user popouts, pins/mentions and emoji panel.\A - Fixed the look of the chatbox in canary.\A - Fixed some more bugs.\A \A Full changelog on github or in the discord server.\A \A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
-}
 /*Account settings announcement*/
 .user-settings-account>h2.ui-form-title.margin-reset.margin-bottom-20+.flex-vertical::after {
     content: none!important;
@@ -65,183 +64,291 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::after {
     content: "Hi, I just created server where I post stuff about the theme and you can give me feedback,\A also there's a beta now :D. To download it join the server at >> bit.ly/BMTserver <<\A\A It's also how to report bugs now, the other links don't work anymore."!important;
 }
-
-/*Contributors*/
 .avatar-profile::before,
 .avatar-profile::after,
 .avatar-large+.comment .timestamp::before,
 .avatar-large+.comment .timestamp::after{
-    display:none!important
-}
-/*Username*/
-.avatar-profile[style*="avatars/--"]::before,
-.avatar-profile[style*="avatars/--"]::after,
-  .avatar-large[style*="avatars/--"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/--"]+.comment .timestamp::after,
-/*Definitely Not Alex#2280*/
-.avatar-profile[style*="avatars/137302338485354496"]::before,
-.avatar-profile[style*="avatars/137302338485354496"]::after,
-  .avatar-large[style*="avatars/137302338485354496"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/137302338485354496"]+.comment .timestamp::after,
-/*PixelatedBulb#2816*/
-.avatar-profile[style*="avatars/168303479054401537"]::before,
-.avatar-profile[style*="avatars/168303479054401537"]::after,
-  .avatar-large[style*="avatars/168303479054401537"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/168303479054401537"]+.comment .timestamp::after,
-/*PoorPockets McNewHolͪdͥ#8740*/
-.avatar-profile[style*="avatars/277173061973835778"]::before,
-.avatar-profile[style*="avatars/277173061973835778"]::after,
-  .avatar-large[style*="avatars/277173061973835778"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/277173061973835778"]+.comment .timestamp::after,
-/*FroztySeven#9632*/
-.avatar-profile[style*="avatars/155407912481718272"]::before,
-.avatar-profile[style*="avatars/155407912481718272"]::after,
-  .avatar-large[style*="avatars/155407912481718272"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/155407912481718272"]+.comment .timestamp::after,
-/*SuperagiusRobloxian#5861*/
-.avatar-profile[style*="avatars/281486586749911041"]::before,
-.avatar-profile[style*="avatars/281486586749911041"]::after,
-  .avatar-large[style*="avatars/281486586749911041"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/281486586749911041"]+.comment .timestamp::after,
-/*╲⎝⧹𝓢𝓾𝓹𝓮𝓻𝓦𝓸𝔀121⧸⎠╱#5390*/
-.avatar-profile[style*="avatars/280188541538140160"]::before,
-.avatar-profile[style*="avatars/280188541538140160"]::after,
-  .avatar-large[style*="avatars/280188541538140160"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/280188541538140160"]+.comment .timestamp::after,
-/*william#4027*/
-.avatar-profile[style*="avatars/184008525888880640"]::before,
-.avatar-profile[style*="avatars/184008525888880640"]::after,
-  .avatar-large[style*="avatars/184008525888880640"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/184008525888880640"]+.comment .timestamp::after,
-/*Zerebos#7790*/
-.avatar-profile[style*="avatars/249746236008169473"]::before,
-.avatar-profile[style*="avatars/249746236008169473"]::after,
-  .avatar-large[style*="avatars/249746236008169473"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/249746236008169473"]+.comment .timestamp::after,
-/*BlazingGem#7651*/
-.avatar-profile[style*="avatars/122312510769594368"]::before,
-.avatar-profile[style*="avatars/122312510769594368"]::after,
-  .avatar-large[style*="avatars/122312510769594368"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/122312510769594368"]+.comment .timestamp::after,
-/*ouchys#8480*/
-.avatar-profile[style*="avatars/235353619132579843"]::before,
-.avatar-profile[style*="avatars/235353619132579843"]::after,
-  .avatar-large[style*="avatars/235353619132579843"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/235353619132579843"]+.comment .timestamp::after,
-/*Анастасия#5580*/
-.avatar-profile[style*="avatars/259277943275126785"]::before,
-.avatar-profile[style*="avatars/259277943275126785"]::after,
-  .avatar-large[style*="avatars/259277943275126785"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/259277943275126785"]+.comment .timestamp::after,
-/*Giaco Audiovisuel#0178*/
-.avatar-profile[style*="avatars/132855540664500224"]::before,
-.avatar-profile[style*="avatars/132855540664500224"]::after,
-  .avatar-large[style*="avatars/132855540664500224"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/132855540664500224"]+.comment .timestamp::after,
-/*Viniuau#3029*/
-.avatar-profile[style*="avatars/110078241087172608"]::before,
-.avatar-profile[style*="avatars/110078241087172608"]::after,
-  .avatar-large[style*="avatars/110078241087172608"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/110078241087172608"]+.comment .timestamp::after,
-/*asolus#0467*/
-.avatar-profile[style*="avatars/166423625728131072"]::before,
-.avatar-profile[style*="avatars/166423625728131072"]::after,
-  .avatar-large[style*="avatars/166423625728131072"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/166423625728131072"]+.comment .timestamp::after,
-/*Midorina#5706*/
-.avatar-profile[style*="avatars/90076279646212096"]::before,
-.avatar-profile[style*="avatars/90076279646212096"]::after,
-  .avatar-large[style*="avatars/90076279646212096"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/90076279646212096"]+.comment .timestamp::after,
-/*Ｋ仔 Queen 💉#8312*/
-.avatar-profile[style*="avatars/282659852701138954"]::before,
-.avatar-profile[style*="avatars/282659852701138954"]::after,
-  .avatar-large[style*="avatars/282659852701138954"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/282659852701138954"]+.comment .timestamp::after,
-/*MGRich#8192*/
-.avatar-profile[style*="avatars/214550163841220609"]::before,
-.avatar-profile[style*="avatars/214550163841220609"]::after,
-  .avatar-large[style*="avatars/214550163841220609"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/214550163841220609"]+.comment .timestamp::after,
-/*- ̗̀ʀΞʀIʀ▲Ҝ ̖́-#3412*/
-.avatar-profile[style*="avatars/111169969273708544"]::before,
-.avatar-profile[style*="avatars/111169969273708544"]::after,
-  .avatar-large[style*="avatars/111169969273708544"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/111169969273708544"]+.comment .timestamp::after,
-/*Morgana Chase (Winter)#0167*/
-.avatar-profile[style*="avatars/161692463365357568"]::before,
-.avatar-profile[style*="avatars/161692463365357568"]::after,
-  .avatar-large[style*="avatars/161692463365357568"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/161692463365357568"]+.comment .timestamp::after,
-/*fofofofofofofofo#5404*/
-.avatar-profile[style*="avatars/159767754960928768"]::before,
-.avatar-profile[style*="avatars/159767754960928768"]::after,
-  .avatar-large[style*="avatars/159767754960928768"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/159767754960928768"]+.comment .timestamp::after,
-/*Pu#6606*/
-.avatar-profile[style*="avatars/116242787980017679"]::before,
-.avatar-profile[style*="avatars/116242787980017679"]::after,
-  .avatar-large[style*="avatars/116242787980017679"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/116242787980017679"]+.comment .timestamp::after,
-/*Pointy#5565*/
-.avatar-profile[style*="avatars/99914384989519872"]::before,
-.avatar-profile[style*="avatars/99914384989519872"]::after,
-  .avatar-large[style*="avatars/99914384989519872"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/99914384989519872"]+.comment .timestamp::after,
-/* Zekken#0101*/
-.avatar-profile[style*="avatars/153597217956036608"]::before,
-.avatar-profile[style*="avatars/153597217956036608"]::after,
-  .avatar-large[style*="avatars/153597217956036608"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/153597217956036608"]+.comment .timestamp::after,
-/*boswelja#9614*/
-.avatar-profile[style*="avatars/258528216698978304"]::before,
-.avatar-profile[style*="avatars/258528216698978304"]::after,
-  .avatar-large[style*="avatars/258528216698978304"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/258528216698978304"]+.comment .timestamp::after,
-/*DE|Gamingfail123#7301*/
-.avatar-profile[style*="avatars/137596811778064384"]::before,
-.avatar-profile[style*="avatars/137596811778064384"]::after,
-  .avatar-large[style*="avatars/137596811778064384"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/137596811778064384"]+.comment .timestamp::after,
-/*Jeder#2091*/
-.avatar-profile[style*="avatars/143685955436544000"]::before,
-.avatar-profile[style*="avatars/143685955436544000"]::after,
-  .avatar-large[style*="avatars/143685955436544000"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/143685955436544000"]+.comment .timestamp::after,
-/*Mist#4209*/
-.avatar-profile[style*="avatars/206318836646019073"]::before,
-.avatar-profile[style*="avatars/206318836646019073"]::after,
-  .avatar-large[style*="avatars/206318836646019073"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/206318836646019073"]+.comment .timestamp::after,
-/*Lucas#1135*/
-.avatar-profile[style*="avatars/211023028832698368"]::before,
-.avatar-profile[style*="avatars/211023028832698368"]::after,
-  .avatar-large[style*="avatars/211023028832698368"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/211023028832698368"]+.comment .timestamp::after,
-/*Jojo#0956*/
-.avatar-profile[style*="avatars/135764542410981377"]::before,
-.avatar-profile[style*="avatars/135764542410981377"]::after,
-  .avatar-large[style*="avatars/135764542410981377"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/135764542410981377"]+.comment .timestamp::after,
-/*mushroomstewart#3338*/
-.avatar-profile[style*="avatars/259136714025467905"]::before,
-.avatar-profile[style*="avatars/259136714025467905"]::after,
-  .avatar-large[style*="avatars/259136714025467905"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/259136714025467905"]+.comment .timestamp::after,
-/*Alipoodle#5025*/
-.avatar-profile[style*="avatars/183931930935427073"]::before,
-.avatar-profile[style*="avatars/183931930935427073"]::after,
-  .avatar-large[style*="avatars/183931930935427073"]+.comment .timestamp::before,
-  .avatar-large[style*="avatars/183931930935427073"]+.comment .timestamp::after{
-    display:inline-block!important
+    display:none!important;
 }
 
+/*Patrons*/
+/*Username*/
+.avatar-profile[style*="avatars/--"]::before,
+  .avatar-large[style*="avatars/--"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+.avatar-profile[style*="avatars/--"]::after,
+  .avatar-large[style*="avatars/--"]+.comment .timestamp::after{display:inline-block!important;
+    content: "BMT Patron"}
+/*/Patrons*/
+
+/*Contributors*/
+/*Username*/
+.avatar-profile[style*="avatars/--"]::before,
+  .avatar-large[style*="avatars/--"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/--"]::after,
+  .avatar-large[style*="avatars/--"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Definitely Not Alex#2280*/
+.avatar-profile[style*="avatars/137302338485354496"]::before,
+  .avatar-large[style*="avatars/137302338485354496"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/137302338485354496"]::after,
+  .avatar-large[style*="avatars/137302338485354496"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*PixelatedBulb#2816*/
+.avatar-profile[style*="avatars/168303479054401537"]::before,
+  .avatar-large[style*="avatars/168303479054401537"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/168303479054401537"]::after,
+  .avatar-large[style*="avatars/168303479054401537"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*PoorPockets McNewHolͪdͥ#8740*/
+.avatar-profile[style*="avatars/277173061973835778"]::before,
+  .avatar-large[style*="avatars/277173061973835778"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/277173061973835778"]::after,
+  .avatar-large[style*="avatars/277173061973835778"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*FroztySeven#9632*/
+.avatar-profile[style*="avatars/155407912481718272"]::before,
+  .avatar-large[style*="avatars/155407912481718272"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/155407912481718272"]::after,
+  .avatar-large[style*="avatars/155407912481718272"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*SuperagiusRobloxian#5861*/
+.avatar-profile[style*="avatars/281486586749911041"]::before,
+  .avatar-large[style*="avatars/281486586749911041"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/281486586749911041"]::after,
+  .avatar-large[style*="avatars/281486586749911041"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*╲⎝⧹𝓢𝓾𝓹𝓮𝓻𝓦𝓸𝔀121⧸⎠╱#5390*/
+.avatar-profile[style*="avatars/280188541538140160"]::before,
+  .avatar-large[style*="avatars/280188541538140160"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/280188541538140160"]::after,
+  .avatar-large[style*="avatars/280188541538140160"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*william#4027*/
+.avatar-profile[style*="avatars/184008525888880640"]::before,
+  .avatar-large[style*="avatars/184008525888880640"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/184008525888880640"]::after,
+  .avatar-large[style*="avatars/184008525888880640"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Zerebos#7790*/
+.avatar-profile[style*="avatars/249746236008169473"]::before,
+  .avatar-large[style*="avatars/249746236008169473"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/249746236008169473"]::after,
+  .avatar-large[style*="avatars/249746236008169473"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*BlazingGem#7651*/
+.avatar-profile[style*="avatars/122312510769594368"]::before
+  .avatar-large[style*="avatars/122312510769594368"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/122312510769594368"]::after,
+  .avatar-large[style*="avatars/122312510769594368"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*ouchys#8480*/
+.avatar-profile[style*="avatars/235353619132579843"]::before,
+  .avatar-large[style*="avatars/235353619132579843"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/235353619132579843"]::after,
+  .avatar-large[style*="avatars/235353619132579843"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Анастасия#5580*/
+.avatar-profile[style*="avatars/259277943275126785"]::before,
+  .avatar-large[style*="avatars/259277943275126785"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/259277943275126785"]::after,
+  .avatar-large[style*="avatars/259277943275126785"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Giaco Audiovisuel#0178*/
+.avatar-profile[style*="avatars/132855540664500224"]::before,
+  .avatar-large[style*="avatars/132855540664500224"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/132855540664500224"]::after,
+  .avatar-large[style*="avatars/132855540664500224"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Viniuau#3029*/
+.avatar-profile[style*="avatars/110078241087172608"]::before,
+  .avatar-large[style*="avatars/110078241087172608"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/110078241087172608"]::after,
+  .avatar-large[style*="avatars/110078241087172608"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*asolus#0467*/
+.avatar-profile[style*="avatars/166423625728131072"]::before,
+  .avatar-large[style*="avatars/166423625728131072"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/166423625728131072"]::after,
+  .avatar-large[style*="avatars/166423625728131072"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Midorina#5706*/
+.avatar-profile[style*="avatars/90076279646212096"]::before,
+  .avatar-large[style*="avatars/90076279646212096"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/90076279646212096"]::after,
+  .avatar-large[style*="avatars/90076279646212096"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Ｋ仔 Queen 💉#8312*/
+.avatar-profile[style*="avatars/282659852701138954"]::before,
+  .avatar-large[style*="avatars/282659852701138954"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/282659852701138954"]::after,
+  .avatar-large[style*="avatars/282659852701138954"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*MGRich#8192*/
+.avatar-profile[style*="avatars/214550163841220609"]::before,
+  .avatar-large[style*="avatars/214550163841220609"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/214550163841220609"]::after,
+  .avatar-large[style*="avatars/214550163841220609"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*- ̗̀ʀΞʀIʀ▲Ҝ ̖́-#3412*/
+.avatar-profile[style*="avatars/111169969273708544"]::before,
+  .avatar-large[style*="avatars/111169969273708544"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/111169969273708544"]::after,
+  .avatar-large[style*="avatars/111169969273708544"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Morgana Chase (Winter)#0167*/
+.avatar-profile[style*="avatars/161692463365357568"]::before,
+  .avatar-large[style*="avatars/161692463365357568"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/161692463365357568"]::after,
+  .avatar-large[style*="avatars/161692463365357568"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*fofofofofofofofo#5404*/
+.avatar-profile[style*="avatars/159767754960928768"]::before,
+  .avatar-large[style*="avatars/159767754960928768"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/159767754960928768"]::after,
+  .avatar-large[style*="avatars/159767754960928768"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Pu#6606*/
+.avatar-profile[style*="avatars/116242787980017679"]::before,
+  .avatar-large[style*="avatars/116242787980017679"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/116242787980017679"]::after,
+  .avatar-large[style*="avatars/116242787980017679"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Pointy#5565*/
+.avatar-profile[style*="avatars/99914384989519872"]::before,
+  .avatar-large[style*="avatars/99914384989519872"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/99914384989519872"]::after,
+  .avatar-large[style*="avatars/99914384989519872"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/* Zekken#0101*/
+.avatar-profile[style*="avatars/153597217956036608"]::before,
+  .avatar-large[style*="avatars/153597217956036608"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/153597217956036608"]::after,
+  .avatar-large[style*="avatars/153597217956036608"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*boswelja#9614*/
+.avatar-profile[style*="avatars/258528216698978304"]::before,
+  .avatar-large[style*="avatars/258528216698978304"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/258528216698978304"]::after,
+  .avatar-large[style*="avatars/258528216698978304"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*DE|Gamingfail123#7301*/
+.avatar-profile[style*="avatars/137596811778064384"]::before,
+  .avatar-large[style*="avatars/137596811778064384"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/137596811778064384"]::after,
+  .avatar-large[style*="avatars/137596811778064384"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Jeder#2091*/
+.avatar-profile[style*="avatars/143685955436544000"]::before,
+  .avatar-large[style*="avatars/143685955436544000"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/143685955436544000"]::after,
+  .avatar-large[style*="avatars/143685955436544000"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Mist#4209*/
+.avatar-profile[style*="avatars/206318836646019073"]::before,
+  .avatar-large[style*="avatars/206318836646019073"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/206318836646019073"]::after,
+  .avatar-large[style*="avatars/206318836646019073"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Lucas#1135*/
+.avatar-profile[style*="avatars/211023028832698368"]::before,
+  .avatar-large[style*="avatars/211023028832698368"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/211023028832698368"]::after,
+  .avatar-large[style*="avatars/211023028832698368"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Jojo#0956*/
+.avatar-profile[style*="avatars/135764542410981377"]::before,
+  .avatar-large[style*="avatars/135764542410981377"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/135764542410981377"]::after,
+  .avatar-large[style*="avatars/135764542410981377"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*mushroomstewart#3338*/
+.avatar-profile[style*="avatars/259136714025467905"]::before,
+  .avatar-large[style*="avatars/259136714025467905"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/259136714025467905"]::after,
+  .avatar-large[style*="avatars/259136714025467905"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
+/*Alipoodle#5025*/
+.avatar-profile[style*="avatars/183931930935427073"]::before,
+  .avatar-large[style*="avatars/183931930935427073"]+.comment .timestamp::before{display:inline-block!important;content: "}";}
+.avatar-profile[style*="avatars/183931930935427073"]::after,
+  .avatar-large[style*="avatars/183931930935427073"]+.comment .timestamp::after{display:inline-block!important;content: "Beard's Material Theme Contributor";}
 /*/Contributors*/
+/*contributors*/
+.avatar-profile{
+    pointer-events: none;
+}
+.avatar-profile::before{
+    color:var(--white5);
+    font-size:25px;
+    z-index:1;
+    position:relative;
+    font-family:BMTicons;
+    top:-20px;
+    right:-490px;
+    background:transparent;
+    border-radius:50%;
+    padding:0px;
+    pointer-events: initial!important;
+    cursor:pointer;
+    transition:100ms ease;
+}
+.avatar-profile:hover::before{
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    color:var(--accent-color);
+}
+.avatar-profile::after{
+    color:var(--white4);
+    font-size:18px;
+    z-index:1;
+    position:relative;
+    transform: translate(calc(-100% + 10px),-32px);
+    pointer-events: none;
+    top:-18px;
+    right:-480px;
+    width:auto;
+    background:var(--accent-color);
+    color:var(--white10);
+    padding:5px 13px;
+    border-radius:40px;
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    opacity:0;
+    transition:200ms ease;
+    white-space: nowrap;
+}
+.avatar-profile:hover::after{
+    opacity:1;
+    transform: translate(-100%,-32px);
+    transition:200ms cubic-bezier(0,0,0,1);
+}
+
+.avatar-large+.comment .timestamp::before{
+    color:var(--white3);
+    font-size:13px;
+    z-index:1;
+    position:relative;
+    padding-left:1px;
+    padding-right:4px;
+    border-radius:2px;
+    margin-left:-3px;
+    transform: translate(0,1px);
+    cursor:pointer;
+    font-family:BMTicons;
+    transition:100ms ease;
+    pointer-events: initial;
+}
+
+.avatar-large+.comment .timestamp:hover::before{
+    color:var(--white10);
+}
+.avatar-large+.comment .timestamp{
+    pointer-events: none;
+}
+.avatar-large+.comment .timestamp::after{
+    background-color: var(--lvl1) !important;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2)!important;
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    z-index: 3000000;
+    display: block;
+    position:absolute;
+    pointer-events: none;
+    transition:80ms ease;
+    color:var(--white10);
+    width:auto;
+    left:0;
+    transform:translate(17px,-7px);
+    opacity:0;
+    top:0;
+    white-space: nowrap;
+}
+.avatar-large+.comment .timestamp:hover::after{
+    opacity:1;
+    transition:80ms ease 10ms;
+}
+.avatar-large+.comment .timestamp{
+    position:relative;
+    cursor:pointer;
+}
+@font-face{
+    font-family:'BMTicons';
+    src: url(data:application/font-ttf;charset=utf-8;base64,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) format('truetype');
+}
+/*/contributors*/
 
 /*Translation*/
 /*French*/
 html[lang="fr"] .content-region #bd-customcss-attach-controls::after{
-    content:"Pour ajouter des paramètres personnalisés au thème, copiez le code\A suivant dans votre 'custom CSS' et remplacez les choses que vous\A souhaitez changer:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #-FFFFFF !important;\A }\A\A N'oubliez pas d'enregisrer(save) et mettre a jour(update) quand vous\A avez fini!\A \A Et si vous ne voulez pas le copier manellement, allez a l'adresse:\A bit.ly/BMTsettings et copiez/collez directement le code."!important;
+    content:"Pour ajouter des paramètres personnalisés au thème, copiez le code\A suivant dans votre 'custom CSS' et remplacez les choses que vous\A souhaitez changer:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A }\A\A N'oubliez pas d'enregisrer(save) et mettre a jour(update) quand vous\A avez fini!\A \A Et si vous ne voulez pas le copier manellement, allez a l'adresse:\A bit.ly/BMTsettings et copiez/collez directement le code."!important;
 }
 html[lang="fr"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
 html[lang="fr"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
@@ -265,7 +372,7 @@ html[lang="fr"] .app::after{
 }
 /*turkish(By @Midorina#5706)*/
 html[lang="tr"] .content-region #bd-customcss-attach-controls::after{
-    content:'Eğer temanıza özel ayarlar eklemek istiyorsanız, aşağıdaki\A kodları "Custom CSS" kısmına kopyalayıp, renk değerlerini istediğiniz\A gibi değiştirin:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: var(--white10)FFF !important;\A }\A \A İşiniz bittiğinde kaydetmeyi/güncellemeyi unutmayın!\A \A Ve eğer manuel kopyalayacak kadar tembelseniz,\A bit.ly/BMTsettings sitesine gidin ve direkt kopyala/yapıştır yapın.\A'!important;
+    content:'Eğer temanıza özel ayarlar eklemek istiyorsanız, aşağıdaki\A kodları "Custom CSS" kısmına kopyalayıp, renk değerlerini istediğiniz\A gibi değiştirin:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A }\A \A İşiniz bittiğinde kaydetmeyi/güncellemeyi unutmayın!\A \A Ve eğer manuel kopyalayacak kadar tembelseniz,\A bit.ly/BMTsettings sitesine gidin ve direkt kopyala/yapıştır yapın.\A'!important;
 }
 html[lang="tr"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
 html[lang="tr"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
@@ -289,7 +396,7 @@ html[lang="tr"] .app::after{
 }
 /*Finnish(By @Asolus#0467)*/
 html[lang="fi"] .content-region #bd-customcss-attach-controls::after{
-    content:'Lisätäksesi mukautettuja asetuksia teemaan, kopioi seuraava koodi\A custom CSS -kohtaasi ja korvaa ne asiat, jotka haluat vaihtaa:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: var(--white10)FFF !important;\A }\A \A Älä unohda tallentaa/päivittää kun olet valmis!\A \A Jos olet liian laiska kopioimaan sitä manuaalisesti, mene osoitteeseen\A bit.ly/BMTsettings ja kopioi ja liitä koodi.\A'!important;
+    content:'Lisätäksesi mukautettuja asetuksia teemaan, kopioi seuraava koodi\A custom CSS -kohtaasi ja korvaa ne asiat, jotka haluat vaihtaa:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A }\A \A Älä unohda tallentaa/päivittää kun olet valmis!\A \A Jos olet liian laiska kopioimaan sitä manuaalisesti, mene osoitteeseen\A bit.ly/BMTsettings ja kopioi ja liitä koodi.\A'!important;
 }
 html[lang="fi"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
 html[lang="fi"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
@@ -313,7 +420,7 @@ html[lang="fi"] .app::after{
 }
 /*Brazilian Portuguese(By @Viniuau#3029)*/
 html[lang="pt-BR"] .content-region #bd-customcss-attach-controls::after{
-    content:'Para adicionar configurações customizadas para o tema copie o seguinte\A código no seu custom CSS e recoloque as coisas que você quer mudar:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: var(--white10)FFF !important;\A }\A \A Não se esqueça de salvar quanto terminar!\A \A E se você é muito preguiçoso pra copiar manualmente, vá no\A bit.ly/BMTsettings e faça o copicola do código.'!important;
+    content:'Para adicionar configurações customizadas para o tema copie o seguinte\A código no seu custom CSS e recoloque as coisas que você quer mudar:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A }\A \A Não se esqueça de salvar quanto terminar!\A \A E se você é muito preguiçoso pra copiar manualmente, vá no\A bit.ly/BMTsettings e faça o copicola do código.'!important;
 }
 html[lang="pt-BR"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
 html[lang="pt-BR"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
@@ -361,7 +468,7 @@ html[lang=""] .app::after{
 }
 /*German(By @Paul Link#3330,@Baki#3316,@DE|Gamingfail123 (UB's dev)#7301)*/
 html[lang="de"] .content-region #bd-customcss-attach-controls::after{
-    content:'Um Änderungen an dem Theme zu machen,\A kopiere folgenden Code in dein Custom-CSS und ersetze die Dinge,\A die du ändern möchtest:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: var(--white10)FFF !important;\A }\A \A Vergiss nicht zu speichern/updaten wenn du fertig bist!\A \A Und wenn du zu faul bist es abzutippen,\A geh einfach zu bit.ly/BMTsettings und kopiere/füge den Code direkt ein.'!important;
+    content:'Um Änderungen an dem Theme zu machen,\A kopiere folgenden Code in dein Custom-CSS und ersetze die Dinge,\A die du ändern möchtest:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A }\A \A Vergiss nicht zu speichern/updaten wenn du fertig bist!\A \A Und wenn du zu faul bist es abzutippen,\A geh einfach zu bit.ly/BMTsettings und kopiere/füge den Code direkt ein.'!important;
 }
 html[lang="de"] .bd-blue .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before,
 html[lang="de"] .theme-light .container-iksrDt .horizontal-2BEEBe div:nth-of-type(3):before{
@@ -638,115 +745,11 @@ html[lang="de"] .app::after{
 }
 
 /*-----/GENERAL KEYFRAMES-----*/
-/*contributors*/
-.avatar-profile{
-    pointer-events: none;
-}
-.avatar-profile::before{
-    content: "}";
-    color:var(--white5);
-    font-size:25px;
-    z-index:1;
-    position:relative;
-    font-family:BMTicons,Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
-    top:-20px;
-    right:-490px;
-    background:transparent;
-    border-radius:50%;
-    padding:0px;
-    pointer-events: initial!important;
-    cursor:pointer;
-    transition:100ms ease;
-}
-.avatar-profile:hover::before{
-    box-shadow:0 5px 15px rgba(0,0,0,.5);
-    color:var(--accent-color);
-}
-.avatar-profile::after{
-    content: " Beard's Material Theme Contributor";
-    color:var(--white4);
-    font-size:18px;
-    z-index:1;
-    position:relative;
-    transform: translate(calc(-100% + 10px),-32px);
-    pointer-events: none;
-    top:-18px;
-    right:-480px;
-    width:270px;
-    background:var(--accent-color);
-    color:var(--white10);
-    padding:5px 13px;
-    border-radius:40px;
-    box-shadow:0 5px 15px rgba(0,0,0,.5);
-    opacity:0;
-    transition:200ms ease;
-}
-.avatar-profile:hover::after{
-    opacity:1;
-    transform: translate(-100%,-32px);
-    transition:200ms cubic-bezier(0,0,0,1);
-}
 
-.avatar-large+.comment .timestamp::before{
-    content: "}";
-    color:var(--white3);
-    font-size:13px;
-    z-index:1;
-    position:relative;
-    padding-left:1px;
-    padding-right:4px;
-    border-radius:2px;
-    margin-left:-3px;
-    transform: translate(0,1px);
-    cursor:pointer;
-    font-family:BMTicons,Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
-    transition:100ms ease;
-    pointer-events: initial;
-}
-
-.avatar-large+.comment .timestamp:hover::before{
-    color:var(--white10);
-}
-.avatar-large+.comment .timestamp{
-    pointer-events: none;
-}
-.avatar-large+.comment .timestamp::after{
-    content: "Beard's Material Theme Contributor";
-    background-color: var(--lvl1) !important;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2)!important;
-    padding: 6px 10px;
-    border-radius: 3px;
-    font-size: 13px;
-    z-index: 3000000;
-    display: block;
-    position:absolute;
-    right:0;
-    pointer-events: none;
-    transition:80ms ease;
-    color:var(--white10);
-    width:195px;
-    left:0;
-    transform:translate(17px,-7px);
-    opacity:0;
-    top:0;
-}
-.avatar-large+.comment .timestamp:hover::after{
-    opacity:1;
-    transition:80ms ease 10ms;
-}
-.avatar-large+.comment .timestamp{
-    position:relative;
-    cursor:pointer;
-}
-@font-face{
-    font-family:'BMTicons';
-    src: url(data:application/font-ttf;charset=utf-8;base64,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) format('truetype');
-}
-/*/contributors*/
 .content-region #bd-customcss-attach-controls::after {
     width: 100%;
     padding: 10px;
-    content:"To add custom settings to the theme, copy the following\A code in your custom CSS and replace the things you want\A to change:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: var(--white10)FFF !important;\A}\A\A Don't forget to save/update when you're done!\A\A And if you're too lazy to manually copy it,\A just go to bit.ly/BMTsettings and directly copy/paste\Athe code. ";
+    content:"To add custom settings to the theme, copy the following\A code in your custom CSS and replace the things you want\A to change:\A \A :root {\A --accent-color: #7289DA !important;\A --notification-color: #FFFFFF !important;\A}\A\A Don't forget to save/update when you're done!\A\A And if you're too lazy to manually copy it,\A just go to bit.ly/BMTsettings and directly copy/paste\Athe code. ";
     background: #43B581;
     margin-top: 10px;
     display: block;
@@ -1716,7 +1719,7 @@ html[lang="de"] .app::after{
     content:"";
     display:block;
     height:4px;
-    background: linear-gradient(to top, var(--white10)fff 0%,var(--white10)fff 50%,var(--lvl3) 51%,var(--lvl3) 100%);
+    background: linear-gradient(to top, var(--white10) 0%,var(--white10) 50%,var(--lvl3) 51%,var(--lvl3) 100%);
     width:18.5px;
     position:absolute;
     transform:translate(7px,15.5px)rotate(45deg)translate(10px,-2px)scale(0,1);
@@ -1730,7 +1733,7 @@ html[lang="de"] .app::after{
     content:"";
     display:block;
     height:4px;
-    background: linear-gradient(to top, var(--white10)fff 0%,var(--white10)fff 50%,var(--lvl3) 51%,var(--lvl3) 100%);
+    background: linear-gradient(to top, var(--white10) 0%,var(--white10) 50%,var(--lvl3) 51%,var(--lvl3) 100%);
     width:18px;
     position:absolute;
     transform:translate(7px,15.5px)rotate(45deg)translate(0,-2px)scale(1,1);
@@ -1758,7 +1761,7 @@ html[lang="de"] .app::after{
     content:"";
     display:block;
     height:4px;
-    background: linear-gradient(to top, var(--white10)fff 0%,var(--white10)fff 50%,var(--lvl3) 51%,var(--lvl3) 100%);
+    background: linear-gradient(to top, var(--white10) 0%,var(--white10) 50%,var(--lvl3) 51%,var(--lvl3) 100%);
     width:18.5px;
     position:absolute;
     transform:translate(7px,15.5px)rotate(45deg)translate(10px,-2px)scale(0,1);
@@ -1771,7 +1774,7 @@ html[lang="de"] .app::after{
     content:"";
     display:block;
     height:4px;
-    background: linear-gradient(to top, var(--white10)fff 0%,var(--white10)fff 50%,var(--lvl3) 51%,var(--lvl3) 100%);
+    background: linear-gradient(to top, var(--white10) 0%,var(--white10) 50%,var(--lvl3) 51%,var(--lvl3) 100%);
     width:18.5px;
     position:absolute;
     transform:translate(7px,15.5px)rotate(45deg)translate(0,-2px)scale(1,1);
@@ -3885,13 +3888,17 @@ div[style="height:30px;width:100%;background:#282B30;"] progress {
     height: 0px;
     position: relative;
     left: -20px;
-    top: -4px;
+    top: 0px;
     display: block;
-    ;
     transition: all 200ms ease;
     border-style: solid;
     border-width: 0 10px 10px 0;
     border-color: transparent rgba(0, 0, 0, .1) transparent transparent;
+}
+.comment {
+    background: rgba(0, 0, 0, .1);
+    border-radius: 0 3px 3px 3px!important;
+    padding: 0px 7px 10px 10px;
 }
 
 .message-group {
@@ -5817,16 +5824,10 @@ iframe[src*="https://www.youtube.com"]::after {
     display: none;
 }
 
-.comment {
-    background: rgba(0, 0, 0, .1);
-    border-radius: 0 3px 3px 3px!important;
-    padding: 4px 7px 10px 10px;
-}
-
 .messages-popout-wrap .comment {
     background: rgba(0, 0, 0, .3);
     border-radius: 0 3px 3px 3px!important;
-    padding: 4px 7px 10px 10px!important;
+    padding: 10px 7px 10px 10px!important;
 }
 
 .message-group .mentioned .message-text {
@@ -7706,6 +7707,7 @@ body:active .popout-bottom:not(:active) .popout-menu:not(:active){
     background-size: 50%;
     background-repeat: no-repeat;
 }
+
 .guilds.scroller::-webkit-scrollbar{
   display: none;
 }
@@ -13239,4 +13241,46 @@ body #sort-options.open .item{
 .user-settings-games .default-2ICJ3w, .hovered-1gq2YI{
   height:16px;
 }
+/*switches tempfix by Zerebos*/
+.switch-3lyafC {
+    visibility: visible !important;
+    overflow: visible !important;
+    width: 35px;
+    background: none !important;
+}
 
+.switch-3lyafC::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0;
+    right: 0;
+    opacity: 0.25;
+    z-index: 1;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 7px !important;
+    background-color: var(--accent-color) !important;
+}
+
+.switch-3lyafC.valueUnchecked-XR6AOk::before {
+    background-color: var(--white10) !important;   
+}
+    
+
+.switch-3lyafC::after {
+    opacity: 1 !important;
+    border-radius: 100px !important;
+    height: 23px !important;
+    width: 23px !important;
+    margin: 0 !important;
+    top: -4px !important;
+    left: -3px;
+}
+
+.valueChecked-3Bzkbm.sizeDefault-rZbSBU::after {
+    transform: translate3d(20px,0,0);
+    background-color: var(--accent-color) !important;
+}
