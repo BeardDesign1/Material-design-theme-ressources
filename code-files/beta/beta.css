@@ -79,6 +79,25 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .avatar-profile[style*="avatars/--"]::after,
   .avatar-large[style*="avatars/--"]+.comment .timestamp::after{display:inline-block!important;
     content: "BMT Patron"}
+/*Finicalmist#0001*/
+.avatar-profile[style*="avatars/132832133600378880"]::before,
+  .avatar-large[style*="avatars/132832133600378880"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+.avatar-profile[style*="avatars/132832133600378880"]::after,
+  .avatar-large[style*="avatars/132832133600378880"]+.comment .timestamp::after{display:inline-block!important;
+    content: "BMT Patron"}
+/*timeandpatience#4312*/
+.avatar-profile[style*="avatars/76797554926288896"]::before,
+  .avatar-large[style*="avatars/76797554926288896"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+.avatar-profile[style*="avatars/76797554926288896"]::after,
+  .avatar-large[style*="avatars/76797554926288896"]+.comment .timestamp::after{display:inline-block!important;
+    content: "Ingenuity Alive"}
+/*Wolff#4327*/
+.avatar-profile[style*="avatars/106440209020760064"]::before,
+  .avatar-large[style*="avatars/106440209020760064"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+.avatar-profile[style*="avatars/106440209020760064"]::after,
+  .avatar-large[style*="avatars/106440209020760064"]+.comment .timestamp::after{display:inline-block!important;
+    content: "Someone Not Important"}
+
 /*/Patrons*/
 
 /*Contributors*/
