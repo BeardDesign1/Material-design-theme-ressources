@@ -97,6 +97,18 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .avatar-profile[style*="avatars/106440209020760064"]::after,
   .avatar-large[style*="avatars/106440209020760064"]+.comment .timestamp::after{display:inline-block!important;
     content: "Someone Not Important"}
+/*𝓲𝓽𝔃𝓭𝓾𝓫⑨８®#5968*/
+.avatar-profile[style*="avatars/242384591527084033"]::before,
+  .avatar-large[style*="avatars/242384591527084033"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+.avatar-profile[style*="avatars/242384591527084033"]::after,
+  .avatar-large[style*="avatars/242384591527084033"]+.comment .timestamp::after{display:inline-block!important;
+    content: "Proud supporter of BMT"}
+/*ColorfulMee#8991*/
+.avatar-profile[style*="avatars/161945410301198338"]::before,
+  .avatar-large[style*="avatars/161945410301198338"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+.avatar-profile[style*="avatars/161945410301198338"]::after,
+  .avatar-large[style*="avatars/161945410301198338"]+.comment .timestamp::after{display:inline-block!important;
+    content: "Send me pics of your pets"}
 
 /*/Patrons*/
 
