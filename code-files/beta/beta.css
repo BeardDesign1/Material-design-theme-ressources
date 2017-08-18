@@ -19,7 +19,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     content: "Changelog: Changelog now on github or in the discord server.\A \A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
 }
 :root {
-    --version:"Beard's Material Theme v2.2.3-beta";
+    --version:"Beard's Material Theme v2.2.4";
     --accent-color: #7289DA;
     --notification-color: #fff;
     --important-notification-color: #F04747;
@@ -75,40 +75,40 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 /*Patrons*/
 /*Username*/
 .avatar-profile[style*="avatars/--"]::before,
-  .avatar-large[style*="avatars/--"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+  .avatar-large[style*="avatars/--"]+.comment .timestamp::before{display:inline-block!important;content: "`"!important;}
 .avatar-profile[style*="avatars/--"]::after,
   .avatar-large[style*="avatars/--"]+.comment .timestamp::after{display:inline-block!important;
-    content: "BMT Patron"}
+    content: "BMT Patron"!important}
 /*Finicalmist#0001*/
 .avatar-profile[style*="avatars/132832133600378880"]::before,
-  .avatar-large[style*="avatars/132832133600378880"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+  .avatar-large[style*="avatars/132832133600378880"]+.comment .timestamp::before{display:inline-block!important;content: "`"!important;}
 .avatar-profile[style*="avatars/132832133600378880"]::after,
   .avatar-large[style*="avatars/132832133600378880"]+.comment .timestamp::after{display:inline-block!important;
-    content: "BMT Patron"}
+    content: "BMT Patron"!important}
 /*timeandpatience#4312*/
 .avatar-profile[style*="avatars/76797554926288896"]::before,
-  .avatar-large[style*="avatars/76797554926288896"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+  .avatar-large[style*="avatars/76797554926288896"]+.comment .timestamp::before{display:inline-block!important;content: "`"!important;}
 .avatar-profile[style*="avatars/76797554926288896"]::after,
   .avatar-large[style*="avatars/76797554926288896"]+.comment .timestamp::after{display:inline-block!important;
-    content: "Ingenuity Alive"}
+    content: "Ingenuity Alive"!important}
 /*Wolff#4327*/
 .avatar-profile[style*="avatars/106440209020760064"]::before,
-  .avatar-large[style*="avatars/106440209020760064"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+  .avatar-large[style*="avatars/106440209020760064"]+.comment .timestamp::before{display:inline-block!important;content: "`"!important;}
 .avatar-profile[style*="avatars/106440209020760064"]::after,
   .avatar-large[style*="avatars/106440209020760064"]+.comment .timestamp::after{display:inline-block!important;
-    content: "Someone Not Important"}
+    content: "Someone Not Important"!important}
 /*𝓲𝓽𝔃𝓭𝓾𝓫⑨８®#5968*/
 .avatar-profile[style*="avatars/242384591527084033"]::before,
-  .avatar-large[style*="avatars/242384591527084033"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+  .avatar-large[style*="avatars/242384591527084033"]+.comment .timestamp::before{display:inline-block!important;content: "`"!important;}
 .avatar-profile[style*="avatars/242384591527084033"]::after,
   .avatar-large[style*="avatars/242384591527084033"]+.comment .timestamp::after{display:inline-block!important;
-    content: "Proud supporter of BMT"}
+    content: "Proud supporter of BMT"!important}
 /*ColorfulMee#8991*/
 .avatar-profile[style*="avatars/161945410301198338"]::before,
-  .avatar-large[style*="avatars/161945410301198338"]+.comment .timestamp::before{display:inline-block!important;content: "`";}
+  .avatar-large[style*="avatars/161945410301198338"]+.comment .timestamp::before{display:inline-block!important;content: "`"!important;}
 .avatar-profile[style*="avatars/161945410301198338"]::after,
   .avatar-large[style*="avatars/161945410301198338"]+.comment .timestamp::after{display:inline-block!important;
-    content: "Send me pics of your pets"}
+    content: "Send me pics of your pets"!important}
 
 /*/Patrons*/
 
@@ -2684,26 +2684,32 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     opacity: 0.7!important;
     transition: all 0ms ease!important;
 }
-
+/*embed images*/
 .attachment-image .image,
 .embed-thumbnail.embed-thumbnail-image .image {
     transition: 200ms cubic-bezier(.2,0,0,1);
 }
+.embed .embed-thumbnail-gifv video,
 .attachment-image img,
 .attachment-image .image,
 .embed .image,
 .embed .embed-thumbnail img {
     border-radius: 3px;
-    -webkit-filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.4));
-    transition: 200ms cubic-bezier(.2,0,0,1);
+    /*-webkit-filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.4));*/
+    box-shadow: 0 3px 7px rgba(0,0,0,.4);
+    transition: 150ms cubic-bezier(.2,0,0,1);
+    background-color:#212121;
 }
+.embed .embed-thumbnail-gifv video:hover,
 .embed .image:not(iframe):hover,
 .embed .embed-thumbnail img:not(iframe):hover,
 .embed-thumbnail-video:not(iframe):hover,
 .attachment-image .image:not(iframe):hover,
 .embed-thumbnail.embed-thumbnail-image .image:not(iframe):hover {
-    -webkit-filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.5));
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    /*-webkit-filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.5));*/
 }
+/*/embed images*/
 .message-group .comment .markup code.inline,
 .message-group .comment .markup pre code {
     background: var(--lvl2)!important;
@@ -4476,16 +4482,8 @@ span {
     border-radius: 3px
 }
 
-.guilds .guild:not(.guilds-add):last-of-type {
-    margin-bottom: 80px!important
-}
-
-#user-profile-modal .guilds .guild:not(.guilds-add):last-of-type {
-    margin-bottom: 0px!important
-}
-
-.dms .guild:not(.guilds-add):last-of-type {
-    margin-bottom: 0px!important
+.guilds>.guild:not(.guilds-add):last-of-type {
+    margin-bottom: 30px!important
 }
 
 .emoji.jumboable {
@@ -4856,27 +4854,40 @@ body:active .status-picker.popout-menu:not(:active) {
 .guild-channels .icon {
     margin-top: 2px
 }
+/*member tab*/
+.channel-members .member{
+    overflow: visible;
+    padding:6px 20px 6px 20px;
+    margin-left:8px;
+    border-radius:3px;
+}
+.channel-members h2{
+  margin-top:15px;
+}
 
 .channel-members::-webkit-scrollbar {
-    background: rgba(225, 225, 225, 0.05);
-    width: 6px!important
+    background: transparent;
+    width: 8px!important
 }
 
 .channel-members-wrap .channel-members::-webkit-scrollbar-thumb {
     border: none !important;
-    background-color: rgba(225, 225, 225, 0.05) !important;
+    background-color: rgba(255,255,255,.05)!important;
     display: initial;
-    border-radius: 0!important
+    border-radius: 0!important;
+    border-left: 3px solid var(--lvl2)!important;
 }
 .channel-members-wrap .channel-members::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(225, 225, 225, 0.1) !important;
+    background-color: var(--white1) !important;
+    border-left: 3px solid var(--lvl2)!important;
 }
 
 .channel-members-wrap .channel-members::-webkit-scrollbar-thumb:active {
     border: none !important;
-    background-color: rgba(225, 225, 225, 0.2) !important;
+    background-color: var(--white2) !important;
     display: initial;
-    border-radius: 0!important
+    border-radius: 0!important;
+    border-left: 3px solid var(--lvl2)!important;
 }
 .emojiButton-38mF6t>.sprite-3pvJkd,
 .channel-textarea-emoji>.sprite-item {
@@ -8382,6 +8393,8 @@ div.platform-win .theme-light .layer[layer-id="user-settings"] .ui-standard-side
 }
 .switch-3lyafC::after,
 .ui-switch::before{
+    content:"";
+    display:block;
     top:-4px!important;
     left:-4px!important;
     height:23px!important;
@@ -8395,7 +8408,8 @@ div.platform-win .theme-light .layer[layer-id="user-settings"] .ui-standard-side
     margin:0;
     transform:translate(-1px,0);
 }
-.valueChecked-3Bzkbm.sizeDefault-rZbSBU:after{
+.valueChecked-3Bzkbm.sizeDefault-rZbSBU::after,
+.ui-switch-checkbox:checked+.ui-switch::before{
   transform:translate(21px,0) !important;
 }
 .switch-3lyafC:hover::after,
@@ -8425,7 +8439,7 @@ div.platform-win .theme-light .layer[layer-id="user-settings"] .ui-standard-side
     opacity:.25;
     transition:all 150ms ease!important;
 }
-.switchEnabled-3CPlLV:active:before{
+.switchEnabled-3CPlLV:active::before{
   opacity:.25;
 }
 .switch-3lyafC.valueChecked-3Bzkbm::before,
@@ -8470,10 +8484,10 @@ div.platform-win .theme-light .layer[layer-id="user-settings"] .ui-standard-side
     cursor:pointer;
 }
 #bd-settingspane-container .ui-switch-item .ui-switch-wrapper .ui-switch-checkbox+.ui-switch:before{
-    transform:translate(0,0);
+    transform:translate(-1px,0);
 }
 #bd-settingspane-container .ui-switch-item .ui-switch-wrapper .ui-switch-checkbox:checked+.ui-switch:before{
-    transform:translate(20px,0)!important;
+    transform:translate(21px,0)!important;
 }
 /*/switches*/
 .embed .embed-thumbnail.embed-thumbnail-article, .embed .embed-thumbnail.embed-thumbnail-image{
@@ -8814,6 +8828,8 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
     position:relative;
     right:10px!important;
     flex:initial!important;
+    display: block;
+    height: 15px;
 }
 .bd-plugin-container, .bda-slist li{
     border:none!important;
@@ -9164,6 +9180,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 /*settings animation*/
 .layer.animating{
     pointer-events: initial!important;
+    will-change:transform,opacity;
 }
 .layer{
     transform:none!important;
@@ -11875,9 +11892,7 @@ body .create-guild-container.deprecated .action.join:active .btn{
     color:var(--white10)!important;
     background: var(--lvl1)!important;
 }
-.channel-members .member{
-    overflow: visible;
-}
+
 .status-streaming{
     animation:streaming-flash 1.5s linear infinite;
 }
@@ -12878,7 +12893,8 @@ body #sort-options.open .item{
 }
 
 .userPopout-4pfA0d .headerActivityText-3qBQRo{
-    color: var(--white5)
+    color: var(--white5);
+    margin-bottom:10px;
 }
 
 .userPopout-4pfA0d .headerActivityText-3qBQRo strong {
@@ -12924,6 +12940,7 @@ body #sort-options.open .item{
     background-size: 90%;
     box-shadow:0 1px 1px rgba(255, 255, 255, .07) inset;
     z-index: 10;
+    padding-top:20px;
 }
 .userPopout-4pfA0d .footer-2J5zqP,
 .userPopout-4pfA0d .body-3rkFrF {
@@ -13169,3 +13186,53 @@ body:active .modal-2LIEKY:not(:active) .inner-1_1f7b{
   from{opacity:1;}
   to{opacity:0;}
 }*/
+.maxLength-1NjdA0{
+  color:var(--white2);
+  transition: 200ms ease;
+}
+textarea:focus + .maxLength-1NjdA0{
+  color:var(--white3);
+}
+/*zerebos fix for switches*/
+.bda-right .ui-switch-checkbox+.ui-switch::after {
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+.ui-switch-wrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.message-group .btn-quote{
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTYgMTdoM2wyLTRWN0g1djZoM3ptOCAwaDNsMi00VjdoLTZ2NmgzeiIvPiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+)!important;
+  margin-right: 8px!important;
+}
+/*Nitro Tag*/
+.avatar-large[style*="/a_"]+.comment .username-wrapper .user-name:before {
+    content: "|";
+    margin-right:3px;
+    position: relative;
+    display: inline-block;
+    font-family: BMTicons;
+    transform: translate(0,3px);
+}
+.avatar-small[style*="/a_"]+.member-inner .member-username .member-username-inner:before {
+    content: "|";
+    margin-right:3px;
+    position: relative;
+    display: inline-block;
+    font-family: BMTicons;
+    transform: translate(0,3px);
+}
+.avatarStatus-1g8f0K{
+  border:4px solid #212121!important;
+  width:26px;
+  height:26px;
+}
+.popout.popout-left.no-arrow{
+  margin-right:0;
+  margin-left: -10px;
+}
