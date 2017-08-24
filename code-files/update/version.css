@@ -109,6 +109,12 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
 .avatar-profile[style*="avatars/161945410301198338"]::after,
   .avatar-large[style*="avatars/161945410301198338"]+.comment .timestamp::after{display:inline-block!important;
     content: "Send me pics of your pets"!important}
+/*Kody#3820*/
+.avatar-profile[style*="avatars/81293337012744192"]::before,
+  .avatar-large[style*="avatars/81293337012744192"]+.comment .timestamp::before{display:inline-block!important;content: "`"!important;}
+.avatar-profile[style*="avatars/81293337012744192"]::after,
+  .avatar-large[style*="avatars/81293337012744192"]+.comment .timestamp::after{display:inline-block!important;
+    content: "Powered by Coffee"!important}
 
 /*/Patrons*/
 
