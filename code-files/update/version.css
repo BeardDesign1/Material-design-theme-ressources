@@ -4591,6 +4591,7 @@ body:active .status-picker.popout-menu:not(:active) {
     margin-top: 0px;
     animation: scale-status 1000ms cubic-bezier(.54, 0, 0, 1);
     position: relative;
+    -webkit-backface-visibility:hidden;
 }
 
 @keyframes scale-status {
