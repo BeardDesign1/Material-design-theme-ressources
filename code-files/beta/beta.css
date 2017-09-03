@@ -6965,13 +6965,12 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 /*quickswitcher*/
 
-.quickswitcher {
+.quickswitcher-2NdiGJ {
     background: var(--lvl2)!important;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2), 0 1px 0 rgba(255, 255, 255, .02) inset!important;
 }
-
-.quickswitcher.dark .big-input {
+.theme-dark .quickswitcher-2NdiGJ .input-MwQhcX {
     background: var(--lvl1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     position:absolute;
@@ -6980,8 +6979,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     top:-90px;
     animation:quickswitcher2 400ms cubic-bezier(.7,0,0,1);
 }
-
-.quickswitcher-container{
+.container-3uJcWB {
     margin-top:200px;
     animation:opacity 200ms ease, quickswitcher 400ms cubic-bezier(.7,0,0,1);
     animation-fill-mode: both
@@ -6996,22 +6994,21 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
         transform:translate(0,-50px);
     }
 }
-.quickswitcher.dark .scroller-wrap::before {
+.theme-dark .quickswitcher-2NdiGJ .scrollerOuter-ppJFBc::before {
     background-image: linear-gradient(0deg, transparent, var(--lvl2) 100%, transparent);
     display:none;
 }
-
-.quickswitcher.dark .result {
+.theme-dark .quickswitcher-2NdiGJ .result-2fJqMr {
     transition: 100ms ease;
     overflow: hidden;
 }
 
-.quickswitcher.dark .result.selected {
+.theme-dark .quickswitcher-2NdiGJ .resultFocused-2geRUA {
     background: var(--lvl3);
     transition: 50ms ease!important
 }
 
-.quickswitcher.dark .result::after {
+.theme-dark .quickswitcher-2NdiGJ .result-2fJqMr::after {
     box-shadow: none!important;
     width: 40px;
     border-radius: 0 2px 2px;
@@ -7030,29 +7027,25 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     -ms-transform: translate(40px);
     transform: translate(40px);
 }
-
-.quickswitcher.dark .result.selected::after {
+.theme-dark .quickswitcher-2NdiGJ .resultFocused-2geRUA::after {
     opacity: 1;
     transition: 100ms ease 100ms;
     -ms-transform: translate(0px);
     transform: translate(0px);
     transition: 200ms cubic-bezier(0,0,0,1);
 }
-.quickswitcher.dark .result.selected:active::after {
+.theme-dark .quickswitcher-2NdiGJ .resultFocused-2geRUA:active::after {
     background-color:var(--accent-color)!important;
 }
-
-.quickswitcher.dark .result.selected:active,
-.quickswitcher.dark .result.selected:active::after {
+.theme-dark .quickswitcher-2NdiGJ .resultFocused-2geRUA:active,
+.theme-dark .quickswitcher-2NdiGJ .resultFocused-2geRUA:active::after {
     background-color: var(--accent-color);
     transition: 0ms!important;
 }
-
-.quickswitcher .scroller-wrap .scroller::-webkit-scrollbar {
+.quickswitcher-2NdiGJ .scrollerOuter-ppJFBc .scroller-1WyTN6::-webkit-scrollbar {
     display: none;
 }
-
-.quickswitcher .scroller-wrap {
+.quickswitcher-2NdiGJ .scrollerOuter-ppJFBc {
     margin-right: -4px!important
 }
 
@@ -7065,7 +7058,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     margin-bottom: -6px;
 }
 
-.quickswitcher.dark .tips {
+.theme-dark .quickswitcher-2NdiGJ .tipsWithResults-3TVZGE {
     border-color: rgba(255, 255, 255, .03);
 }
 
@@ -7078,7 +7071,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
     fill: var(--white5)!important;
 }
 
-.quickswitcher .tips .misc-controls .keybind-shortcut:last-of-type::before {
+.quickswitcher-2NdiGJ .tips .misc-controls .keybind-shortcut:last-of-type::before {
     display: none;
 }
 
@@ -9783,7 +9776,7 @@ div.platform-win .user-settings-modal .tab-bar.SIDE .tab-bar-item:nth-of-type(15
 .create-guild-container.deprecated .action.join .btn{
     background: #3ca374;
 }
-.quickswitcher.dark .ui-scroller-wrap:before{
+.theme-dark .quickswitcher-2NdiGJ .scrollerOuter-ppJFBc:before{
     display:none;
 }
 .chat .channel-textarea .channel-textarea-inner textarea{
@@ -11569,8 +11562,8 @@ body .create-guild-container.deprecated .action.join:active .btn{
 .create-guild-container.deprecated .create-or-join .form-inner{
     background: transparent;
 }*/
-.quickswitcher.dark .results-scroller-outer:before{
-        background-image: linear-gradient(0deg,transparent,var(--lvl2) 60%,var(--lvl2));
+.theme-dark .quickswitcher-2NdiGJ .scrollerOuter-ppJFBc:before{
+    background-image: linear-gradient(0deg,transparent,var(--lvl2) 60%,var(--lvl2));
 }
 .upload-modal .inner .file .icon.image[style*="background-image:"]{
     border:none;
@@ -12248,7 +12241,7 @@ body .form.deprecated .control-group input:focus,
 .message-group .edit-message textarea:focus{
     color:rgba(255,255,255,1);
 }
-.quickswitcher.dark .tips{
+.theme-dark .quickswitcher-2NdiGJ .tipsWithResults-3TVZGE {
     color:var(--white3);
 }
 .quick-message.isBlocked{
