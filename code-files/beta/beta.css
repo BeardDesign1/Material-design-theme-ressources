@@ -19,7 +19,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     content: "Changelog: Changelog now on github or in the discord server.\A \A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
 }
 :root {
-    --version:"Beard's Material Theme v2.2.5-beta-fix";
+    --version:"Beard's Material Theme v2.2.5";
     --accent-color: #7289DA;
     --notification-color: #fff;
     --important-notification-color: #F04747;
@@ -3734,6 +3734,10 @@ span {
 #friends .friends-table .friends-row .friends-column-actions .friends-action.friends-action-remove::after{
   background:#000!important;
 }
+#friends .friends-table .friends-row .friends-column-actions .friends-action.friends-action-accept:active::after,
+#friends .friends-table .friends-row .friends-column-actions .friends-action.friends-action-remove:active::after{
+  opacity:0.2;
+}
 #friends .friends-table .friends-row .friends-column-actions .friends-action:hover,
 #friends .friends-table .friends-row .friends-column-actions .friends-action:active {
   background-color:rgba(255,255,255,.1)!important;
@@ -4579,6 +4583,7 @@ span {
     pointer-events: auto;
     left: 0;
     z-index: 1000000;
+    box-shadow: none!important;
 }
 body:active .status-picker.popout-menu:not(:active) {
     transform: scale(0.9);
@@ -4617,12 +4622,13 @@ body:active .status-picker.popout-menu:not(:active) {
     margin-left: 0px;
     bottom: 0;
     margin-top: 0px;
-    animation: scale-status 1000ms cubic-bezier(.54, 0, 0, 1);
+    transform: none;
+    animation: anim-status 1000ms cubic-bezier(.54, 0, 0, 1);
     position: relative;
     -webkit-backface-visibility:hidden;
 }
 
-@keyframes scale-status {
+@keyframes anim-status {
     from {
         transform: translate(0, -100%);
     }
@@ -4631,6 +4637,14 @@ body:active .status-picker.popout-menu:not(:active) {
     }
 }
 
+@keyframes bugfix-status {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(0,0);
+    }
+}
 .status-picker:hover .popout-menu-item {
     color: transparent;
     opacity: .7;
@@ -5325,10 +5339,10 @@ body:active .status-picker.popout-menu:not(:active) {
     -ms-transform: scale(1.3);
     transform: scale(1.3)
 }
-
+.stop-animations .private-channels .channel .badge,
 .private-channels .channel .badge {
-    -ms-transform: translate(-15px);
-    transform: translate(-15px)
+    -ms-transform: translate(-15px)!important;
+    transform: translate(-15px)!important;
 }
 
 .private-channels .channel .close {
@@ -11041,7 +11055,9 @@ html[lang="ko"] .upload-modal-in .upload-drop-modal .bgScale{
 }
 /*/Upload animation*/
 .popout{
-    z-index: 10000!important
+    z-index: 10000!important;
+    -webkit-filter:none!important;
+    filter:none!important;
 }
 .context-menu {
     z-index: 1000000!important
@@ -12627,10 +12643,15 @@ body:active .popout.popout-right.no-arrow[style*="visibility: visible;"]:not(:ac
 .theme-dark #friends .friends-header .tab-bar .tab-bar-item.tab-bar-item-primary.selected {
     color: #36393e!important;
 }
+
 .guilds-wrapper .guilds .friends-online {
     margin-left:35px;
     transform:translate(-50%,0);
 }
+.stop-animations .guilds-wrapper .guilds .friends-online{
+  transform:translate(-50%,0)!important;
+}
+
 .message-group .btn-quote {
     margin-right: 10px;
     margin-top: 3px;
@@ -13254,23 +13275,7 @@ textarea:focus + .maxLength-1NjdA0{
   background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTYgMTdoM2wyLTRWN0g1djZoM3ptOCAwaDNsMi00VjdoLTZ2NmgzeiIvPiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PC9zdmc+)!important;
   margin-right: 8px!important;
 }
-/*Nitro Tag*/
-.avatar-large[style*="/a_"]+.comment .username-wrapper .user-name:before {
-    content: "|";
-    margin-right:3px;
-    position: relative;
-    display: inline-block;
-    font-family: BMTicons;
-    transform: translate(0,3px);
-}
-.avatar-small[style*="/a_"]+.member-inner .member-username .member-username-inner:before {
-    content: "|";
-    margin-right:3px;
-    position: relative;
-    display: inline-block;
-    font-family: BMTicons;
-    transform: translate(0,3px);
-}
+
 .avatarStatus-1g8f0K{
   border:4px solid #212121!important;
   width:26px;
@@ -13425,6 +13430,7 @@ textarea:focus + .maxLength-1NjdA0{
   color:transparent;
 }*/
 /*New version(works on click)*/
+
 .private-channels .search-bar input{
   pointer-events: initial;
   border-radius: 100000px;
@@ -13444,6 +13450,9 @@ textarea:focus + .maxLength-1NjdA0{
   background-size: 40%;
   box-shadow: 0 25.64px 76.92px rgba(0, 0, 0, .25), 0 -5.13px 0px rgba(0, 0, 0, 0.2) inset, 0 10.26px 5.13px rgba(255,255,255,.03) inset!important;
   cursor: pointer;
+}
+.stop-animations .private-channels .search-bar input{
+  transform:translate(50%,50%)scale(.195)!important;
 }
 .private-channels .search-bar input:hover{
   background-color:#353535;
@@ -13746,3 +13755,56 @@ textarea:focus + .maxLength-1NjdA0{
 .ui-key-recorder.disabled{
   pointer-events: none;
 }
+.theme-dark .ui-standard-sidebar-view{
+  background: transparent!important;
+}
+/**/
+/*
+.layer.animating:first-of-type  {
+    opacity: 1!important;
+    transform: scale(1)!important;
+    z-index:1;
+}
+.layer.stop-animations:first-of-type{
+  opacity: 0.7!important;
+    transform: scale(1)!important;
+    z-index:1;
+}
+.layer+.layer .ui-standard-sidebar-view {
+    min-width: 900px;
+    max-width: 60%;
+    max-height: calc(100% - 120px);
+    min-height: 650px;
+    position: fixed;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0!important;
+    border-radius: 5px!important;
+    overflow: hidden;
+    transform: scale(0);
+    box-shadow: 0 10px 20px rgba(0,0,0,.4);
+    transition: 300ms cubic-bezier(.4,0,0,1);
+    background: transparent!important;
+}
+.layer:not(.stop-animations)+.layer.animating .ui-standard-sidebar-view {
+  transform: scale(0.5)!important;
+  opacity: 1!important;
+  transition: all 250ms linear;
+}
+.layer.stop-animations+.layer .ui-standard-sidebar-view {
+    animation:scale 250ms cubic-bezier(.2,0,0,1.15);
+    transform: scale(1);
+    opacity: 1;
+}
+.layer+.layer {
+    background: rgba(0,0,0,0.85)!important;
+    z-index: 2;
+    opacity:0!important;
+    transition:all 200ms ease;
+}
+.layer.stop-animations+.layer{
+    opacity:1!important;
+    animation:opacity 300ms ease!important;
+}*/
