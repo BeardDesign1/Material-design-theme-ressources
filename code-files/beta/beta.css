@@ -6739,7 +6739,7 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 
 /**/
 
-.popout.popout-top {
+.popout.popout-top, .popout.popout-top-left {
     overflow: visible!important
 }
 
@@ -7858,6 +7858,17 @@ a:active .friends-icon {
 .user-settings-modal button.preview-sound:active::before {
     box-shadow: 0 0 0 2px var(--accent-color), 0 0 0 4px var(--white10);
     transition: 0ms;
+}
+
+.user-settings-voice .preview-overlay img {
+  filter: grayscale(100%)brightness(110%);
+}
+
+.theme-dark .user-settings-voice .preview-overlay {
+    background: #292929;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2), 0 1px 0 rgba(255,255,255,.03) inset;
+    border-radius: 3px;
 }
 
 .message-group .comment .markup {
@@ -13310,6 +13321,10 @@ textarea:focus + .maxLength-1NjdA0{
 }
 
 /*--Friends Search bar--*/
+.private-channels {
+	-webkit-transform: none;
+	transform: none;
+}
 .private-channels .search-bar{
   bottom:0;
   position: absolute;
