@@ -12760,6 +12760,13 @@ body #sort-options.open .item{
     font-weight: 800
 }
 
+.details-vSFjFG, .name-8onsv0 {
+    color: var(--white10);
+}
+.content-P9ThHS {
+    color: var(--white7);
+}
+
 .userPopout-4pfA0d .body-3rkFrF .member-roles .member-role {
     position: relative;
     z-index: 2;
