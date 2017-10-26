@@ -8,8 +8,8 @@
 /!\
 Lilian Tedone(Beard Design) retains full copyright of this code.
 You are NOT ALLOWED to redistribute this file/Theme or any of the contents of it in any way or method.
-I.e. you are NOT ALLOWED to post an edited version of this theme to Github or other similar platforms without a clear and direct permission from Lilian Tedone.
 You are allowed to use this theme as it is, and edit it it AS LONG AS YOU KEEP IT FOR YOURSELF.
+I.e. you are NOT ALLOWED to post an edited version of this theme to Github or other similar platforms without a clear and direct permission from Lilian Tedone.
 Sorry I have to be super aggressive in this legal stuff, but there has been some problems and I just dont want more :3
 ///////////////////////////////////////
 */
@@ -455,7 +455,8 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     box-shadow: 0 -3px 20px rgba(0, 0, 0, .1);
     opacity: .95;
     transition: all 200ms ease;
-    overflow-y: visible!important
+    overflow-y: visible!important;
+	z-index: 5;
 }
 
 .typing .text {

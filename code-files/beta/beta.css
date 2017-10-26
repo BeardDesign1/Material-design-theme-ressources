@@ -455,7 +455,8 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     box-shadow: 0 -3px 20px rgba(0, 0, 0, .1);
     opacity: .95;
     transition: all 200ms ease;
-    overflow-y: visible!important
+    overflow-y: visible!important;
+	z-index: 5;
 }
 
 .typing .text {
