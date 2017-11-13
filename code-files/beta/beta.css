@@ -19,6 +19,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     content: "Changelog: Changelog now on github or in the discord server.\A \A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
 }
 :root {
+    --version:"Beard's Material Theme v2.2.9-beta";
     --accent-color: #7289DA;
     --notification-color: #fff;
     --important-notification-color: #F04747;
