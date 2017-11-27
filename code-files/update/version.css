@@ -19,7 +19,7 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     content: "Changelog: Changelog now on github or in the discord server.\A \A Theme settings:go to the Custom CSS tab.\A \A Please help me inprove the theme!\A Go to bit.ly/BMTserver to signal bugs or incoherences :)"!important;
 }
 :root {
-    --version:"Beard's Material Theme v2.2.9";
+    --version:"Beard's Material Theme v2.2.10-beta";
     --accent-color: #7289DA;
     --notification-color: #fff;
     --important-notification-color: #F04747;
@@ -1416,11 +1416,13 @@ Sorry I have to be super aggressive in this legal stuff, but there has been some
     background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgOWMtMS42IDAtMy4xNS4yNS00LjYuNzJ2My4xYzAgLjM5LS4yMy43NC0uNTYuOS0uOTguNDktMS44NyAxLjEyLTIuNjYgMS44NS0uMTguMTgtLjQzLjI4LS43LjI4LS4yOCAwLS41My0uMTEtLjcxLS4yOUwuMjkgMTMuMDhjLS4xOC0uMTctLjI5LS40Mi0uMjktLjcgMC0uMjguMTEtLjUzLjI5LS43MUMzLjM0IDguNzggNy40NiA3IDEyIDdzOC42NiAxLjc4IDExLjcxIDQuNjdjLjE4LjE4LjI5LjQzLjI5LjcxIDAgLjI4LS4xMS41My0uMjkuNzFsLTIuNDggMi40OGMtLjE4LjE4LS40My4yOS0uNzEuMjktLjI3IDAtLjUyLS4xMS0uNy0uMjgtLjc5LS43NC0xLjY5LTEuMzYtMi42Ny0xLjg1LS4zMy0uMTYtLjU2LS41LS41Ni0uOXYtMy4xQzE1LjE1IDkuMjUgMTMuNiA5IDEyIDl6Ii8+PC9zdmc+);
 }
 /*old*/
-.container-iksrDt button:active,
 #rtc-connection .btn:active,
 #voice-connection .btn:active,
 .account .btn:active {
     background: transparent;
+    opacity: 1
+}
+.container-iksrDt button:active {
     opacity: 1
 }
 #rtc-connection .btn:active::after,
@@ -4301,7 +4303,7 @@ body:active .status-picker.popout-menu:not(:active) {
 .status-picker .popout-menu-item:nth-of-type(5){
   animation-delay: 300ms;
 }
-.status-text{
+.status-picker .status-text{
   background-color: var(--lvl1) !important;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2)!important;
   padding: 6px 10px;
@@ -6743,8 +6745,11 @@ div[style="background:#2E3136; color:#ADADAD; height:30px; position:absolute; bo
 }
 
 .context-menu .context-menu {
-    -ms-transform: translate(0, -16px)!important;
-    transform: translate(0, -16px)!important;
+    margin-top: -16px
+}
+
+.context-menu .context-menu.invertY {
+    margin-top: 16px
 }
 
 .theme-dark.context-menu .item-subMenu {
@@ -7060,8 +7065,6 @@ a:active .friends-icon {
 
 .connecting video.ready {
     -webkit-filter: grayscale(100);
-}
- {
     background: #593695!important;
 }
 
@@ -10396,7 +10399,7 @@ body .citar-btn:active{
     border-color:var(--white2)!important;
 }
 .modal-2LIEKY{
-    z-index: 1000000;
+    z-index: 1000000!important;
 }
 .theme-dark .modal-3HOjGZ{
     background:var(--lvl2);
@@ -12488,6 +12491,8 @@ body #files_directDownload{
   flex-direction:column;
   overflow: hidden;
   justify-content: flex-end;
+  position: fixed;
+  z-index: 4;
 }
 body #files_directDownload .file{
   pointer-events: initial;
@@ -12743,9 +12748,25 @@ body #sort-options.open .item{
     box-shadow: none
 }
 
-
+.userPopout-4pfA0d .activityUserPopout-1nmgaw .headerText-2CVBxK,
 .userPopout-4pfA0d .body-3rkFrF .bodyTitleText-hSiL7d {
     color: var(--white10)
+}
+
+.nameUserPopout-1Hbg0M {
+    color: var(--white9);
+}
+
+.userPopout-4pfA0d .content-P9ThHS {
+    color: var(--white7) !important;
+}
+
+.activityUserPopout-1nmgaw .details-vSFjFG {
+    color: var(--white5) !important
+}
+.bodyDivider-3OPnU2 {
+    background: rgba(255,255,255,.05);
+    height: 2px;
 }
 
 .userPopout-4pfA0d .headerActivityText-3qBQRo{
@@ -13818,6 +13839,10 @@ body .sp-hidden[style*="top"]{
   box-shadow:0 5px 15px rgba(0,0,0,.3)!important;
 }
 
+#permissions-modal-wrapper .modal-wrapper {
+    z-index: 100000;
+}
+
 #permissions-modal-wrapper .header {
     border-bottom: 0px;
     color: #fff;
@@ -13881,6 +13906,122 @@ body .sp-hidden[style*="top"]{
   display: inline-block;
 }
 
+.theme-dark #friends .headerBar-cxbhPD .tab-bar .tab-bar-item{
+    border-bottom:none!important;
+    position: relative;
+    margin:0!important;
+    padding: 2px 16px;
+    min-width: 80px;
+    transition: 300ms ease!important;
+}
+
+.theme-dark #friends .headerBar-cxbhPD .tab-bar .tab-bar-item:hover{
+    transition: 100ms ease!important;
+}
+.theme-dark #friends .headerBar-cxbhPD .tab-bar .tab-bar-item:active{
+    color:#fff!important;
+    transition: 0ms ease!important;
+}
+#friends .tab-bar .tab-bar-item::after{
+    content:"";
+    width:100%;
+    height:2px;
+    position: absolute;
+    background: white;
+    bottom:0;
+    left:0;
+    opacity: 1;
+    transform-origin: bottom;
+    pointer-events: none;
+}
+#friends .tab-bar .tab-bar-item.selected::after{
+    transition:200ms cubic-bezier(0,0,0,1), opacity 1ms ease;
+    transform: scale(1,1);
+    transform-origin: bottom;
+}
+#friends .tab-bar .tab-bar-item:not(.selected)::after{
+    transform: translate(80px) scale(2.5,1);
+    transition:200ms cubic-bezier(1,0,0,.7), opacity 100ms;
+    opacity: 0;
+}
+#friends .tab-bar .tab-bar-item.selected ~ .tab-bar-item::after{
+    transform: translate(-80px) scale(2.5,1);
+    transition:200ms cubic-bezier(1,0,0,.7), opacity 100ms;
+    opacity: 0;
+}
+body .theme-dark #friends .tab-bar .tab-bar-item.tab-bar-item-primary{
+    height: 47px;
+    line-height: 47px;
+    box-sizing: border-box;
+    border-radius: 0;
+    background:transparent!important;
+}
+body .theme-dark #friends .tab-bar .tab-bar-item.tab-bar-item-primary:hover{
+    color:#fff!important;
+}
+body .theme-dark #friends .headerBar-cxbhPD .tab-bar .tab-bar-item.tab-bar-item-primary.selected{
+    background:transparent!important;
+    color:#fff!important;
+}
+.theme-dark #friends .tab-bar .tab-bar-item.tab-bar-item-primary::after{
+    height:100%;
+    z-index: -1;
+    background:var(--accent-color);
+    transform: scale(1,1);
+}
+.theme-dark #friends .tab-bar .tab-bar-item.tab-bar-item-primary:not(.selected)::after{
+    transform: scale(1,0)!important;
+    transition:200ms ease 10ms;
+    opacity: 0;
+    transform-origin: bottom left;
+    background:var(--accent-color);
+}
+.friend-table-add-wrapper{
+    animation:friend-table-wrapper 300ms cubic-bezier(.4,0,0,1);
+    transform-origin: top;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 2
+}
+@keyframes friend-table-wrapper{
+    from{
+        transform:translate(0,-231px);
+    }
+}
+.friends-table>.scroller-wrap{
+    margin-top:0px;
+    transform:translate(0,0);
+    animation:testabcd 300ms cubic-bezier(.4,0,0,1), max-height 1ms;
+}
+.friend-table-add-wrapper+.scroller-wrap{
+    max-height:calc(100% - 231px);
+    transition:all 300ms cubic-bezier(.4,0,0,1), max-height 100ms 300ms;
+    transform:translate(0,231px);
+}
+.friends-table-header+.scroller-wrap{
+    max-height:calc(100% - 34px);
+    transition:all 300ms cubic-bezier(.4,0,0,1), max-height 1ms;
+    transform:translate(0,34px);
+}
+.friends-table-header{
+    transform-origin: top;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 2
+}
+
+.container-3NvGrL::after,
+.guild-header::after{
+    top:5px;
+    position: absolute;
+}
+.container-3NvGrL{
+    position: relative;
+}
 
 /* Latest Hotfixes */
 /* form changes */
@@ -14134,4 +14275,74 @@ z-index: 5;
 
 #friends .headerBar-cxbhPD {
   box-shadow: 0 2px 20px rgba(0,0,0,.4);
+}
+
+.send-button {
+    top:0;
+    bottom: 0;
+}
+
+.mention-RlZ5F3, .unread-2TDDFN {
+    font-size: 0;
+    background: none;
+}
+
+.icon-2qNMWC {
+    margin-left: 0;
+    background-color: var(--important-notification-color);
+    padding: 6px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,.6);
+}
+
+.unread-mentions-indicator-bottom .unread-mentions-bar,
+.unread-mentions-indicator-top .unread-mentions-bar {
+    box-shadow: none;
+}
+
+.unread-mentions-indicator-bottom, .unread-mentions-indicator-top {
+    box-shadow: none;
+}
+
+.unread-mentions-indicator-bottom {
+    bottom: 70px;
+}
+
+#user-profile-modal .guilds .section .connected-accounts .connected-account .connected-account-icon,
+.user-settings-connections .connect-account-btn .connect-account-btn-inner {
+    filter: grayscale(100%) invert(100%) brightness(130%)
+}
+
+#bd-settings-sidebar .ui-tab-bar-separator {
+    display: none;
+}
+
+#bd-settings-sidebar::after {
+    content: "";
+    display: block;
+    background: rgba(255,255,255,.04);
+    height: 2px;
+    margin: 8px 10px;
+}
+
+.chat.private .titleText-2IfpkV {
+    overflow: visible;
+}
+
+.wrapper-uAa07y {
+    background: none !important;
+    border: none !important;
+}
+
+.upload-modal .bf-toolbar {
+    background: none;
+}
+
+.upload-modal .comment {
+    padding-bottom: 0;
+}
+
+.upload-modal .textArea-20yzAH {
+    margin-right: 0;
+    padding-right: 38px;
 }
